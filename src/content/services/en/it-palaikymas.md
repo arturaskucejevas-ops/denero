@@ -1,14 +1,26 @@
 ---
-title: IT support
-summary: Reliable IT infrastructure management and fast assistance so your business runs without interruption.
+title: Microsoft Dynamics NAV / Business Central Consulting
+summary: We provide consulting, implementation, support and optimization
+  services for Microsoft Dynamics NAV and Dynamics 365 Business Central. We
+  develop tailored business solutions, customize and automate processes,
+  integrate systems, create reports and data analytics solutions, and modernize
+  existing ERP systems.
 icon: support
 order: 3
+draft: false
 ---
-## Keeping everything running
+## Key Services
 
-We proactively maintain your infrastructure and respond quickly to requests.
+* ERP Consulting
 
-- Service desk
-- Server and network management
-- Backup and recovery
-- Licence management
+* Implementation & Configuration
+
+* NAV & BC Development
+
+* Custom Solutions
+
+* SQL & Power BI Analytics
+
+* System Integration & Automation
+
+* Technical Support & Optimization

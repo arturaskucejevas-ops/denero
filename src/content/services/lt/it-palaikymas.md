@@ -1,14 +1,26 @@
 ---
-title: IT palaikymas
-summary: Patikima IT infrastruktūros priežiūra ir greita pagalba, kad jūsų verslas veiktų be sutrikimų.
+title: Microsoft Dynamics NAV / Business Central konsultacijos
+summary: Teikiame „Microsoft Dynamics NAV“ ir „Dynamics 365 Business Central“
+  konsultavimo, diegimo, priežiūros ir optimizavimo paslaugas. Kuriame
+  individualius verslo sprendimus, programuojame, automatizuojame procesus,
+  integruojame sistemas, atliekame ataskaitų ir duomenų analitikos sprendimų
+  kūrimą bei esamų sistemų modernizavimą.
 icon: support
 order: 3
+draft: false
 ---
-## Rūpinamės, kad viskas veiktų
+## Pagrindinės paslaugos
 
-Proaktyviai prižiūrime jūsų infrastruktūrą ir greitai reaguojame į užklausas.
+* ERP konsultacijos
 
-- Pagalbos tarnyba
-- Serverių ir tinklų priežiūra
-- Atsarginės kopijos ir atkūrimas
-- Licencijų valdymas
+* Sistemų diegimas ir konfigūravimas
+
+* NAV ir BC programavimas
+
+* Individualūs sprendimai
+
+* SQL ir Power BI analitika
+
+* Sistemų integracijos ir automatizavimas
+
+* Techninė priežiūra ir optimizavimas
