@@ -1,14 +1,30 @@
 ---
-title: Business consulting
-summary: We assess your current situation, identify opportunities for improvement and prepare a clear action plan.
-icon: users
+title: Custom Solutions & Integrations
+summary: We develop tailored business solutions and integrate different systems,
+  ensuring seamless data exchange, process automation and efficient system
+  performance.
+icon: cog
 order: 1
+draft: true
 ---
-## What you get
+## What We Work With
 
-Our experts analyse your processes, systems and goals, and deliver concrete, actionable recommendations.
+We work with Microsoft business management systems, databases, analytics platforms and modern integration technologies. We develop and implement solutions tailored to individual business needs.
 
-- Current-state audit
-- Strategy and roadmap
-- Risk assessment
-- Implementation oversight
+### Technologies
+
+* Microsoft Dynamics NAV
+* Microsoft Dynamics 365 Business Central
+* Microsoft SQL Server
+* Microsoft Power BI
+* Microsoft Power Automate
+* Microsoft Excel / VBA
+* AL / C/AL Development
+* SQL / T-SQL
+* REST API / Web Services
+* XML / JSON
+* EDI / SEPA Integrations
+* RDLC Reporting
+* OData / SOAP
+* .NET / C#
+* And more
