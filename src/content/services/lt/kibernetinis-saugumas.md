@@ -6,7 +6,7 @@ summary: Kuriame individualias verslo ir mobiliąsias programėles, diegiame
   verslui priimti duomenimis pagrįstus sprendimus.
 icon: cloud
 order: 2
-draft: true
+draft: false
 ---
 **Naudojamos technologijos:**
 
