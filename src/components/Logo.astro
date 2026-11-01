@@ -1,10 +1,12 @@
 ---
 import settings from '../data/settings.json';
-interface Props { href: string }
-const { href } = Astro.props;
+interface Props { href: string; variant?: 'dark' | 'light' }
+const { href, variant = 'dark' } = Astro.props;
+// Šviesi versija (balta + auksas) naudojama tamsiame fone
+const src = variant === 'light' ? (settings.logo_light || settings.logo) : settings.logo;
 ---
-<a class="logo" href={href}>
-  {settings.logo
-    ? <img src={settings.logo} alt={settings.company_name} width="140" height="36" />
+<a class="logo" href={href} aria-label={settings.company_name}>
+  {src
+    ? <img src={src} alt={settings.company_name} width="244" height="100" />
     : <><span class="logo-mark" aria-hidden="true">{settings.short_name.charAt(0)}</span><span>{settings.short_name}</span></>}
 </a>

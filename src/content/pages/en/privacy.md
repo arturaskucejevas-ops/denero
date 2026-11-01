@@ -6,7 +6,7 @@ seo_description: Information about how we collect and process personal data.
 
 ## Data controller
 
-UAB "Pavyzdys", company code 300000000, Gedimino pr. 1, Vilnius, email info@pavyzdys.lt.
+Denero, company code 300000000, Gedimino pr. 1, Vilnius, email info@pavyzdys.lt.
 
 ## Data we collect
 

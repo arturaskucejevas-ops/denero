@@ -1,7 +1,8 @@
 {
-  "company_name": "UAB „Pavyzdys“",
-  "short_name": "Pavyzdys",
-  "logo": "",
+  "company_name": "Denero",
+  "short_name": "Denero",
+  "logo": "/brand/denero-logo.svg",
+  "logo_light": "/brand/denero-logo-light.svg",
   "email": "info@pavyzdys.lt",
   "phone": "+370 600 00000",
   "address": "Gedimino pr. 1, LT-01103 Vilnius",

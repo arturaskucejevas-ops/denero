@@ -6,7 +6,7 @@ seo_description: Informacija apie tai, kaip renkame ir tvarkome asmens duomenis.
 
 ## Duomenų valdytojas
 
-UAB „Pavyzdys“, įmonės kodas 300000000, Gedimino pr. 1, Vilnius, el. paštas info@pavyzdys.lt.
+Denero, įmonės kodas 300000000, Gedimino pr. 1, Vilnius, el. paštas info@pavyzdys.lt.
 
 ## Kokius duomenis renkame
 

@@ -2,7 +2,7 @@
 # Prisijungimas per GitHub (redaguoti gali tik saugyklos nariai; įjunkite 2FA).
 backend:
   name: github
-  repo: arturaskucejevas-ops/denero         # TODO: pvz. imone/svetaine
+  repo: OWNER/REPO          # TODO: pvz. imone/svetaine
   branch: main
   # base_url: https://api.netlify.com   # Netlify OAuth tarpininkas (numatytas)
 
@@ -15,7 +15,7 @@ publish_mode: editorial_workflow
 locale: lt
 site_url: https://www.pavyzdys.lt
 display_url: https://www.pavyzdys.lt
-logo_url: /favicon.svg
+logo_url: /brand/denero-logo.svg
 
 media_folder: public/uploads
 public_folder: /uploads
@@ -106,7 +106,8 @@ collections:
         fields:
           - { label: Įmonės pavadinimas, name: company_name, widget: string }
           - { label: Trumpas pavadinimas (logotipe), name: short_name, widget: string }
-          - { label: Logotipas, name: logo, widget: image, required: false, hint: "Jei nenurodytas – rodoma pirmoji raidė." }
+          - { label: Logotipas (šviesiam fonui), name: logo, widget: image, required: false, hint: "PNG/SVG su permatomu fonu." }
+          - { label: Logotipas (tamsiam fonui – poraštė), name: logo_light, widget: image, required: false }
           - { label: El. paštas, name: email, widget: string }
           - { label: Telefonas, name: phone, widget: string }
           - { label: Adresas, name: address, widget: string }
