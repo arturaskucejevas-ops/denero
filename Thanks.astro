@@ -1,0 +1,16 @@
+---
+import Base from '../layouts/Base.astro';
+import { routes, t, alt, type Lang } from '../i18n/ui';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const tr = t(lang);
+---
+<Base lang={lang} title={tr('thanks.title')} alternates={alt('thanks')} noindex>
+  <section class="section center">
+    <div class="container">
+      <h1>{tr('thanks.title')}</h1>
+      <p>{tr('thanks.text')}</p>
+      <a class="btn btn--primary" href={routes.home[lang]}>{tr('thanks.back')}</a>
+    </div>
+  </section>
+</Base>

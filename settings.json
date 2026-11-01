@@ -1,0 +1,29 @@
+{
+  "company_name": "Denero",
+  "short_name": "Denero",
+  "logo": "/brand/denero-logo.svg",
+  "logo_light": "/brand/denero-logo-light.svg",
+  "email": "info@pavyzdys.lt",
+  "phone": "+370 600 00000",
+  "address": "Gedimino pr. 1, LT-01103 Vilnius",
+  "company_code": "300000000",
+  "vat_code": "LT100000000000",
+  "working_hours_lt": "I–V 8:00–17:00",
+  "working_hours_en": "Mon–Fri 8:00–17:00",
+  "map_url": "https://maps.google.com/?q=Gedimino+pr.+1,+Vilnius",
+  "linkedin": "https://www.linkedin.com/",
+  "facebook": "",
+  "seo": {
+    "lt": {
+      "default_title": "Profesionalūs verslo sprendimai ir paslaugos",
+      "default_description": "Teikiame patikimas verslo paslaugas ir sprendimus įmonėms Lietuvoje. Susisiekite ir gaukite individualų pasiūlymą.",
+      "keywords": ""
+    },
+    "en": {
+      "default_title": "Professional business services and solutions",
+      "default_description": "We deliver reliable business services and solutions for companies in Lithuania and the Baltics. Contact us for a tailored proposal.",
+      "keywords": ""
+    }
+  },
+  "og_image": "/og-image.png"
+}

@@ -1,0 +1,40 @@
+---
+import Base from '../layouts/Base.astro';
+import OfferingCard from '../components/OfferingCard.astro';
+import CtaBand from '../components/CtaBand.astro';
+import home from '../data/home.json';
+import { routes, t, alt, detailPath, type Lang } from '../i18n/ui';
+import { getOfferings, slugOf } from '../i18n/content';
+interface Props { lang: Lang; kind: 'services' | 'solutions' }
+const { lang, kind } = Astro.props;
+const tr = t(lang);
+const h = home[lang];
+const items = await getOfferings(kind, lang);
+const title = kind === 'services' ? h.services_title : h.solutions_title;
+const lead = kind === 'services' ? h.services_text : h.solutions_text;
+const listLd = {
+  '@context': 'https://schema.org', '@type': 'ItemList',
+  itemListElement: items.map((s, i) => ({ '@type': 'ListItem', position: i + 1, name: s.data.title,
+    url: new URL(detailPath(kind, lang, slugOf(s.id)), Astro.site).href })),
+};
+---
+<Base lang={lang} title={title} description={lead} alternates={alt(kind)} jsonLd={[listLd]}>
+  <section class="hero page-hero">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><a href={routes.home[lang]}>{tr('nav.home')}</a> / {title}</nav>
+      <h1>{title}</h1>
+      <p>{lead}</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="grid">
+        {items.map((s) => (
+          <OfferingCard title={s.data.title} summary={s.data.summary} icon={s.data.icon}
+            href={detailPath(kind, lang, slugOf(s.id))} more={tr('common.more')} />
+        ))}
+      </div>
+    </div>
+  </section>
+  <CtaBand lang={lang} />
+</Base>

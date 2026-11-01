@@ -1,0 +1,52 @@
+---
+import { render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import home from '../data/home.json';
+import { routes, t, detailPath, type Lang } from '../i18n/ui';
+import { slugOf } from '../i18n/content';
+interface Props { lang: Lang; kind: 'services' | 'solutions'; entry: any; hasTranslation: boolean }
+const { lang, kind, entry, hasTranslation } = Astro.props;
+const tr = t(lang);
+const { Content } = await render(entry);
+const d = entry.data;
+const slug = slugOf(entry.id);
+const sectionTitle = kind === 'services' ? home[lang].services_title : home[lang].solutions_title;
+const other: Lang = lang === 'lt' ? 'en' : 'lt';
+const alternates = {
+  [lang]: detailPath(kind, lang, slug),
+  [other]: hasTranslation ? detailPath(kind, other, slug) : routes[kind][other],
+} as Record<Lang, string>;
+const site = Astro.site!;
+const crumbs = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: tr('nav.home'), item: new URL(routes.home[lang], site).href },
+    { '@type': 'ListItem', position: 2, name: sectionTitle, item: new URL(routes[kind][lang], site).href },
+    { '@type': 'ListItem', position: 3, name: d.title },
+  ],
+};
+const serviceLd = { '@context': 'https://schema.org', '@type': 'Service', name: d.title, description: d.summary, areaServed: 'LT' };
+const benefits: string[] = d.benefits ?? [];
+---
+<Base lang={lang} title={d.seo_title || d.title} description={d.seo_description || d.summary} alternates={alternates} jsonLd={[crumbs, serviceLd]}>
+  <section class="hero page-hero">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href={routes.home[lang]}>{tr('nav.home')}</a> / <a href={routes[kind][lang]}>{sectionTitle}</a> / {d.title}
+      </nav>
+      <h1>{d.title}</h1>
+      <p>{d.summary}</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container detail">
+      <article class="prose"><Content /></article>
+      <aside class="aside-box">
+        {benefits.length > 0 && <><h3>{tr('common.benefits')}</h3><ul>{benefits.map((b) => <li>{b}</li>)}</ul></>}
+        <h3>{tr('common.interested')}</h3>
+        <p>{tr('common.interested_text')}</p>
+        <a class="btn btn--primary" href={routes.contact[lang]}>{tr('nav.contact')}</a>
+      </aside>
+    </div>
+  </section>
+</Base>

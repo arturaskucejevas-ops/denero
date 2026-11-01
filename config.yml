@@ -1,0 +1,177 @@
+# Decap CMS konfigūracija – turinio valdymas per /admin/
+# Prisijungimas per GitHub (redaguoti gali tik saugyklos nariai; įjunkite 2FA).
+backend:
+  name: github
+  repo: OWNER/REPO          # TODO: pvz. imone/svetaine
+  branch: main
+  # base_url: https://api.netlify.com   # Netlify OAuth tarpininkas (numatytas)
+
+# Vietiniam redagavimui: `npm run cms` + `npm run dev` → http://localhost:4321/admin/
+local_backend: true
+
+# Redakcinis procesas: juodraštis → peržiūra → publikavimas
+publish_mode: editorial_workflow
+
+locale: lt
+site_url: https://www.pavyzdys.lt
+display_url: https://www.pavyzdys.lt
+logo_url: /brand/denero-logo.svg
+
+media_folder: public/uploads
+public_folder: /uploads
+
+i18n:
+  structure: multiple_folders
+  locales: [lt, en]
+  default_locale: lt
+
+collections:
+  - name: services
+    label: Paslaugos
+    label_singular: Paslauga
+    folder: src/content/services
+    create: true
+    slug: "{{slug}}"
+    i18n: true
+    summary: "{{title}}"
+    sortable_fields: [order, title]
+    fields:
+      - { label: Pavadinimas, name: title, widget: string, i18n: true }
+      - { label: Trumpas aprašymas, name: summary, widget: text, i18n: true }
+      - &icons
+        label: Piktograma
+        name: icon
+        widget: select
+        i18n: duplicate
+        default: cog
+        options:
+          - { label: Skydas (saugumas), value: shield }
+          - { label: Debesis, value: cloud }
+          - { label: Diagrama, value: chart }
+          - { label: Krumpliaratis, value: cog }
+          - { label: Kodas, value: code }
+          - { label: Žmonės, value: users }
+          - { label: Tinklas, value: network }
+          - { label: Spyna, value: lock }
+          - { label: Duomenų bazė, value: database }
+          - { label: Pagalba, value: support }
+      - { label: Eiliškumas, name: order, widget: number, value_type: int, default: 10, i18n: duplicate }
+      - { label: Juodraštis (nerodyti), name: draft, widget: boolean, default: false, i18n: duplicate }
+      - { label: Turinys, name: body, widget: markdown, i18n: true, buttons: [bold, italic, link, heading-two, heading-three, bulleted-list, numbered-list, quote] }
+      - { label: "SEO pavadinimas (neprivaloma)", name: seo_title, widget: string, required: false, i18n: true, hint: "Rodomas Google paieškoje. Iki ~60 simbolių." }
+      - { label: "SEO aprašymas (neprivaloma)", name: seo_description, widget: text, required: false, i18n: true, hint: "Iki ~155 simbolių." }
+
+  - name: solutions
+    label: Sprendimai
+    label_singular: Sprendimas
+    folder: src/content/solutions
+    create: true
+    slug: "{{slug}}"
+    i18n: true
+    summary: "{{title}}"
+    sortable_fields: [order, title]
+    fields:
+      - { label: Pavadinimas, name: title, widget: string, i18n: true }
+      - { label: Trumpas aprašymas, name: summary, widget: text, i18n: true }
+      - *icons
+      - { label: Eiliškumas, name: order, widget: number, value_type: int, default: 10, i18n: duplicate }
+      - { label: Nauda, name: benefits, widget: list, i18n: true, required: false, field: { label: Punktas, name: item, widget: string } }
+      - { label: Juodraštis (nerodyti), name: draft, widget: boolean, default: false, i18n: duplicate }
+      - { label: Turinys, name: body, widget: markdown, i18n: true, buttons: [bold, italic, link, heading-two, heading-three, bulleted-list, numbered-list, quote] }
+      - { label: "SEO pavadinimas (neprivaloma)", name: seo_title, widget: string, required: false, i18n: true }
+      - { label: "SEO aprašymas (neprivaloma)", name: seo_description, widget: text, required: false, i18n: true }
+
+  - name: pages
+    label: Puslapiai
+    label_singular: Puslapis
+    folder: src/content/pages
+    create: false
+    delete: false
+    i18n: true
+    summary: "{{title}}"
+    fields:
+      - { label: Pavadinimas, name: title, widget: string, i18n: true }
+      - { label: Įžanga, name: lead, widget: text, required: false, i18n: true }
+      - { label: Turinys, name: body, widget: markdown, i18n: true }
+      - { label: "SEO pavadinimas (neprivaloma)", name: seo_title, widget: string, required: false, i18n: true }
+      - { label: "SEO aprašymas", name: seo_description, widget: text, required: false, i18n: true }
+
+  - name: settings
+    label: Nustatymai
+    editor: { preview: false }
+    files:
+      - name: settings
+        label: Įmonės duomenys ir SEO
+        file: src/data/settings.json
+        fields:
+          - { label: Įmonės pavadinimas, name: company_name, widget: string }
+          - { label: Trumpas pavadinimas (logotipe), name: short_name, widget: string }
+          - { label: Logotipas (šviesiam fonui), name: logo, widget: image, required: false, hint: "PNG/SVG su permatomu fonu." }
+          - { label: Logotipas (tamsiam fonui – poraštė), name: logo_light, widget: image, required: false }
+          - { label: El. paštas, name: email, widget: string }
+          - { label: Telefonas, name: phone, widget: string }
+          - { label: Adresas, name: address, widget: string }
+          - { label: Įmonės kodas, name: company_code, widget: string }
+          - { label: PVM kodas, name: vat_code, widget: string }
+          - { label: Darbo laikas (LT), name: working_hours_lt, widget: string }
+          - { label: Darbo laikas (EN), name: working_hours_en, widget: string }
+          - { label: Žemėlapio nuoroda, name: map_url, widget: string, required: false }
+          - { label: LinkedIn, name: linkedin, widget: string, required: false }
+          - { label: Facebook, name: facebook, widget: string, required: false }
+          - { label: "Dalinimosi paveikslėlis (1200×630)", name: og_image, widget: image, required: false }
+          - label: SEO
+            name: seo
+            widget: object
+            fields:
+              - label: Lietuvių
+                name: lt
+                widget: object
+                fields:
+                  - { label: Numatytasis pavadinimas, name: default_title, widget: string }
+                  - { label: Numatytasis aprašymas, name: default_description, widget: text }
+                  - { label: Raktiniai žodžiai (kableliais), name: keywords, widget: text, required: false }
+              - label: English
+                name: en
+                widget: object
+                fields:
+                  - { label: Default title, name: default_title, widget: string }
+                  - { label: Default description, name: default_description, widget: text }
+                  - { label: Keywords (comma separated), name: keywords, widget: text, required: false }
+
+      - name: home
+        label: Pradinis puslapis
+        file: src/data/home.json
+        fields:
+          - label: Lietuvių
+            name: lt
+            widget: object
+            fields: &homefields
+              - { label: Antraštės virš tekstas, name: hero_eyebrow, widget: string }
+              - { label: Pagrindinė antraštė (H1), name: hero_title, widget: string }
+              - { label: Įžangos tekstas, name: hero_text, widget: text }
+              - { label: Pagrindinis mygtukas, name: hero_cta, widget: string }
+              - { label: Antrinis mygtukas, name: hero_cta_secondary, widget: string }
+              - { label: Paslaugų sekcijos pavadinimas, name: services_title, widget: string }
+              - { label: Paslaugų sekcijos tekstas, name: services_text, widget: text }
+              - { label: Sprendimų sekcijos pavadinimas, name: solutions_title, widget: string }
+              - { label: Sprendimų sekcijos tekstas, name: solutions_text, widget: text }
+              - label: Skaičiai
+                name: stats
+                widget: list
+                fields:
+                  - { label: Reikšmė, name: value, widget: string }
+                  - { label: Aprašymas, name: label, widget: string }
+              - { label: "„Kodėl mes“ pavadinimas", name: why_title, widget: string }
+              - label: "„Kodėl mes“ punktai"
+                name: why_items
+                widget: list
+                fields:
+                  - { label: Pavadinimas, name: title, widget: string }
+                  - { label: Tekstas, name: text, widget: text }
+              - { label: Kvietimo pavadinimas, name: cta_title, widget: string }
+              - { label: Kvietimo tekstas, name: cta_text, widget: text }
+              - { label: Kvietimo mygtukas, name: cta_button, widget: string }
+          - label: English
+            name: en
+            widget: object
+            fields: *homefields

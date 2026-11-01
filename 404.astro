@@ -1,0 +1,15 @@
+---
+import Base from '../layouts/Base.astro';
+import { routes, t } from '../i18n/ui';
+const tr = t('lt'); const en = t('en');
+---
+<Base lang="lt" title={tr('404.title')} alternates={{ lt: '/', en: '/en/' }} noindex>
+  <section class="section center">
+    <div class="container">
+      <p class="eyebrow">404</p>
+      <h1>{tr('404.title')}</h1>
+      <p>{tr('404.text')} <span lang="en">/ {en('404.text')}</span></p>
+      <a class="btn btn--primary" href={routes.home.lt}>{tr('thanks.back')}</a>
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,42 @@
+---
+import Logo from './Logo.astro';
+import settings from '../data/settings.json';
+import { routes, t, type Lang } from '../i18n/ui';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const tr = t(lang);
+const year = new Date().getFullYear();
+---
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <Logo href={routes.home[lang]} variant="light" />
+        <p>{settings.seo[lang].default_description}</p>
+      </div>
+      <div>
+        <h2>{tr('footer.nav')}</h2>
+        <ul>
+          <li><a href={routes.services[lang]}>{tr('nav.services')}</a></li>
+          <li><a href={routes.solutions[lang]}>{tr('nav.solutions')}</a></li>
+          <li><a href={routes.about[lang]}>{tr('nav.about')}</a></li>
+          <li><a href={routes.contact[lang]}>{tr('nav.contact')}</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>{tr('footer.contacts')}</h2>
+        <ul>
+          <li><a href={`mailto:${settings.email}`}>{settings.email}</a></li>
+          <li><a href={`tel:${settings.phone.replace(/\s/g, '')}`}>{settings.phone}</a></li>
+          <li>{settings.address}</li>
+          {settings.linkedin && <li><a href={settings.linkedin} rel="noopener noreferrer" target="_blank">LinkedIn</a></li>}
+          {settings.facebook && <li><a href={settings.facebook} rel="noopener noreferrer" target="_blank">Facebook</a></li>}
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© {year} {settings.company_name}. {tr('footer.rights')}</span>
+      <a href={routes.privacy[lang]}>{tr('footer.privacy')}</a>
+    </div>
+  </div>
+</footer>

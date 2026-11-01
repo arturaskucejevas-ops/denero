@@ -1,0 +1,74 @@
+---
+import Base from '../layouts/Base.astro';
+import OfferingCard from '../components/OfferingCard.astro';
+import CtaBand from '../components/CtaBand.astro';
+import home from '../data/home.json';
+import { routes, t, alt, detailPath, type Lang } from '../i18n/ui';
+import { getOfferings, slugOf } from '../i18n/content';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const h = home[lang];
+const tr = t(lang);
+const services = await getOfferings('services', lang);
+const solutions = await getOfferings('solutions', lang);
+---
+<Base lang={lang} alternates={alt('home')}>
+  <section class="hero">
+    <div class="container">
+      <span class="eyebrow">{h.hero_eyebrow}</span>
+      <h1>{h.hero_title}</h1>
+      <p>{h.hero_text}</p>
+      <div class="hero-actions">
+        <a class="btn btn--primary" href={routes.contact[lang]}>{h.hero_cta}</a>
+        <a class="btn btn--ghost" href={routes.services[lang]}>{h.hero_cta_secondary}</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="stats">
+      {h.stats.map((s) => <div class="stat"><strong>{s.value}</strong><span>{s.label}</span></div>)}
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>{h.services_title}</h2>
+        <p>{h.services_text}</p>
+      </div>
+      <div class="grid">
+        {services.map((s) => (
+          <OfferingCard title={s.data.title} summary={s.data.summary} icon={s.data.icon}
+            href={detailPath('services', lang, slugOf(s.id))} more={tr('common.more')} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--soft">
+    <div class="container">
+      <div class="section-head">
+        <h2>{h.solutions_title}</h2>
+        <p>{h.solutions_text}</p>
+      </div>
+      <div class="grid">
+        {solutions.map((s) => (
+          <OfferingCard title={s.data.title} summary={s.data.summary} icon={s.data.icon}
+            href={detailPath('solutions', lang, slugOf(s.id))} more={tr('common.more')} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head"><h2>{h.why_title}</h2></div>
+      <div class="why">
+        {h.why_items.map((w) => <div class="why-item"><h3>{w.title}</h3><p>{w.text}</p></div>)}
+      </div>
+    </div>
+  </section>
+
+  <CtaBand lang={lang} />
+</Base>
