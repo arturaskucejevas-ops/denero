@@ -1,0 +1,18 @@
+---
+import { getCollection } from 'astro:content';
+import V from '../../views/OfferingDetail.astro';
+import { slugOf } from '../../i18n/content';
+
+export async function getStaticPaths() {
+  const all = await getCollection('solutions', (e) => !e.data.draft);
+  const other = 'lt' === 'lt' ? 'en' : 'lt';
+  return all
+    .filter((e) => e.id.startsWith('lt/'))
+    .map((entry) => ({
+      params: { slug: slugOf(entry.id) },
+      props: { entry, hasTranslation: all.some((e) => e.id === `${other}/${slugOf(entry.id)}`) },
+    }));
+}
+const { entry, hasTranslation } = Astro.props;
+---
+<V lang="lt" kind="solutions" entry={entry} hasTranslation={hasTranslation} />

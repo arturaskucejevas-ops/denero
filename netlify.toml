@@ -1,0 +1,12 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# Senų/neteisingų adresų nukreipimai, pvz.:
+# [[redirects]]
+#   from = "/lt/*"
+#   to = "/:splat"
+#   status = 301

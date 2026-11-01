@@ -1,0 +1,54 @@
+{
+  "lt": {
+    "hero_eyebrow": "Patikimas partneris jūsų verslui",
+    "hero_title": "Šiuolaikiniai sprendimai, kurie padeda verslui augti",
+    "hero_text": "Padedame įmonėms efektyviai valdyti procesus, užtikrinti saugumą ir diegti technologijas, kurios kuria realią vertę.",
+    "hero_cta": "Susisiekti",
+    "hero_cta_secondary": "Mūsų paslaugos",
+    "services_title": "Paslaugos",
+    "services_text": "Visapusiškos paslaugos – nuo konsultacijos iki įgyvendinimo ir palaikymo.",
+    "solutions_title": "Sprendimai",
+    "solutions_text": "Paruošti, išbandyti sprendimai, pritaikomi jūsų organizacijos poreikiams.",
+    "stats": [
+      { "value": "15+", "label": "metų patirtis" },
+      { "value": "250+", "label": "įgyvendintų projektų" },
+      { "value": "98%", "label": "patenkintų klientų" },
+      { "value": "24/7", "label": "palaikymas" }
+    ],
+    "why_title": "Kodėl verta rinktis mus",
+    "why_items": [
+      { "title": "Patirtis", "text": "Kvalifikuota komanda su ilgamete patirtimi įvairiuose sektoriuose." },
+      { "title": "Saugumas", "text": "Saugumo ir duomenų apsaugos principai taikomi kiekviename etape." },
+      { "title": "Rezultatas", "text": "Aiškūs tikslai, skaidrus procesas ir išmatuojami rezultatai." }
+    ],
+    "cta_title": "Pasiruošę pradėti?",
+    "cta_text": "Papasakokite apie savo poreikius – pasiūlysime tinkamiausią sprendimą.",
+    "cta_button": "Gauti pasiūlymą"
+  },
+  "en": {
+    "hero_eyebrow": "A trusted partner for your business",
+    "hero_title": "Modern solutions that help your business grow",
+    "hero_text": "We help organisations run efficient processes, stay secure and adopt technology that creates real value.",
+    "hero_cta": "Contact us",
+    "hero_cta_secondary": "Our services",
+    "services_title": "Services",
+    "services_text": "End-to-end services – from consulting to implementation and ongoing support.",
+    "solutions_title": "Solutions",
+    "solutions_text": "Proven, ready-to-use solutions tailored to the needs of your organisation.",
+    "stats": [
+      { "value": "15+", "label": "years of experience" },
+      { "value": "250+", "label": "projects delivered" },
+      { "value": "98%", "label": "satisfied clients" },
+      { "value": "24/7", "label": "support" }
+    ],
+    "why_title": "Why choose us",
+    "why_items": [
+      { "title": "Experience", "text": "A qualified team with years of experience across many sectors." },
+      { "title": "Security", "text": "Security and data protection principles applied at every stage." },
+      { "title": "Results", "text": "Clear goals, a transparent process and measurable outcomes." }
+    ],
+    "cta_title": "Ready to start?",
+    "cta_text": "Tell us about your needs and we will propose the best-fitting solution.",
+    "cta_button": "Request a proposal"
+  }
+}
