@@ -2,7 +2,7 @@
 # Prisijungimas per GitHub (redaguoti gali tik saugyklos nariai; įjunkite 2FA).
 backend:
   name: github
-  repo: OWNER/REPO          # TODO: pvz. imone/svetaine
+  repo: arturaskucejevas-ops/denero        # TODO: pvz. imone/svetaine
   branch: main
   # base_url: https://api.netlify.com   # Netlify OAuth tarpininkas (numatytas)
 
