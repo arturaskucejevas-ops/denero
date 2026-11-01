@@ -10,6 +10,7 @@ const offering = z.object({
   seo_title: z.string().optional(),
   seo_description: z.string().optional(),
   draft: z.boolean().default(false),
+  faq: z.array(z.object({ question: z.string(), answer: z.string() })).default([]),
 });
 
 const services = defineCollection({

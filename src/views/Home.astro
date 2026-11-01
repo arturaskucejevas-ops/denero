@@ -34,7 +34,7 @@ const solutions = await getOfferings('solutions', lang);
   <section class="section">
     <div class="container">
       <div class="section-head">
-        <h2>{h.services_title}</h2>
+        <h2>{h.services_heading || h.services_title}</h2>
         <p>{h.services_text}</p>
       </div>
       <div class="grid">
@@ -61,7 +61,19 @@ const solutions = await getOfferings('solutions', lang);
     </div>
   </section>
 
-  <section class="section">
+  {h.tech_items?.length > 0 && (
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>{h.tech_title}</h2>
+          <p>{h.tech_text}</p>
+        </div>
+        <ul class="chips">{h.tech_items.map((t) => <li>{t}</li>)}</ul>
+      </div>
+    </section>
+  )}
+
+  <section class="section section--soft">
     <div class="container">
       <div class="section-head"><h2>{h.why_title}</h2></div>
       <div class="why">

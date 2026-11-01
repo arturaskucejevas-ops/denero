@@ -3,7 +3,8 @@ import { render } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import home from '../data/home.json';
 import { routes, t, detailPath, type Lang } from '../i18n/ui';
-import { slugOf } from '../i18n/content';
+import { slugOf, getOfferings } from '../i18n/content';
+import settings from '../data/settings.json';
 interface Props { lang: Lang; kind: 'services' | 'solutions'; entry: any; hasTranslation: boolean }
 const { lang, kind, entry, hasTranslation } = Astro.props;
 const tr = t(lang);
@@ -25,10 +26,22 @@ const crumbs = {
     { '@type': 'ListItem', position: 3, name: d.title },
   ],
 };
-const serviceLd = { '@context': 'https://schema.org', '@type': 'Service', name: d.title, description: d.summary, areaServed: 'LT' };
+const pageUrl = new URL(detailPath(kind, lang, slug), site).href;
+const serviceLd = {
+  '@context': 'https://schema.org', '@type': 'Service',
+  name: d.title, description: d.seo_description || d.summary, url: pageUrl,
+  serviceType: d.title, areaServed: { '@type': 'Country', name: 'Lithuania' },
+  provider: { '@type': 'Organization', name: settings.company_name, url: site.href },
+};
+const faq: { question: string; answer: string }[] = d.faq ?? [];
+const faqLd = faq.length ? [{
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map((f) => ({ '@type': 'Question', name: f.question, acceptedAnswer: { '@type': 'Answer', text: f.answer } })),
+}] : [];
+const related = (await getOfferings(kind, lang)).filter((e) => e.id !== entry.id);
 const benefits: string[] = d.benefits ?? [];
 ---
-<Base lang={lang} title={d.seo_title || d.title} description={d.seo_description || d.summary} alternates={alternates} jsonLd={[crumbs, serviceLd]}>
+<Base lang={lang} title={d.seo_title || d.title} description={d.seo_description || d.summary} alternates={alternates} jsonLd={[crumbs, serviceLd, ...faqLd]}>
   <section class="hero page-hero">
     <div class="container">
       <nav class="breadcrumbs" aria-label="Breadcrumb">
@@ -40,12 +53,26 @@ const benefits: string[] = d.benefits ?? [];
   </section>
   <section class="section">
     <div class="container detail">
-      <article class="prose"><Content /></article>
+      <div>
+        <article class="prose"><Content /></article>
+        {faq.length > 0 && (
+          <section class="faq" aria-labelledby="faq-title">
+            <h2 id="faq-title">{tr('common.faq')}</h2>
+            {faq.map((f) => <details><summary>{f.question}</summary><p>{f.answer}</p></details>)}
+          </section>
+        )}
+      </div>
       <aside class="aside-box">
         {benefits.length > 0 && <><h3>{tr('common.benefits')}</h3><ul>{benefits.map((b) => <li>{b}</li>)}</ul></>}
         <h3>{tr('common.interested')}</h3>
         <p>{tr('common.interested_text')}</p>
         <a class="btn btn--primary" href={routes.contact[lang]}>{tr('nav.contact')}</a>
+        {related.length > 0 && (
+          <nav class="related" aria-label={kind === 'services' ? tr('common.other_services') : tr('common.other_solutions')}>
+            <h3>{kind === 'services' ? tr('common.other_services') : tr('common.other_solutions')}</h3>
+            <ul>{related.map((r) => <li><a href={detailPath(kind, lang, slugOf(r.id))}>{r.data.title}</a></li>)}</ul>
+          </nav>
+        )}
       </aside>
     </div>
   </section>

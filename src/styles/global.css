@@ -172,3 +172,30 @@ textarea { min-height: 150px; resize: vertical; }
 .center { text-align: center; }
 .mt-lg { margin-top: 40px; }
 .section--flush { padding-top: 0; }
+.section--soft + .section--flush { padding-top: clamp(56px, 8vw, 96px); }
+
+/* Technologijų žymos */
+.chips { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.chips li { border: 1px solid var(--line); background: #fff; border-radius: 999px; padding: 8px 16px; font-size: .95rem; font-weight: 500; color: var(--ink); }
+.chips li:nth-child(-n+3) { border-color: var(--gold-500); background: var(--gold-50); }
+
+/* DUK */
+.faq { margin-top: 48px; max-width: 760px; }
+.faq h2 { font-size: 1.6rem; }
+.faq details { border: 1px solid var(--line); border-radius: var(--radius); padding: 0 20px; margin-bottom: 12px; background: #fff; }
+.faq details[open] { border-color: var(--gold-500); }
+.faq summary { cursor: pointer; font-weight: 600; padding: 16px 0; color: var(--dark-900); list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: '+'; color: var(--gold-700); font-size: 1.3rem; line-height: 1; }
+.faq details[open] summary::after { content: '−'; }
+.faq details p { color: var(--muted); margin: 0 0 16px; }
+
+/* Susijusios paslaugos */
+.related { margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--line); }
+.related ul li { padding-left: 0; }
+.related ul li::before { content: none; }
+.related a { text-decoration: none; font-weight: 500; }
+.related a:hover { text-decoration: underline; }
+.prose ol { padding-left: 1.3em; }
+/* 4 kortelės – rodomos 2×2, kad neliktų vienos eilutėje */
+.grid:has(> :nth-child(4):last-child) { grid-template-columns: repeat(auto-fill, minmax(min(100%, 440px), 1fr)); }

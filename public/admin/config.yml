@@ -63,6 +63,15 @@ collections:
       - { label: Eiliškumas, name: order, widget: number, value_type: int, default: 10, i18n: duplicate }
       - { label: Juodraštis (nerodyti), name: draft, widget: boolean, default: false, i18n: duplicate }
       - { label: Turinys, name: body, widget: markdown, i18n: true, buttons: [bold, italic, link, heading-two, heading-three, bulleted-list, numbered-list, quote] }
+      - label: "DUK (dažniausi klausimai)"
+        name: faq
+        widget: list
+        i18n: true
+        required: false
+        hint: "Klausimai ir atsakymai rodomi puslapyje ir Google paieškos rezultatuose."
+        fields:
+          - { label: Klausimas, name: question, widget: string }
+          - { label: Atsakymas, name: answer, widget: text }
       - { label: "SEO pavadinimas (neprivaloma)", name: seo_title, widget: string, required: false, i18n: true, hint: "Rodomas Google paieškoje. Iki ~60 simbolių." }
       - { label: "SEO aprašymas (neprivaloma)", name: seo_description, widget: text, required: false, i18n: true, hint: "Iki ~155 simbolių." }
 
@@ -124,6 +133,7 @@ collections:
           - { label: LinkedIn, name: linkedin, widget: string, required: false }
           - { label: Facebook, name: facebook, widget: string, required: false }
           - { label: "Dalinimosi paveikslėlis (1200×630)", name: og_image, widget: image, required: false }
+          - { label: "Google Search Console patvirtinimo kodas", name: google_site_verification, widget: string, required: false, hint: "Tik content=\"...\" reikšmė iš Google meta žymos." }
           - label: SEO
             name: seo
             widget: object
@@ -156,7 +166,8 @@ collections:
               - { label: Įžangos tekstas, name: hero_text, widget: text }
               - { label: Pagrindinis mygtukas, name: hero_cta, widget: string }
               - { label: Antrinis mygtukas, name: hero_cta_secondary, widget: string }
-              - { label: Paslaugų sekcijos pavadinimas, name: services_title, widget: string }
+              - { label: "Paslaugų pavadinimas (meniu, kelias)", name: services_title, widget: string }
+              - { label: "Paslaugų antraštė (H1/H2 – su raktiniais žodžiais)", name: services_heading, widget: string, required: false }
               - { label: Paslaugų sekcijos tekstas, name: services_text, widget: text }
               - { label: Sprendimų sekcijos pavadinimas, name: solutions_title, widget: string }
               - { label: Sprendimų sekcijos tekstas, name: solutions_text, widget: text }
@@ -166,6 +177,9 @@ collections:
                 fields:
                   - { label: Reikšmė, name: value, widget: string }
                   - { label: Aprašymas, name: label, widget: string }
+              - { label: Technologijų sekcijos pavadinimas, name: tech_title, widget: string, required: false }
+              - { label: Technologijų sekcijos tekstas, name: tech_text, widget: text, required: false }
+              - { label: Technologijos, name: tech_items, widget: list, required: false, field: { label: Technologija, name: item, widget: string } }
               - { label: "„Kodėl mes“ pavadinimas", name: why_title, widget: string }
               - label: "„Kodėl mes“ punktai"
                 name: why_items

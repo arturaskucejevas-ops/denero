@@ -10,3 +10,37 @@
 #   from = "/lt/*"
 #   to = "/:splat"
 #   status = 301
+
+# Seni paslaugų adresai → nauji (išsaugo paieškos reitingą)
+[[redirects]]
+  from = "/paslaugos/it-palaikymas/"
+  to = "/paslaugos/dynamics-nav-business-central/"
+  status = 301
+[[redirects]]
+  from = "/en/services/it-palaikymas/"
+  to = "/en/services/dynamics-nav-business-central/"
+  status = 301
+[[redirects]]
+  from = "/paslaugos/kibernetinis-saugumas/"
+  to = "/paslaugos/power-apps-power-bi/"
+  status = 301
+[[redirects]]
+  from = "/en/services/kibernetinis-saugumas/"
+  to = "/en/services/power-apps-power-bi/"
+  status = 301
+[[redirects]]
+  from = "/paslaugos/konsultacijos/"
+  to = "/paslaugos/erp-integracijos/"
+  status = 301
+[[redirects]]
+  from = "/en/services/konsultacijos/"
+  to = "/en/services/erp-integracijos/"
+  status = 301
+[[redirects]]
+  from = "/paslaugos/web-crm-sistem%C5%B3-k%C5%ABrimas-ir-pritaikymas/"
+  to = "/paslaugos/web-crm-kurimas/"
+  status = 301
+[[redirects]]
+  from = "/en/services/web-crm-sistem%C5%B3-k%C5%ABrimas-ir-pritaikymas/"
+  to = "/en/services/web-crm-kurimas/"
+  status = 301

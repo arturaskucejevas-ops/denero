@@ -26,9 +26,14 @@ const locale = lang === 'lt' ? 'lt_LT' : 'en_GB';
 
 const org = {
   '@context': 'https://schema.org',
-  '@type': 'Organization',
+  '@type': 'ProfessionalService',
+  '@id': new URL('/#organization', site).href,
   name: settings.company_name,
+  description: settings.seo[lang].default_description,
   url: site.href,
+  image: ogImage,
+  areaServed: { '@type': 'Country', name: 'Lithuania' },
+  knowsAbout: ['Microsoft Dynamics NAV', 'Microsoft Dynamics 365 Business Central', 'ERP', 'Power BI', 'Power Apps', 'Power Automate', 'Power Pages', 'Dynamics 365 CRM', 'EDI', 'SEPA', 'SQL Server', 'System integration'],
   email: settings.email,
   telephone: settings.phone,
   address: { '@type': 'PostalAddress', streetAddress: settings.address, addressCountry: 'LT' },
@@ -46,6 +51,7 @@ const ld = [org, ...jsonLd];
   <title>{fullTitle}</title>
   <meta name="description" content={desc} />
   {kw && <meta name="keywords" content={kw} />}
+  {settings.google_site_verification && <meta name="google-site-verification" content={settings.google_site_verification} />}
   <meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large'} />
   <link rel="canonical" href={canonical} />
   <link rel="alternate" hreflang="lt" href={new URL(alternates.lt, site).href} />

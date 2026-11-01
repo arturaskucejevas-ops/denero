@@ -15,15 +15,16 @@
   "facebook": "",
   "seo": {
     "lt": {
-      "default_title": "Profesionalūs verslo sprendimai ir paslaugos",
-      "default_description": "Teikiame patikimas verslo paslaugas ir sprendimus įmonėms Lietuvoje. Susisiekite ir gaukite individualų pasiūlymą.",
-      "keywords": ""
+      "default_title": "Dynamics NAV ir Business Central konsultacijos",
+      "default_description": "Microsoft Dynamics NAV ir Business Central konsultacijos, diegimas, programavimas ir priežiūra. Power BI, Power Apps, integracijos (API, EDI, SEPA), CRM.",
+      "keywords": "Microsoft Dynamics NAV, Dynamics 365 Business Central, Business Central konsultacijos, Business Central diegimas, Business Central programavimas, NAV programavimas, NAV priežiūra, NAV perkėlimas į Business Central, ERP sistema, ERP konsultacijos, AL programavimas, C/AL, Power BI ataskaitos, Power Apps, Power Automate, sistemų integracijos, EDI integracija, SEPA, REST API, CRM sistemų kūrimas, Dynamics 365 CRM, Power Pages, svetainių kūrimas, Lietuva, Vilnius"
     },
     "en": {
-      "default_title": "Professional business services and solutions",
-      "default_description": "We deliver reliable business services and solutions for companies in Lithuania and the Baltics. Contact us for a tailored proposal.",
-      "keywords": ""
+      "default_title": "Dynamics NAV & Business Central Consulting",
+      "default_description": "Microsoft Dynamics NAV and Business Central consulting, implementation, development and support. Power BI, Power Apps, integrations (API, EDI, SEPA), CRM.",
+      "keywords": "Microsoft Dynamics NAV, Dynamics 365 Business Central, Business Central consulting, Business Central implementation, Business Central development, NAV development, NAV support, NAV to Business Central upgrade, ERP consulting, AL development, Power BI reports, Power Apps, Power Automate, system integration, EDI integration, SEPA, CRM development, Dynamics 365 CRM, Power Pages, Lithuania"
     }
   },
-  "og_image": "/og-image.png"
+  "og_image": "/og-image.png",
+  "google_site_verification": ""
 }
