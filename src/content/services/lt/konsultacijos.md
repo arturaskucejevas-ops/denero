@@ -5,7 +5,7 @@ summary: Kuriame individualius verslo poreikius atitinkančius sprendimus ir
   procesų automatizavimą ir efektyvų sistemų veikimą.
 icon: cog
 order: 1
-draft: true
+draft: false
 ---
 ## Su kuo dirbame
 
