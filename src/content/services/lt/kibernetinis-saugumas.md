@@ -1,14 +1,22 @@
 ---
-title: Kibernetinis saugumas
-summary: Apsaugome jūsų sistemas ir duomenis – nuo rizikos vertinimo iki nuolatinės stebėsenos.
-icon: shield
+title: App kūrimas ir analitika
+summary: Kuriame individualias verslo ir mobiliąsias programėles, diegiame
+  duomenų analitikos sprendimus bei interaktyvias ataskaitas. Integruojame
+  skirtingus duomenų šaltinius, automatizuojame duomenų apdorojimą ir padedame
+  verslui priimti duomenimis pagrįstus sprendimus.
+icon: cloud
 order: 2
+draft: false
 ---
-## Saugumas – nuo pagrindų
+**Naudojamos technologijos:**
 
-Padedame atitikti NIS2, BDAR ir kitus reikalavimus bei sumažinti incidentų riziką.
-
-- Saugumo auditas ir skverbties testai
-- Saugumo politikų rengimas
-- Darbuotojų mokymai
-- Incidentų valdymas
+* Microsoft Power Apps
+* Microsoft Power BI
+* Microsoft Power Automate
+* Microsoft SQL Server
+* .NET / C#
+* JavaScript / TypeScript
+* React
+* REST API / Web Services
+* Azure Cloud
+* Excel / VBA

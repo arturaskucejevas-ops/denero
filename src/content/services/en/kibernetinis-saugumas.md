@@ -1,14 +1,22 @@
 ---
-title: Cybersecurity
-summary: We protect your systems and data – from risk assessment to continuous monitoring.
-icon: shield
+title: App Development & Analytics
+summary: We develop custom business and mobile applications, implement data
+  analytics solutions and create interactive reports. We integrate multiple data
+  sources, automate data processing and help businesses make data-driven
+  decisions.
+icon: cloud
 order: 2
+draft: false
 ---
-## Security from the ground up
+**Technologies:**
 
-We help you comply with NIS2, GDPR and other requirements while reducing the risk of incidents.
-
-- Security audits and penetration testing
-- Security policy development
-- Staff awareness training
-- Incident response
+* Microsoft Power Apps
+* Microsoft Power BI
+* Microsoft Power Automate
+* Microsoft SQL Server
+* .NET / C#
+* JavaScript / TypeScript
+* React
+* REST API / Web Services
+* Azure Cloud
+* Excel / VBA
