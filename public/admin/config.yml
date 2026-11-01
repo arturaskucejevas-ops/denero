@@ -2,7 +2,7 @@
 # Prisijungimas per GitHub (redaguoti gali tik saugyklos nariai; įjunkite 2FA).
 backend:
   name: github
-  repo: arturaskucejevas-ops/denero        # TODO: pvz. imone/svetaine
+  repo: arturaskucejevas-ops/denero
   branch: main
   # base_url: https://api.netlify.com   # Netlify OAuth tarpininkas (numatytas)
 
@@ -13,12 +13,17 @@ local_backend: true
 publish_mode: editorial_workflow
 
 locale: lt
-site_url: https://www.pavyzdys.lt
-display_url: https://www.pavyzdys.lt
+site_url: https://denero-web.netlify.app
+display_url: https://denero-web.netlify.app
 logo_url: /brand/denero-logo.svg
 
 media_folder: public/uploads
 public_folder: /uploads
+
+# Adresai be lietuviškų raidžių (pvz. web-crm-sistemu-kurimas)
+slug:
+  encoding: ascii
+  clean_accents: true
 
 i18n:
   structure: multiple_folders

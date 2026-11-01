@@ -3,7 +3,7 @@ import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 
 // TODO: pakeiskite į tikrąjį domeną (svarbu SEO: canonical, hreflang, sitemap)
-const SITE = 'https://www.pavyzdys.lt';
+const SITE = 'https://denero-web.netlify.app';
 
 export default defineConfig({
   site: SITE,
