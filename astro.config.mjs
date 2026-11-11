@@ -15,7 +15,7 @@ export default defineConfig({
   },
   integrations: [
     sitemap({
-      filter: (page) => !page.includes('/admin') && !page.includes('/aciu') && !page.includes('/thank-you')
+      filter: (page) => !page.includes('/aciu') && !page.includes('/thank-you')
     }),
   ],
 });

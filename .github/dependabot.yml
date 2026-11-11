@@ -1,0 +1,16 @@
+# Automatiniai saugumo atnaujinimai: GitHub kas savaitę patikrina priklausomybes
+# ir sukuria Pull Request, jei randama pažeidžiamumų ar naujų versijų.
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    groups:
+      astro:
+        patterns: ["astro", "@astrojs/*"]
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly

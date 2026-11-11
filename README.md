@@ -1,61 +1,45 @@
-# Įmonės svetainė (LT / EN) su turinio valdymu
+# Denero svetainė (LT / EN)
 
-**Technologijos:** [Astro](https://astro.build) (statinė svetainė) + [Decap CMS](https://decapcms.org) (turinio valdymas per `/admin/`).
+Statinė svetainė, sukurta su [Astro](https://astro.build). Talpinama Netlify: https://denero-web.netlify.app
 
-## Kodėl toks sprendimas (saugumas)
-- **Statinė svetainė** – serveryje nėra duomenų bazės, PHP ar administravimo sąsajos, kurią būtų galima nulaužti (nėra SQL injekcijų, įskiepių spragų ir pan.).
-- **Administravimas per GitHub prisijungimą** – redaguoti gali tik saugyklos nariai; rekomenduojama privaloma 2FA.
-- **Redakcinis procesas** – pakeitimai pirmiausia tampa juodraščiu, publikuojami tik patvirtinus. Visa pakeitimų istorija saugoma Git (galima bet kada atstatyti).
-- **Griežta CSP** (Content-Security-Policy) – leidžiami tik pačios svetainės skriptai/stiliai, jokių inline skriptų, jokių trečiųjų šalių CDN (net šriftai ir CMS talpinami pačioje svetainėje).
-- **Saugumo antraštės** (`public/_headers`): HSTS, X-Frame-Options, nosniff, Referrer-Policy, Permissions-Policy, COOP/CORP.
-- **Kontaktų forma** – Netlify Forms su „honeypot“ apsauga nuo šlamšto, BDAR sutikimas, laukų ilgio apribojimai.
-- Jokių sekimo slapukų → nereikia slapukų juostos.
-- `/.well-known/security.txt`, `/admin/` uždarytas paieškos sistemoms.
+## Saugumas
+Svetainėje **nėra jokios serverio programos, duomenų bazės ar administravimo sąsajos** – tik iš anksto sugeneruoti HTML, CSS ir paveikslėlių failai. Todėl nėra ką „nulaužti“: nėra slaptažodžių, prisijungimo formų, SQL ar įskiepių.
 
-## SEO
-- Lokalizuoti URL: `/paslaugos/…` (LT, pagrindinė kalba) ir `/en/services/…` (EN).
-- `hreflang` nuorodos tarp kalbų, `canonical`, Open Graph, `sitemap-index.xml`, `robots.txt`.
-- Struktūrizuoti duomenys (JSON-LD): Organization, Service, BreadcrumbList, ItemList.
-- Kiekvienam puslapiui CMS'e galima nurodyti SEO pavadinimą ir aprašymą; raktiniai žodžiai – **Nustatymai → Įmonės duomenys ir SEO**.
-- Labai greitas įkėlimas (be JS karkaso) – teigiamai vertinama Google (Core Web Vitals).
+Papildomos apsaugos priemonės:
 
-## Struktūra
+| Priemonė | Ką apsaugo |
+|---|---|
+| HTTPS + HSTS (preload) | Ryšys visada šifruojamas, negalima perimti ar pakeisti turinio |
+| Griežta CSP (Content-Security-Policy) | Vykdomi tik pačios svetainės skriptai; XSS, svetimų skriptų ar reklamų įterpimas neįmanomas |
+| Trusted Types | Papildoma apsauga nuo DOM XSS |
+| X-Frame-Options / frame-ancestors | Svetainės negalima įterpti į svetimą puslapį (clickjacking) |
+| COOP / COEP / CORP | Izoliacija nuo kitų svetainių (Spectre tipo atakos, resursų vagystė) |
+| Permissions-Policy | Išjungta kamera, mikrofonas, vieta, mokėjimai ir kt. naršyklės funkcijos |
+| nosniff, Referrer-Policy | Failų tipo klastojimas, informacijos nutekėjimas per nuorodas |
+| Visi resursai talpinami pačioje svetainėje | Jokių trečiųjų šalių CDN, šriftų ar sekimo skriptų |
+| Kontaktų forma (Netlify Forms) | Šlamšto filtras + „honeypot“, laukų ilgio apribojimai, BDAR sutikimas |
+| Be slapukų | Nereikia slapukų juostos, nerenkami asmens duomenys |
+| Dependabot | GitHub automatiškai praneša apie pažeidžiamas priklausomybes |
+| `/.well-known/security.txt` | Kontaktas saugumo spragoms pranešti |
+
+Antraštės aprašytos `public/_headers`. Patikrinti galima: https://securityheaders.com ir https://observatory.mozilla.org
+
+## Tekstų keitimas
+Tekstai saugomi failuose:
 ```
 src/content/services/{lt,en}/*.md   – Paslaugos
 src/content/solutions/{lt,en}/*.md  – Sprendimai
 src/content/pages/{lt,en}/*.md      – Apie mus, Privatumo politika
-src/data/settings.json              – Įmonės kontaktai, rekvizitai, SEO
-src/data/home.json                  – Pradinio puslapio tekstai (LT/EN)
-src/i18n/ui.ts                      – Sąsajos tekstai ir URL maršrutai
-public/admin/config.yml             – CMS konfigūracija
-public/_headers                     – Saugumo antraštės
+src/data/settings.json              – Kontaktai, rekvizitai, SEO
+src/data/home.json                  – Pradinio puslapio tekstai
+src/i18n/ui.ts                      – Meniu, mygtukai, formos tekstai
 ```
+Mažą pataisymą galima atlikti tiesiai GitHub: atidarykite failą → ✏️ → pakeiskite → **Commit changes**. Po 1–2 min. Netlify atnaujins svetainę.
 
 ## Paleidimas lokaliai
 ```bash
 npm install
-npm run dev          # svetainė: http://localhost:4321
-npm run cms          # kitame terminale – leidžia redaguoti per http://localhost:4321/admin/ be prisijungimo
+npm run dev      # http://localhost:4321
+npm run build    # sugeneruoja dist/
+npm audit        # priklausomybių saugumo patikra
 ```
-
-## Publikavimas (Netlify – rekomenduojama)
-1. Įkelkite projektą į **privačią** GitHub saugyklą.
-2. `public/admin/config.yml` → `repo: OWNER/REPO` pakeiskite į savo saugyklą.
-3. `astro.config.mjs` → `SITE` ir `config.yml` → `site_url` pakeiskite į tikrąjį domeną; atnaujinkite `security.txt`.
-4. Netlify: *Add new site → Import from Git* (build nustatymai paimami iš `netlify.toml`).
-5. GitHub: *Settings → Developer settings → OAuth Apps → New* (callback: `https://api.netlify.com/auth/done`), tada Netlify: *Site configuration → Access & security → OAuth → GitHub* įveskite Client ID/Secret.
-6. Netlify *Forms* → įjunkite el. pašto pranešimus apie naujas užklausas.
-7. Prijunkite domeną, įjunkite HTTPS; pateikite `sitemap-index.xml` Google Search Console.
-
-Galima talpinti ir Cloudflare Pages (antraštės veiks), tačiau kontaktų formai tada reikės kito apdorojimo (pvz. Cloudflare Worker / Turnstile).
-
-## Prieš paleidžiant
-- [ ] Įmonės pavadinimas, logotipas, kontaktai, rekvizitai (CMS → Nustatymai)
-- [ ] Tikrasis paslaugų / sprendimų turinys LT ir EN
-- [ ] Raktiniai žodžiai ir SEO aprašymai
-- [ ] Privatumo politiką peržiūri teisininkas
-- [ ] `og-image.png` (1200×630) su įmonės ženklu
-- [ ] GitHub: 2FA visiems redaktoriams, `main` šakos apsauga
-
-## Priežiūra
-`npm audit --omit=dev` – produkcinės priklausomybės be žinomų pažeidžiamumų. `decap-cms` naudojamas tik administravimo sąsajoje (prieinama tik prisijungusiems redaktoriams); atnaujinkite reguliariai (`npm update`).
