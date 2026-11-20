@@ -1,4 +1,4 @@
 Contact: mailto:info@denero.eu
 Expires: 2027-11-01T00:00:00.000Z
 Preferred-Languages: lt, en
-Canonical: https://denero-web.netlify.app/.well-known/security.txt
+Canonical: https://deneroweb.netlify.app/.well-known/security.txt

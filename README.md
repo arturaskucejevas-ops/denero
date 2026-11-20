@@ -1,6 +1,6 @@
 # Denero svetainė (LT / EN)
 
-Statinė svetainė, sukurta su [Astro](https://astro.build). Talpinama Netlify: https://denero-web.netlify.app
+Statinė svetainė, sukurta su [Astro](https://astro.build). Talpinama Netlify: https://deneroweb.netlify.app
 
 ## Saugumas
 Svetainėje **nėra jokios serverio programos, duomenų bazės ar administravimo sąsajos** – tik iš anksto sugeneruoti HTML, CSS ir paveikslėlių failai. Todėl nėra ką „nulaužti“: nėra slaptažodžių, prisijungimo formų, SQL ar įskiepių.
