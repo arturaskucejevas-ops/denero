@@ -70,3 +70,10 @@
   from = "/en/solutions/procesu-automatizavimas/"
   to = "/en/solutions/"
   status = 301
+
+# Netlify adresas → pagrindinis domenas (kad Google indeksuotų tik denero.eu)
+[[redirects]]
+  from = "https://deneroweb.netlify.app/*"
+  to = "https://denero.eu/:splat"
+  status = 301
+  force = true
