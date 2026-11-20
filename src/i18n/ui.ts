@@ -33,7 +33,7 @@ export const ui = {
     'common.benefits': 'Nauda',
     'common.faq': 'Dažniausiai užduodami klausimai',
     'testimonials.title': 'Klientų atsiliepimai',
-    'testimonials.translated': 'Išversta iš anglų kalbos',
+    'testimonials.translated': 'Išversta iš lietuvių kalbos',
     'common.other_services': 'Kitos paslaugos',
     'common.other_solutions': 'Kiti sprendimai',
     'common.interested': 'Norite sužinoti daugiau?',
