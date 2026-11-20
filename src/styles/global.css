@@ -255,3 +255,4 @@ ol.steps strong { color: var(--dark-900); }
 .inquiry .form-card { color: var(--ink); }
 .inquiry .form-card a { color: var(--gold-700); }
 @media (max-width: 900px) { .inquiry-grid { grid-template-columns: 1fr; } }
+.shot a { display: block; cursor: zoom-in; } .shot a:hover img { border-color: var(--gold-500); }

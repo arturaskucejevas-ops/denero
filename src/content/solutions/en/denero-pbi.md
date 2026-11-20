@@ -28,6 +28,9 @@ gallery:
   - src: /sprendimai/denero-pbi/biudzetas.jpg
     alt: Detailed budget analysis
     caption: Budget execution by selected dimension, line and account.
+  - src: /sprendimai/denero-pbi/pelningumas.jpg
+    alt: Profitability analysis by service and product
+    caption: "Profitability by type, group and product: sales, cost of sales, gross profit and margin."
 highlights_title: Why it's worth it
 highlights:
   - title: Ready out of the box

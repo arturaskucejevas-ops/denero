@@ -28,6 +28,9 @@ gallery:
   - src: /sprendimai/denero-pbi/biudzetas.jpg
     alt: Detali biudžeto analizė
     caption: Biudžeto vykdymas pagal pasirinktą pjūvį, eilutes ir sąskaitas.
+  - src: /sprendimai/denero-pbi/pelningumas.jpg
+    alt: Pelningumo analizė pagal paslaugas ir produktus
+    caption: "Pelningumas pagal tipus, grupes ir produktus: pardavimai, savikaina, bendrasis pelnas ir marža."
 highlights_title: Kodėl verta
 highlights:
   - title: Paruošta iš karto

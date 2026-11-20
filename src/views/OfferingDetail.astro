@@ -90,7 +90,7 @@ const subject = `${lang === 'lt' ? 'Užklausa dėl' : 'Enquiry about'}: ${d.titl
     <section class="section section--tight">
       <div class="container">
         <figure class="shot shot--main">
-          <img src={mainImg.src} alt={mainImg.alt} width="1600" height="900" loading="eager" decoding="async" />
+          <a href={mainImg.src} target="_blank" rel="noopener"><img src={mainImg.src} alt={mainImg.alt} width="1600" height="900" loading="eager" decoding="async" /></a>
           {mainImg.caption && <figcaption>{mainImg.caption}</figcaption>}
         </figure>
       </div>
@@ -142,7 +142,7 @@ const subject = `${lang === 'lt' ? 'Užklausa dėl' : 'Enquiry about'}: ${d.titl
         <div class="shots">
           {moreImgs.map((g: any) => (
             <figure class="shot">
-              <img src={g.src} alt={g.alt} width="1600" height="900" loading="lazy" decoding="async" />
+              <a href={g.src} target="_blank" rel="noopener"><img src={g.src} alt={g.alt} width="1600" height="900" loading="lazy" decoding="async" /></a>
               {g.caption && <figcaption>{g.caption}</figcaption>}
             </figure>
           ))}
