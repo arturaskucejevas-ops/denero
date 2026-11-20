@@ -1,5 +1,6 @@
 import settings from '../data/settings.json';
 import home from '../data/home.json';
+import testimonials from '../data/testimonials.json';
 import { routes, detailPath, type Lang } from './ui';
 import { getOfferings, getPage, slugOf } from './content';
 
@@ -60,6 +61,10 @@ export async function buildLlmsFull(site: URL) {
         for (const f of s.data.faq) out.push(`**${f.question}**`, '', f.answer.replace(/\s+/g, ' '), '');
       }
     }
+  }
+  out.push('# Klientų atsiliepimai / Client testimonials', '');
+  for (const i of testimonials.items) {
+    out.push(`> ${i.quote_lt}`, '', `— ${i.role_lt}, ${i.company}`, '');
   }
   return out.join('\n').replace(/\n{3,}/g, '\n\n') + '\n';
 }

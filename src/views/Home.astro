@@ -2,6 +2,7 @@
 import Base from '../layouts/Base.astro';
 import OfferingCard from '../components/OfferingCard.astro';
 import CtaBand from '../components/CtaBand.astro';
+import Testimonials from '../components/Testimonials.astro';
 import home from '../data/home.json';
 import { routes, t, alt, detailPath, type Lang } from '../i18n/ui';
 import { getOfferings, slugOf } from '../i18n/content';
@@ -81,6 +82,8 @@ const solutions = await getOfferings('solutions', lang);
       </div>
     </div>
   </section>
+
+  <Testimonials lang={lang} />
 
   <CtaBand lang={lang} />
 </Base>

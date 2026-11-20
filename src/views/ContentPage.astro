@@ -2,6 +2,7 @@
 import { render } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import CtaBand from '../components/CtaBand.astro';
+import Testimonials from '../components/Testimonials.astro';
 import { routes, t, alt, type Lang } from '../i18n/ui';
 import { getPage } from '../i18n/content';
 interface Props { lang: Lang; name: 'about' | 'privacy' }
@@ -22,5 +23,6 @@ const d = page.data;
   <section class="section">
     <div class="container"><article class="prose"><Content /></article></div>
   </section>
+  {name === 'about' && <Testimonials lang={lang} soft />}
   {name === 'about' && <CtaBand lang={lang} />}
 </Base>

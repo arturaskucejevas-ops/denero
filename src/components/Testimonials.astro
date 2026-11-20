@@ -1,0 +1,31 @@
+---
+import data from '../data/testimonials.json';
+import { t, type Lang } from '../i18n/ui';
+interface Props { lang: Lang; soft?: boolean }
+const { lang, soft = false } = Astro.props;
+const tr = t(lang);
+const items = data.items.filter((i) => i.quote_lt);
+---
+{items.length > 0 && (
+  <section class={`section ${soft ? 'section--soft' : ''}`} aria-labelledby="testimonials-title">
+    <div class="container">
+      <div class="section-head">
+        <h2 id="testimonials-title">{tr('testimonials.title')}</h2>
+      </div>
+      <div class={`testimonials ${items.length === 1 ? 'testimonials--single' : ''}`}>
+        {items.map((i) => (
+          <figure class="testimonial">
+            <blockquote lang={lang === 'en' && i.quote_en ? 'en' : 'lt'}>
+              <p>{lang === 'en' && i.quote_en ? i.quote_en : i.quote_lt}</p>
+            </blockquote>
+            <figcaption>
+              <strong>{i.company}</strong>
+              <span>{lang === 'en' ? i.role_en : i.role_lt}</span>
+            </figcaption>
+            {lang === 'en' && i.quote_en && <small class="testimonial-note">{tr('testimonials.translated')}</small>}
+          </figure>
+        ))}
+      </div>
+    </div>
+  </section>
+)}
