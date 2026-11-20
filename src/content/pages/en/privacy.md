@@ -10,7 +10,7 @@ DENERO, MB, company code 308191585, A. P. Kavoliuko g. 2A-71, LT-04351 Vilnius, 
 
 ## Data we collect
 
-The name, email address, phone number and message submitted through the contact form – solely to respond to your enquiry.
+The name, company, email address, phone number and message submitted through the contact form – solely to respond to your enquiry. Form data is delivered to our mailbox via the service provider Web3Forms, which does not use it for any other purpose.
 
 ## Cookies
 

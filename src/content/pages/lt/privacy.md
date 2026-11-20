@@ -10,7 +10,7 @@ DENERO, MB, įmonės kodas 308191585, A. P. Kavoliuko g. 2A-71, LT-04351 Vilnius
 
 ## Kokius duomenis renkame
 
-Kontaktų formoje pateiktą vardą, el. pašto adresą, telefono numerį ir žinutės turinį – tik tam, kad galėtume atsakyti į jūsų užklausą.
+Kontaktų formoje pateiktą vardą, įmonės pavadinimą, el. pašto adresą, telefono numerį ir žinutės turinį – tik tam, kad galėtume atsakyti į jūsų užklausą. Formos duomenys į mūsų el. paštą perduodami per paslaugų teikėją „Web3Forms“, kuris jų nenaudoja kitais tikslais.
 
 ## Slapukai
 

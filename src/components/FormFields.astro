@@ -1,0 +1,15 @@
+---
+import { routes, t, type Lang } from '../i18n/ui';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const tr = t(lang);
+---
+  <div class="form-grid">
+    <div><label for="f-name">{tr('form.name')} *</label><input id="f-name" name="name" required maxlength="120" autocomplete="name" /></div>
+    <div><label for="f-company">{tr('form.company')}</label><input id="f-company" name="company" maxlength="120" autocomplete="organization" /></div>
+    <div><label for="f-email">{tr('form.email')} *</label><input id="f-email" name="email" type="email" required maxlength="160" autocomplete="email" /></div>
+    <div><label for="f-phone">{tr('form.phone')}</label><input id="f-phone" name="phone" type="tel" maxlength="40" autocomplete="tel" pattern="[0-9+()\s\-]{6,40}" /></div>
+    <div class="full"><label for="f-msg">{tr('form.message')} *</label><textarea id="f-msg" name="message" required maxlength="4000"></textarea></div>
+    <div class="full"><label class="checkbox"><input type="checkbox" name="consent" required /> <span>{tr('form.consent')} <a href={routes.privacy[lang]}>{tr('form.consent_link')}</a>.</span></label></div>
+    <div class="full"><button class="btn btn--primary" type="submit">{tr('form.submit')}</button></div>
+  </div>

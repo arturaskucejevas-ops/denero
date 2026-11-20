@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import Icon from '../components/Icon.astro';
+import FormFields from '../components/FormFields.astro';
 import settings from '../data/settings.json';
 import { routes, t, alt, type Lang } from '../i18n/ui';
 interface Props { lang: Lang }
@@ -8,6 +9,10 @@ const { lang } = Astro.props;
 const tr = t(lang);
 const hours = lang === 'lt' ? settings.working_hours_lt : settings.working_hours_en;
 const formName = `contact-${lang}`;
+// Web3Forms (nemokamas formų siuntimas į el. paštą). Jei raktas neįrašytas – naudojama Netlify Forms.
+const w3f = settings.web3forms_key;
+const thanksUrl = new URL(routes.thanks[lang], Astro.site).href;
+const subject = lang === 'lt' ? 'Nauja užklausa iš Denero svetainės' : 'New enquiry from Denero website (EN)';
 ---
 <Base lang={lang} title={tr('contact.title')} description={tr('contact.lead')} alternates={alt('contact')}>
   <section class="hero page-hero">
@@ -30,20 +35,23 @@ const formName = `contact-${lang}`;
       </div>
       <div class="form-card">
         <h2>{tr('form.title')}</h2>
-        <!-- Netlify Forms: apsauga nuo šlamšto (honeypot) + serverio pusės apdorojimas be jokio backend kodo -->
+        <!-- Web3Forms (jei įrašytas raktas) arba Netlify Forms; abiem atvejais apsauga nuo šlamšto (honeypot) -->
+        {w3f ? (
+        <form name={formName} method="POST" action="https://api.web3forms.com/submit">
+          <input type="hidden" name="access_key" value={w3f} />
+          <input type="hidden" name="subject" value={subject} />
+          <input type="hidden" name="from_name" value="Denero svetainė" />
+          <input type="hidden" name="redirect" value={thanksUrl} />
+          <p class="hp" aria-hidden="true"><label>Botcheck <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" /></label></p>
+          <FormFields lang={lang} />
+        </form>
+        ) : (
         <form name={formName} method="POST" action={routes.thanks[lang]} data-netlify="true" netlify-honeypot="company_website">
           <input type="hidden" name="form-name" value={formName} />
           <p class="hp" aria-hidden="true"><label>Website <input name="company_website" tabindex="-1" autocomplete="off" /></label></p>
-          <div class="form-grid">
-            <div><label for="f-name">{tr('form.name')} *</label><input id="f-name" name="name" required maxlength="120" autocomplete="name" /></div>
-            <div><label for="f-company">{tr('form.company')}</label><input id="f-company" name="company" maxlength="120" autocomplete="organization" /></div>
-            <div><label for="f-email">{tr('form.email')} *</label><input id="f-email" name="email" type="email" required maxlength="160" autocomplete="email" /></div>
-            <div><label for="f-phone">{tr('form.phone')}</label><input id="f-phone" name="phone" type="tel" maxlength="40" autocomplete="tel" pattern="[0-9+()\s\-]{6,40}" /></div>
-            <div class="full"><label for="f-msg">{tr('form.message')} *</label><textarea id="f-msg" name="message" required maxlength="4000"></textarea></div>
-            <div class="full"><label class="checkbox"><input type="checkbox" name="consent" required /> <span>{tr('form.consent')} <a href={routes.privacy[lang]}>{tr('form.consent_link')}</a>.</span></label></div>
-            <div class="full"><button class="btn btn--primary" type="submit">{tr('form.submit')}</button></div>
-          </div>
+          <FormFields lang={lang} />
         </form>
+        )}
       </div>
     </div>
   </section>
