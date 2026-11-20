@@ -1,16 +1,16 @@
 {
-  "company_name": "Denero",
+  "company_name": "DENERO, MB",
   "short_name": "Denero",
   "logo": "/brand/denero-logo.svg",
   "logo_light": "/brand/denero-logo-light.svg",
-  "email": "info@pavyzdys.lt",
-  "phone": "+370 600 00000",
-  "address": "Gedimino pr. 1, LT-01103 Vilnius",
-  "company_code": "300000000",
-  "vat_code": "LT100000000000",
-  "working_hours_lt": "I–V 8:00–17:00",
-  "working_hours_en": "Mon–Fri 8:00–17:00",
-  "map_url": "https://maps.google.com/?q=Gedimino+pr.+1,+Vilnius",
+  "email": "info@denero.eu",
+  "phone": "",
+  "address": "A. P. Kavoliuko g. 2A-71, LT-04351 Vilnius",
+  "company_code": "308191585",
+  "vat_code": "",
+  "working_hours_lt": "",
+  "working_hours_en": "",
+  "map_url": "https://www.google.com/maps/search/?api=1&query=A.+P.+Kavoliuko+g.+2A,+Vilnius",
   "linkedin": "",
   "facebook": "",
   "seo": {
@@ -26,5 +26,8 @@
     }
   },
   "og_image": "/og-image.png",
-  "google_site_verification": ""
+  "google_site_verification": "",
+  "street": "A. P. Kavoliuko g. 2A-71",
+  "postal_code": "LT-04351",
+  "city": "Vilnius"
 }

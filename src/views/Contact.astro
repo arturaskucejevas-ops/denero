@@ -22,10 +22,10 @@ const formName = `contact-${lang}`;
       <div>
         <ul class="contact-list">
           <li><span class="icon"><Icon name="mail" size={20} /></span><div><small>{tr('contact.email')}</small><a href={`mailto:${settings.email}`}>{settings.email}</a></div></li>
-          <li><span class="icon"><Icon name="phone" size={20} /></span><div><small>{tr('contact.phone')}</small><a href={`tel:${settings.phone.replace(/\s/g, '')}`}>{settings.phone}</a></div></li>
+          {settings.phone && <li><span class="icon"><Icon name="phone" size={20} /></span><div><small>{tr('contact.phone')}</small><a href={`tel:${settings.phone.replace(/\s/g, '')}`}>{settings.phone}</a></div></li>}
           <li><span class="icon"><Icon name="pin" size={20} /></span><div><small>{tr('contact.address')}</small>{settings.address}<br />{settings.map_url && <a href={settings.map_url} target="_blank" rel="noopener noreferrer">{tr('contact.map')}</a>}</div></li>
-          <li><span class="icon"><Icon name="clock" size={20} /></span><div><small>{tr('contact.hours')}</small>{hours}</div></li>
-          <li><span class="icon"><Icon name="doc" size={20} /></span><div><small>{tr('contact.requisites')}</small>{settings.company_name}<br />{tr('contact.company_code')}: {settings.company_code}<br />{tr('contact.vat_code')}: {settings.vat_code}</div></li>
+          {hours && <li><span class="icon"><Icon name="clock" size={20} /></span><div><small>{tr('contact.hours')}</small>{hours}</div></li>}
+          <li><span class="icon"><Icon name="doc" size={20} /></span><div><small>{tr('contact.requisites')}</small>{settings.company_name}<br />{tr('contact.company_code')}: {settings.company_code}{settings.vat_code && <><br />{tr('contact.vat_code')}: {settings.vat_code}</>}</div></li>
         </ul>
       </div>
       <div class="form-card">

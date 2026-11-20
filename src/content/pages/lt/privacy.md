@@ -6,7 +6,7 @@ seo_description: Informacija apie tai, kaip renkame ir tvarkome asmens duomenis.
 
 ## Duomenų valdytojas
 
-Denero, įmonės kodas 300000000, Gedimino pr. 1, Vilnius, el. paštas info@pavyzdys.lt.
+DENERO, MB, įmonės kodas 308191585, A. P. Kavoliuko g. 2A-71, LT-04351 Vilnius, el. paštas info@denero.eu.
 
 ## Kokius duomenis renkame
 
@@ -18,4 +18,4 @@ Svetainė nenaudoja sekimo ar reklaminių slapukų.
 
 ## Jūsų teisės
 
-Turite teisę susipažinti su savo duomenimis, reikalauti juos ištaisyti ar ištrinti. Kreipkitės el. paštu info@pavyzdys.lt.
+Turite teisę susipažinti su savo duomenimis, reikalauti juos ištaisyti ar ištrinti. Kreipkitės el. paštu info@denero.eu.

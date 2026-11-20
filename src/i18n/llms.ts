@@ -9,8 +9,9 @@ const abs = (p: string, site: URL) => new URL(p, site).href;
 function contacts(lang: Lang) {
   const lt = lang === 'lt';
   return [
+    `- ${lt ? 'Įmonė' : 'Company'}: ${settings.company_name}`,
     `- ${lt ? 'El. paštas' : 'Email'}: ${settings.email}`,
-    `- ${lt ? 'Telefonas' : 'Phone'}: ${settings.phone}`,
+    ...(settings.phone ? [`- ${lt ? 'Telefonas' : 'Phone'}: ${settings.phone}`] : []),
     `- ${lt ? 'Adresas' : 'Address'}: ${settings.address}`,
     `- ${lt ? 'Įmonės kodas' : 'Company code'}: ${settings.company_code}`,
   ].join('\n');
@@ -18,7 +19,7 @@ function contacts(lang: Lang) {
 
 export async function buildLlmsTxt(site: URL) {
   const out: string[] = [];
-  out.push(`# ${settings.company_name}`, '');
+  out.push(`# ${settings.short_name}`, "");
   out.push(`> ${settings.seo.lt.default_description}`, '');
   out.push(`> ${settings.seo.en.default_description}`, '');
   out.push(`${home.en.hero_text} Based in Lithuania, serving clients in Lithuanian and English.`, '');
@@ -42,7 +43,7 @@ export async function buildLlmsTxt(site: URL) {
 }
 
 export async function buildLlmsFull(site: URL) {
-  const out: string[] = [`# ${settings.company_name} – visas turinys / full content`, ''];
+  const out: string[] = [`# ${settings.short_name} – visas turinys / full content`, ''];
   for (const lang of ['lt', 'en'] as Lang[]) {
     const lt = lang === 'lt';
     const about = await getPage(lang, 'about');

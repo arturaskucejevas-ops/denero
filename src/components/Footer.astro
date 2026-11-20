@@ -27,8 +27,9 @@ const year = new Date().getFullYear();
         <h2>{tr('footer.contacts')}</h2>
         <ul>
           <li><a href={`mailto:${settings.email}`}>{settings.email}</a></li>
-          <li><a href={`tel:${settings.phone.replace(/\s/g, '')}`}>{settings.phone}</a></li>
+          {settings.phone && <li><a href={`tel:${settings.phone.replace(/\s/g, '')}`}>{settings.phone}</a></li>}
           <li>{settings.address}</li>
+          <li>{lang === 'lt' ? 'Įm. k.' : 'Reg. No.'} {settings.company_code}</li>
           {settings.linkedin && <li><a href={settings.linkedin} rel="noopener noreferrer" target="_blank">LinkedIn</a></li>}
           {settings.facebook && <li><a href={settings.facebook} rel="noopener noreferrer" target="_blank">Facebook</a></li>}
         </ul>

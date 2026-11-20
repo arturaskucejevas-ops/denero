@@ -6,7 +6,7 @@ seo_description: Information about how we collect and process personal data.
 
 ## Data controller
 
-Denero, company code 300000000, Gedimino pr. 1, Vilnius, email info@pavyzdys.lt.
+DENERO, MB, company code 308191585, A. P. Kavoliuko g. 2A-71, LT-04351 Vilnius, Lithuania, email info@denero.eu.
 
 ## Data we collect
 
@@ -18,4 +18,4 @@ This website does not use tracking or advertising cookies.
 
 ## Your rights
 
-You have the right to access, rectify or erase your data. Contact us at info@pavyzdys.lt.
+You have the right to access, rectify or erase your data. Contact us at info@denero.eu.
