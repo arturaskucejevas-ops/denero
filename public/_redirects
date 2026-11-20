@@ -1,0 +1,15 @@
+# Nukreipimai (veikia Cloudflare Pages ir Netlify).
+/paslaugos/it-palaikymas/ /paslaugos/dynamics-nav-business-central/ 301
+/en/services/it-palaikymas/ /en/services/dynamics-nav-business-central/ 301
+/paslaugos/kibernetinis-saugumas/ /paslaugos/power-apps-power-bi/ 301
+/en/services/kibernetinis-saugumas/ /en/services/power-apps-power-bi/ 301
+/paslaugos/konsultacijos/ /paslaugos/erp-integracijos/ 301
+/en/services/konsultacijos/ /en/services/erp-integracijos/ 301
+/paslaugos/web-crm-sistem%C5%B3-k%C5%ABrimas-ir-pritaikymas/ /paslaugos/web-crm-kurimas/ 301
+/en/services/web-crm-sistem%C5%B3-k%C5%ABrimas-ir-pritaikymas/ /en/services/web-crm-kurimas/ 301
+/sprendimai/debesiju-sprendimai/ /sprendimai/ 301
+/sprendimai/duomenu-analitika/ /sprendimai/denero-pbi/ 301
+/sprendimai/procesu-automatizavimas/ /sprendimai/ 301
+/en/solutions/debesiju-sprendimai/ /en/solutions/ 301
+/en/solutions/duomenu-analitika/ /en/solutions/denero-pbi/ 301
+/en/solutions/procesu-automatizavimas/ /en/solutions/ 301

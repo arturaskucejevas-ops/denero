@@ -5,73 +5,9 @@
 [build.environment]
   NODE_VERSION = "22"
 
-# Senų/neteisingų adresų nukreipimai, pvz.:
-# [[redirects]]
-#   from = "/lt/*"
-#   to = "/:splat"
-#   status = 301
+# Puslapių nukreipimai – faile public/_redirects (tinka ir Cloudflare Pages).
 
-# Seni paslaugų adresai → nauji (išsaugo paieškos reitingą)
-[[redirects]]
-  from = "/paslaugos/it-palaikymas/"
-  to = "/paslaugos/dynamics-nav-business-central/"
-  status = 301
-[[redirects]]
-  from = "/en/services/it-palaikymas/"
-  to = "/en/services/dynamics-nav-business-central/"
-  status = 301
-[[redirects]]
-  from = "/paslaugos/kibernetinis-saugumas/"
-  to = "/paslaugos/power-apps-power-bi/"
-  status = 301
-[[redirects]]
-  from = "/en/services/kibernetinis-saugumas/"
-  to = "/en/services/power-apps-power-bi/"
-  status = 301
-[[redirects]]
-  from = "/paslaugos/konsultacijos/"
-  to = "/paslaugos/erp-integracijos/"
-  status = 301
-[[redirects]]
-  from = "/en/services/konsultacijos/"
-  to = "/en/services/erp-integracijos/"
-  status = 301
-[[redirects]]
-  from = "/paslaugos/web-crm-sistem%C5%B3-k%C5%ABrimas-ir-pritaikymas/"
-  to = "/paslaugos/web-crm-kurimas/"
-  status = 301
-[[redirects]]
-  from = "/en/services/web-crm-sistem%C5%B3-k%C5%ABrimas-ir-pritaikymas/"
-  to = "/en/services/web-crm-kurimas/"
-  status = 301
-
-# Seni sprendimų adresai → sprendimų sąrašas
-[[redirects]]
-  from = "/sprendimai/debesiju-sprendimai/"
-  to = "/sprendimai/"
-  status = 301
-[[redirects]]
-  from = "/sprendimai/duomenu-analitika/"
-  to = "/sprendimai/denero-pbi/"
-  status = 301
-[[redirects]]
-  from = "/sprendimai/procesu-automatizavimas/"
-  to = "/sprendimai/"
-  status = 301
-[[redirects]]
-  from = "/en/solutions/debesiju-sprendimai/"
-  to = "/en/solutions/"
-  status = 301
-[[redirects]]
-  from = "/en/solutions/duomenu-analitika/"
-  to = "/en/solutions/denero-pbi/"
-  status = 301
-[[redirects]]
-  from = "/en/solutions/procesu-automatizavimas/"
-  to = "/en/solutions/"
-  status = 301
-
-# Netlify adresas → pagrindinis domenas (kad Google indeksuotų tik denero.eu)
+# Netlify adresas → pagrindinis domenas
 [[redirects]]
   from = "https://deneroweb.netlify.app/*"
   to = "https://denero.eu/:splat"
