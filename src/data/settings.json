@@ -17,12 +17,12 @@
     "lt": {
       "default_title": "Dynamics NAV ir Business Central konsultacijos",
       "default_description": "Microsoft Dynamics NAV ir Business Central konsultacijos, diegimas, programavimas ir priežiūra. Power BI, Power Apps, integracijos (API, EDI, SEPA), CRM.",
-      "keywords": "Microsoft Dynamics NAV, Dynamics 365 Business Central, Business Central konsultacijos, Business Central diegimas, Business Central programavimas, NAV programavimas, NAV priežiūra, NAV perkėlimas į Business Central, ERP sistema, ERP konsultacijos, AL programavimas, C/AL, Power BI ataskaitos, Power Apps, Power Automate, sistemų integracijos, EDI integracija, SEPA, REST API, CRM sistemų kūrimas, Dynamics 365 CRM, Power Pages, svetainių kūrimas, Lietuva, Vilnius"
+      "keywords": "Microsoft Dynamics NAV, Dynamics 365 Business Central, Business Central konsultacijos, Business Central diegimas, Business Central programavimas, NAV programavimas, NAV priežiūra, NAV perkėlimas į Business Central, ERP sistema, ERP konsultacijos, AL programavimas, C/AL, Power BI ataskaitos, Power Apps, Power Automate, sistemų integracijos, EDI integracija, SEPA, REST API, CRM sistemų kūrimas, Dynamics 365 CRM, Power Pages, svetainių kūrimas, Lietuva, Vilnius, DENERO PBI, Power BI ataskaitos Business Central, Power BI ataskaitos NAV, finansinės ataskaitos Power BI, valdymo ataskaitos, Power BI SQL"
     },
     "en": {
       "default_title": "Dynamics NAV & Business Central Consulting",
       "default_description": "Microsoft Dynamics NAV and Business Central consulting, implementation, development and support. Power BI, Power Apps, integrations (API, EDI, SEPA), CRM.",
-      "keywords": "Microsoft Dynamics NAV, Dynamics 365 Business Central, Business Central consulting, Business Central implementation, Business Central development, NAV development, NAV support, NAV to Business Central upgrade, ERP consulting, AL development, Power BI reports, Power Apps, Power Automate, system integration, EDI integration, SEPA, CRM development, Dynamics 365 CRM, Power Pages, Lithuania"
+      "keywords": "Microsoft Dynamics NAV, Dynamics 365 Business Central, Business Central consulting, Business Central implementation, Business Central development, NAV development, NAV support, NAV to Business Central upgrade, ERP consulting, AL development, Power BI reports, Power Apps, Power Automate, system integration, EDI integration, SEPA, CRM development, Dynamics 365 CRM, Power Pages, Lithuania, DENERO PBI, Power BI reports Business Central, Power BI reports NAV, financial reports Power BI, management reports, Power BI SQL"
     }
   },
   "og_image": "/og-image.png",

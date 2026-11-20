@@ -32,14 +32,19 @@ export async function buildLlmsTxt(site: URL) {
     }
     out.push('');
   }
+  for (const lang of ['lt', 'en'] as Lang[]) {
+    out.push(lang === 'lt' ? '## Sprendimai / produktai (LT)' : '## Solutions / products (EN)', '');
+    for (const s of await getOfferings('solutions', lang)) {
+      const extra = [s.data.price, s.data.coming_soon ? (lang === 'lt' ? 'informacija ruošiama' : 'information coming soon') : '']
+        .filter(Boolean).join('; ');
+      out.push(`- [${s.data.title}](${abs(detailPath('solutions', lang, slugOf(s.id)), site)}): ${(s.data.card_summary || s.data.summary).replace(/\s+/g, ' ')}${extra ? ` (${extra})` : ''}`);
+    }
+    out.push('');
+  }
   out.push('## Puslapiai / Pages', '');
   out.push(`- [Apie mus](${abs(routes.about.lt, site)})`, `- [About us](${abs(routes.about.en, site)})`);
   out.push(`- [Kontaktai](${abs(routes.contact.lt, site)})`, `- [Contact](${abs(routes.contact.en, site)})`);
   out.push(`- [Visas turinys / Full content](${abs('/llms-full.txt', site)})`, '');
-  out.push('## Optional', '');
-  for (const s of await getOfferings('solutions', 'lt')) {
-    out.push(`- [${s.data.title}](${abs(detailPath('solutions', 'lt', slugOf(s.id)), site)}): ${s.data.summary}`);
-  }
   return out.join('\n') + '\n';
 }
 
@@ -59,6 +64,20 @@ export async function buildLlmsFull(site: URL) {
       if (s.data.faq.length) {
         out.push(`### ${lt ? 'Dažniausiai užduodami klausimai' : 'FAQ'}`, '');
         for (const f of s.data.faq) out.push(`**${f.question}**`, '', f.answer.replace(/\s+/g, ' '), '');
+      }
+    }
+    for (const s of await getOfferings('solutions', lang)) {
+      const x = s.data;
+      out.push(`## ${x.headline || x.title}`, `URL: ${abs(detailPath('solutions', lang, slugOf(s.id)), site)}`, '');
+      if (x.price) out.push(`${lt ? 'Kaina' : 'Price'}: ${x.price}${x.price_note ? ` (${x.price_note})` : ''}`, '');
+      if (x.coming_soon) { out.push(lt ? 'Informacija ruošiama. Užklausas priimame el. paštu ' + settings.email + '.' : 'Information coming soon. Enquiries: ' + settings.email + '.', ''); continue; }
+      out.push(x.summary.replace(/\s+/g, ' '), '', (s.body ?? '').trim(), '');
+      if (x.highlights.length) { out.push(`### ${x.highlights_title}`, ''); for (const h of x.highlights) out.push(`- **${h.title}** – ${h.text}`); out.push(''); }
+      if (x.reports.length) { out.push(`### ${x.reports_title}`, ''); x.reports.forEach((r, i) => out.push(`${i + 1}. ${r}`)); out.push(''); }
+      if (x.steps.length) { out.push(`### ${x.steps_title}`, ''); x.steps.forEach((st, i) => out.push(`${i + 1}. **${st.title}** ${st.text}`)); out.push(''); }
+      if (x.faq.length) {
+        out.push(`### ${lt ? 'Dažniausiai užduodami klausimai' : 'FAQ'}`, '');
+        for (const f of x.faq) out.push(`**${f.question}**`, '', f.answer.replace(/\s+/g, ' '), '');
       }
     }
   }

@@ -215,3 +215,43 @@ textarea { min-height: 150px; resize: vertical; }
 @media (max-width: 600px) { .testimonial { padding: 28px 22px 22px 26px; } .testimonial blockquote { padding-right: 36px; } .testimonial blockquote p { font-size: 1.08rem; } .testimonial::before { right: 16px; font-size: 4.5rem; } }
 .form-status { margin: 16px 0 0; color: #b42318; font-weight: 500; min-height: 1px; }
 .form-status:empty { display: none; }
+
+/* Sprendimų puslapiai */
+.section--tight { padding: 40px 0 0; }
+.price-pill { display: inline-flex; flex-direction: column; justify-content: center; padding: 8px 18px; border: 1px solid rgba(212,166,74,.5); border-radius: 8px; color: #fff; line-height: 1.25; }
+.price-pill strong { color: var(--gold-300); font-size: 1.05rem; }
+.price-pill small { color: #bfc1c5; font-size: .8rem; }
+.badge { display: inline-flex; align-items: center; gap: 6px; border-radius: 999px; padding: 5px 12px; font-size: .8rem; font-weight: 600; }
+.badge--soon { background: var(--gold-50); color: var(--gold-700); border: 1px solid var(--gold-500); }
+.hero .badge--soon { background: rgba(212,166,74,.15); color: var(--gold-300); border-color: rgba(212,166,74,.5); }
+.card .badge { align-self: flex-start; margin-bottom: 12px; }
+.card-price { font-weight: 700; color: var(--dark-900); margin: -4px 0 14px; }
+.aside-price { background: #fff; border: 1px solid var(--gold-500); border-radius: var(--radius); padding: 14px 16px; margin-bottom: 20px; display: flex; flex-direction: column; }
+.aside-price small { color: var(--muted); font-size: .8rem; text-transform: uppercase; letter-spacing: .06em; }
+.aside-price strong { font-size: 1.5rem; color: var(--dark-900); }
+.aside-price span { color: var(--muted); font-size: .9rem; }
+.shot { margin: 0; }
+.shot img { width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--line); box-shadow: var(--shadow); background: #fff; }
+.shot figcaption { color: var(--muted); font-size: .9rem; margin-top: 10px; }
+.shots { display: grid; gap: 28px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 460px), 1fr)); }
+.feature-grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); }
+.feature { background: #fff; border: 1px solid var(--line); border-top: 3px solid var(--gold-500); border-radius: var(--radius); padding: 22px; }
+.feature h3 { font-size: 1.05rem; margin-bottom: 8px; }
+.feature p { color: var(--muted); margin: 0; font-size: .97rem; }
+ol.reports { columns: 3 240px; column-gap: 40px; padding-left: 1.4em; margin: 0; }
+ol.reports li { break-inside: avoid; padding: 4px 0; color: var(--ink); }
+ol.reports li::marker { color: var(--gold-700); font-weight: 600; }
+ol.steps { list-style: none; counter-reset: s; padding: 0; margin: 0; display: grid; gap: 12px; max-width: 900px; }
+ol.steps li { counter-increment: s; position: relative; padding: 16px 18px 16px 62px; background: var(--bg-soft); border: 1px solid var(--line); border-radius: var(--radius); color: var(--muted); }
+ol.steps li::before { content: counter(s); position: absolute; left: 18px; top: 14px; width: 30px; height: 30px; border-radius: 50%; background: var(--gold-500); color: var(--dark-900); font-weight: 700; display: grid; place-items: center; }
+ol.steps strong { color: var(--dark-900); }
+.faq--wide { margin-top: 0; }
+.inquiry { background: linear-gradient(160deg, var(--dark-900), var(--dark-700)); color: #d6d7da; scroll-margin-top: 80px; }
+.inquiry h2 { color: #fff; }
+.inquiry .eyebrow { color: var(--gold-300); }
+.inquiry a { color: var(--gold-300); }
+.inquiry-price strong { color: var(--gold-300); font-size: 1.2rem; }
+.inquiry-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 48px; align-items: start; }
+.inquiry .form-card { color: var(--ink); }
+.inquiry .form-card a { color: var(--gold-700); }
+@media (max-width: 900px) { .inquiry-grid { grid-template-columns: 1fr; } }

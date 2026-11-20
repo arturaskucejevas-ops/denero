@@ -1,0 +1,30 @@
+---
+// Užklausos forma: Web3Forms (jei įrašytas raktas) arba Netlify Forms.
+// Abiem atvejais apsauga nuo šlamšto (honeypot). Naudojama Kontaktų ir Sprendimų puslapiuose.
+import FormFields from './FormFields.astro';
+import settings from '../data/settings.json';
+import { routes, type Lang } from '../i18n/ui';
+interface Props { lang: Lang; name: string; subject: string; topic?: string }
+const { lang, name, subject, topic } = Astro.props;
+const w3f = settings.web3forms_key;
+const thanksUrl = new URL(routes.thanks[lang], Astro.site).href;
+---
+{w3f ? (
+<form name={name} method="POST" action="https://api.web3forms.com/submit">
+  <input type="hidden" name="access_key" value={w3f} />
+  <input type="hidden" name="subject" value={subject} />
+  <input type="hidden" name="from_name" value="Denero svetainė" />
+  <input type="hidden" name="redirect" value={thanksUrl} />
+  {topic && <input type="hidden" name="sprendimas" value={topic} />}
+  <p class="hp" aria-hidden="true"><label>Botcheck <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" /></label></p>
+  <FormFields lang={lang} />
+  <p id="form-status" class="form-status" role="alert" aria-live="polite"></p>
+</form>
+) : (
+<form name={name} method="POST" action={routes.thanks[lang]} data-netlify="true" netlify-honeypot="company_website">
+  <input type="hidden" name="form-name" value={name} />
+  <p class="hp" aria-hidden="true"><label>Website <input name="company_website" tabindex="-1" autocomplete="off" /></label></p>
+  <FormFields lang={lang} />
+</form>
+)}
+{w3f && <script is:inline src="/js/contact.js" defer></script>}

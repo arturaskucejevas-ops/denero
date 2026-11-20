@@ -1,11 +1,13 @@
 ---
 import Icon from './Icon.astro';
-interface Props { title: string; summary: string; icon: string; href: string; more: string }
-const { title, summary, icon, href, more } = Astro.props;
+interface Props { title: string; summary: string; icon: string; href: string; more: string; soon?: boolean; soonLabel?: string; price?: string }
+const { title, summary, icon, href, more, soon = false, soonLabel, price } = Astro.props;
 ---
 <article class="card">
   <div class="icon"><Icon name={icon} /></div>
+  {soon && soonLabel && <span class="badge badge--soon">{soonLabel}</span>}
   <h3>{title}</h3>
+  {price && <p class="card-price">{price}</p>}
   <p>{summary}</p>
   <a class="card-link" href={href} aria-label={`${more}: ${title}`}>{more}</a>
 </article>

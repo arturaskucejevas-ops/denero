@@ -1,7 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import Icon from '../components/Icon.astro';
-import FormFields from '../components/FormFields.astro';
+import ContactForm from '../components/ContactForm.astro';
 import settings from '../data/settings.json';
 import { routes, t, alt, type Lang } from '../i18n/ui';
 interface Props { lang: Lang }
@@ -9,9 +9,6 @@ const { lang } = Astro.props;
 const tr = t(lang);
 const hours = lang === 'lt' ? settings.working_hours_lt : settings.working_hours_en;
 const formName = `contact-${lang}`;
-// Web3Forms (nemokamas formų siuntimas į el. paštą). Jei raktas neįrašytas – naudojama Netlify Forms.
-const w3f = settings.web3forms_key;
-const thanksUrl = new URL(routes.thanks[lang], Astro.site).href;
 const subject = lang === 'lt' ? 'Nauja užklausa iš Denero svetainės' : 'New enquiry from Denero website (EN)';
 ---
 <Base lang={lang} title={tr('contact.title')} description={tr('contact.lead')} alternates={alt('contact')}>
@@ -35,25 +32,7 @@ const subject = lang === 'lt' ? 'Nauja užklausa iš Denero svetainės' : 'New e
       </div>
       <div class="form-card">
         <h2>{tr('form.title')}</h2>
-        <!-- Web3Forms (jei įrašytas raktas) arba Netlify Forms; abiem atvejais apsauga nuo šlamšto (honeypot) -->
-        {w3f ? (
-        <form name={formName} method="POST" action="https://api.web3forms.com/submit">
-          <input type="hidden" name="access_key" value={w3f} />
-          <input type="hidden" name="subject" value={subject} />
-          <input type="hidden" name="from_name" value="Denero svetainė" />
-          <input type="hidden" name="redirect" value={thanksUrl} />
-          <p class="hp" aria-hidden="true"><label>Botcheck <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" /></label></p>
-          <FormFields lang={lang} />
-          <p id="form-status" class="form-status" role="alert" aria-live="polite"></p>
-        </form>
-        ) : (
-        <form name={formName} method="POST" action={routes.thanks[lang]} data-netlify="true" netlify-honeypot="company_website">
-          <input type="hidden" name="form-name" value={formName} />
-          <p class="hp" aria-hidden="true"><label>Website <input name="company_website" tabindex="-1" autocomplete="off" /></label></p>
-          <FormFields lang={lang} />
-        </form>
-        )}
-        {w3f && <script is:inline src="/js/contact.js" defer></script>}
+        <ContactForm lang={lang} name={formName} subject={subject} />
       </div>
     </div>
   </section>

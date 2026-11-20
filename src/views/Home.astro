@@ -40,7 +40,7 @@ const solutions = await getOfferings('solutions', lang);
       </div>
       <div class="grid">
         {services.map((s) => (
-          <OfferingCard title={s.data.title} summary={s.data.summary} icon={s.data.icon}
+          <OfferingCard title={s.data.title} summary={s.data.card_summary || s.data.summary} soon={s.data.coming_soon} soonLabel={tr('solution.coming_soon')} price={s.data.price} icon={s.data.icon}
             href={detailPath('services', lang, slugOf(s.id))} more={tr('common.more')} />
         ))}
       </div>
@@ -55,7 +55,7 @@ const solutions = await getOfferings('solutions', lang);
       </div>
       <div class="grid">
         {solutions.map((s) => (
-          <OfferingCard title={s.data.title} summary={s.data.summary} icon={s.data.icon}
+          <OfferingCard title={s.data.title} summary={s.data.card_summary || s.data.summary} soon={s.data.coming_soon} soonLabel={tr('solution.coming_soon')} price={s.data.price} icon={s.data.icon}
             href={detailPath('solutions', lang, slugOf(s.id))} more={tr('common.more')} />
         ))}
       </div>

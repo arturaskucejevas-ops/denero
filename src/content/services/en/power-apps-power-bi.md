@@ -31,6 +31,8 @@ With **Microsoft Power Apps**, .NET / C# and React we build apps that simplify e
 
 ## Power BI reporting & analytics
 
+Looking for something ready-made? [DENERO PBI](/en/solutions/denero-pbi/) – 25 ready-made Power BI finance and management reports for Business Central, NAV and other systems for €50 + VAT per year.
+
 We create **Power BI** reports and dashboards for sales, finance, inventory and production data, combining Dynamics NAV / Business Central, SQL, Excel and other sources into one clear view.
 
 ## Process automation

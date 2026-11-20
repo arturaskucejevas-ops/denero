@@ -31,7 +31,7 @@ const listLd = {
     <div class="container">
       <div class="grid">
         {items.map((s) => (
-          <OfferingCard title={s.data.title} summary={s.data.summary} icon={s.data.icon}
+          <OfferingCard title={s.data.title} summary={s.data.card_summary || s.data.summary} soon={s.data.coming_soon} soonLabel={tr('solution.coming_soon')} price={s.data.price} icon={s.data.icon}
             href={detailPath(kind, lang, slugOf(s.id))} more={tr('common.more')} />
         ))}
       </div>

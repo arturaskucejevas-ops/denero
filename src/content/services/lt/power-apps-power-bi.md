@@ -31,6 +31,8 @@ Su **Microsoft Power Apps**, .NET / C# ir React kuriame programėles, kurios sup
 
 ## Power BI ataskaitos ir duomenų analitika
 
+Ieškote paruoštų sprendimų? [DENERO PBI](/sprendimai/denero-pbi/) – 25 paruoštos Power BI finansų ir valdymo ataskaitos Business Central, NAV ir kitoms sistemoms už 50 € + PVM per metus.
+
 Kuriame **Power BI** ataskaitas ir valdymo skydus (dashboard) pardavimų, finansų, sandėlio ir gamybos duomenims. Sujungiame Dynamics NAV / Business Central, SQL, Excel ir kitus duomenų šaltinius į vieną aiškų vaizdą.
 
 ## Procesų automatizavimas

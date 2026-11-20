@@ -44,3 +44,29 @@
   from = "/en/services/web-crm-sistem%C5%B3-k%C5%ABrimas-ir-pritaikymas/"
   to = "/en/services/web-crm-kurimas/"
   status = 301
+
+# Seni sprendimų adresai → sprendimų sąrašas
+[[redirects]]
+  from = "/sprendimai/debesiju-sprendimai/"
+  to = "/sprendimai/"
+  status = 301
+[[redirects]]
+  from = "/sprendimai/duomenu-analitika/"
+  to = "/sprendimai/denero-pbi/"
+  status = 301
+[[redirects]]
+  from = "/sprendimai/procesu-automatizavimas/"
+  to = "/sprendimai/"
+  status = 301
+[[redirects]]
+  from = "/en/solutions/debesiju-sprendimai/"
+  to = "/en/solutions/"
+  status = 301
+[[redirects]]
+  from = "/en/solutions/duomenu-analitika/"
+  to = "/en/solutions/denero-pbi/"
+  status = 301
+[[redirects]]
+  from = "/en/solutions/procesu-automatizavimas/"
+  to = "/en/solutions/"
+  status = 301

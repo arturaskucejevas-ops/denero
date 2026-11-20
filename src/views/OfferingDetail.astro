@@ -1,6 +1,8 @@
 ---
+import { existsSync } from 'node:fs';
 import { render } from 'astro:content';
 import Base from '../layouts/Base.astro';
+import ContactForm from '../components/ContactForm.astro';
 import home from '../data/home.json';
 import { routes, t, detailPath, type Lang } from '../i18n/ui';
 import { slugOf, getOfferings } from '../i18n/content';
@@ -11,13 +13,20 @@ const tr = t(lang);
 const { Content } = await render(entry);
 const d = entry.data;
 const slug = slugOf(entry.id);
-const sectionTitle = kind === 'services' ? home[lang].services_title : home[lang].solutions_title;
+const isSolution = kind === 'solutions';
+const sectionTitle = isSolution ? home[lang].solutions_title : home[lang].services_title;
 const other: Lang = lang === 'lt' ? 'en' : 'lt';
 const alternates = {
   [lang]: detailPath(kind, lang, slug),
   [other]: hasTranslation ? detailPath(kind, other, slug) : routes[kind][other],
 } as Record<Lang, string>;
 const site = Astro.site!;
+const pageUrl = new URL(detailPath(kind, lang, slug), site).href;
+
+// Paveikslėliai rodomi tik jei failas tikrai yra public/ aplanke
+const gallery = (d.gallery ?? []).filter((g: any) => existsSync(`public${g.src}`));
+const [mainImg, ...moreImgs] = gallery;
+
 const crumbs = {
   '@context': 'https://schema.org', '@type': 'BreadcrumbList',
   itemListElement: [
@@ -26,13 +35,29 @@ const crumbs = {
     { '@type': 'ListItem', position: 3, name: d.title },
   ],
 };
-const pageUrl = new URL(detailPath(kind, lang, slug), site).href;
-const serviceLd = {
-  '@context': 'https://schema.org', '@type': 'Service',
-  name: d.title, description: d.seo_description || d.summary, url: pageUrl,
-  serviceType: d.title, areaServed: { '@type': 'Country', name: 'Lithuania' },
-  provider: { '@type': 'Organization', name: settings.company_name, url: site.href },
-};
+const provider = { '@type': 'Organization', name: settings.company_name, url: site.href };
+const offer = d.price_amount != null ? {
+  '@type': 'Offer', price: d.price_amount, priceCurrency: 'EUR', url: pageUrl,
+  availability: 'https://schema.org/InStock',
+  priceSpecification: {
+    '@type': 'UnitPriceSpecification', price: d.price_amount, priceCurrency: 'EUR',
+    valueAddedTaxIncluded: false, billingDuration: d.price_period, unitText: lang === 'lt' ? 'metams' : 'per year',
+  },
+} : undefined;
+const mainLd = isSolution && !d.coming_soon
+  ? {
+      '@context': 'https://schema.org', '@type': 'SoftwareApplication',
+      name: d.title, description: d.seo_description || d.summary, url: pageUrl,
+      applicationCategory: 'BusinessApplication', operatingSystem: 'Microsoft Power BI (web, Windows, iOS, Android)',
+      ...(d.reports?.length ? { featureList: d.reports.join(', ') } : {}),
+      ...(gallery.length ? { screenshot: gallery.map((g: any) => new URL(g.src, site).href) } : {}),
+      publisher: provider, ...(offer ? { offers: offer } : {}),
+    }
+  : {
+      '@context': 'https://schema.org', '@type': 'Service',
+      name: d.title, description: d.seo_description || d.summary, url: pageUrl,
+      serviceType: d.title, areaServed: { '@type': 'Country', name: 'Lithuania' }, provider,
+    };
 const faq: { question: string; answer: string }[] = d.faq ?? [];
 const faqLd = faq.length ? [{
   '@context': 'https://schema.org', '@type': 'FAQPage',
@@ -40,40 +65,135 @@ const faqLd = faq.length ? [{
 }] : [];
 const related = (await getOfferings(kind, lang)).filter((e) => e.id !== entry.id);
 const benefits: string[] = d.benefits ?? [];
+const subject = `${lang === 'lt' ? 'Užklausa dėl' : 'Enquiry about'}: ${d.title}`;
 ---
-<Base lang={lang} title={d.seo_title || d.title} description={d.seo_description || d.summary} alternates={alternates} jsonLd={[crumbs, serviceLd, ...faqLd]}>
+<Base lang={lang} title={d.seo_title || d.title} description={d.seo_description || d.summary} alternates={alternates} jsonLd={[crumbs, mainLd, ...faqLd]}>
   <section class="hero page-hero">
     <div class="container">
       <nav class="breadcrumbs" aria-label="Breadcrumb">
         <a href={routes.home[lang]}>{tr('nav.home')}</a> / <a href={routes[kind][lang]}>{sectionTitle}</a> / {d.title}
       </nav>
-      <h1>{d.title}</h1>
+      {d.eyebrow && <span class="eyebrow">{d.eyebrow}</span>}
+      <h1>{d.headline || d.title}</h1>
       <p>{d.summary}</p>
+      {(isSolution || d.price || d.coming_soon) && (
+        <div class="hero-actions">
+          <a class="btn btn--primary" href="#uzklausa">{tr('solution.cta')}</a>
+          {d.price && <span class="price-pill"><strong>{d.price}</strong>{d.price_note && <small>{d.price_note}</small>}</span>}
+          {d.coming_soon && <span class="badge badge--soon">{tr('solution.coming_soon')}</span>}
+        </div>
+      )}
     </div>
   </section>
+
+  {mainImg && (
+    <section class="section section--tight">
+      <div class="container">
+        <figure class="shot shot--main">
+          <img src={mainImg.src} alt={mainImg.alt} width="1600" height="900" loading="eager" decoding="async" />
+          {mainImg.caption && <figcaption>{mainImg.caption}</figcaption>}
+        </figure>
+      </div>
+    </section>
+  )}
+
   <section class="section">
     <div class="container detail">
       <div>
         <article class="prose"><Content /></article>
-        {faq.length > 0 && (
-          <section class="faq" aria-labelledby="faq-title">
-            <h2 id="faq-title">{tr('common.faq')}</h2>
-            {faq.map((f) => <details><summary>{f.question}</summary><p>{f.answer}</p></details>)}
-          </section>
-        )}
       </div>
       <aside class="aside-box">
         {benefits.length > 0 && <><h3>{tr('common.benefits')}</h3><ul>{benefits.map((b) => <li>{b}</li>)}</ul></>}
-        <h3>{tr('common.interested')}</h3>
-        <p>{tr('common.interested_text')}</p>
-        <a class="btn btn--primary" href={routes.contact[lang]}>{tr('nav.contact')}</a>
+        {d.price && (
+          <div class="aside-price">
+            <small>{tr('solution.price')}</small>
+            <strong>{d.price}</strong>
+            {d.price_note && <span>{d.price_note}</span>}
+          </div>
+        )}
+        <h3>{isSolution ? tr('solution.interested') : tr('common.interested')}</h3>
+        <p>{isSolution ? tr('solution.interested_text') : tr('common.interested_text')}</p>
+        <a class="btn btn--primary" href={isSolution ? '#uzklausa' : routes.contact[lang]}>{isSolution ? tr('solution.cta') : tr('nav.contact')}</a>
         {related.length > 0 && (
-          <nav class="related" aria-label={kind === 'services' ? tr('common.other_services') : tr('common.other_solutions')}>
-            <h3>{kind === 'services' ? tr('common.other_services') : tr('common.other_solutions')}</h3>
+          <nav class="related" aria-label={isSolution ? tr('common.other_solutions') : tr('common.other_services')}>
+            <h3>{isSolution ? tr('common.other_solutions') : tr('common.other_services')}</h3>
             <ul>{related.map((r) => <li><a href={detailPath(kind, lang, slugOf(r.id))}>{r.data.title}</a></li>)}</ul>
           </nav>
         )}
       </aside>
     </div>
   </section>
+
+  {d.highlights?.length > 0 && (
+    <section class="section section--soft">
+      <div class="container">
+        <div class="section-head"><h2>{d.highlights_title}</h2></div>
+        <div class="feature-grid">
+          {d.highlights.map((h: any) => <div class="feature"><h3>{h.title}</h3><p>{h.text}</p></div>)}
+        </div>
+      </div>
+    </section>
+  )}
+
+  {moreImgs.length > 0 && (
+    <section class="section">
+      <div class="container">
+        <div class="section-head"><h2>{tr('solution.inside')}</h2></div>
+        <div class="shots">
+          {moreImgs.map((g: any) => (
+            <figure class="shot">
+              <img src={g.src} alt={g.alt} width="1600" height="900" loading="lazy" decoding="async" />
+              {g.caption && <figcaption>{g.caption}</figcaption>}
+            </figure>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  {d.reports?.length > 0 && (
+    <section class={`section ${moreImgs.length ? 'section--soft' : ''}`}>
+      <div class="container">
+        <div class="section-head"><h2>{d.reports_title}</h2></div>
+        <ol class="reports">{d.reports.map((r: string) => <li>{r}</li>)}</ol>
+      </div>
+    </section>
+  )}
+
+  {d.steps?.length > 0 && (
+    <section class="section">
+      <div class="container">
+        <div class="section-head"><h2>{d.steps_title}</h2></div>
+        <ol class="steps">{d.steps.map((s: any) => <li><strong>{s.title}</strong> {s.text}</li>)}</ol>
+      </div>
+    </section>
+  )}
+
+  {faq.length > 0 && (
+    <section class="section section--soft">
+      <div class="container">
+        <section class="faq faq--wide" aria-labelledby="faq-title">
+          <h2 id="faq-title">{tr('common.faq')}</h2>
+          {faq.map((f) => <details><summary>{f.question}</summary><p>{f.answer}</p></details>)}
+        </section>
+      </div>
+    </section>
+  )}
+
+  {isSolution && (
+    <section class="section inquiry" id="uzklausa" aria-labelledby="inquiry-title">
+      <div class="container inquiry-grid">
+        <div>
+          <span class="eyebrow">{d.title}</span>
+          <h2 id="inquiry-title">{tr('solution.form_title')}</h2>
+          <p>{tr('solution.form_text')}</p>
+          {d.price && <p class="inquiry-price"><strong>{d.price}</strong>{d.price_note && <> – {d.price_note.toLowerCase()}</>}</p>}
+          <p>{tr('contact.email')}: <a href={`mailto:${settings.email}`}>{settings.email}</a></p>
+        </div>
+        <div class="form-card">
+          <ContactForm lang={lang} name={`solution-${slug}-${lang}`} subject={subject} topic={d.title} />
+        </div>
+      </div>
+    </section>
+  )}
 </Base>
