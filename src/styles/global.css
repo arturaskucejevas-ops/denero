@@ -213,3 +213,5 @@ textarea { min-height: 150px; resize: vertical; }
 .testimonial-note { display: block; margin-top: 12px; color: var(--muted); font-size: .8rem; font-style: italic; }
 .testimonial blockquote { padding-right: 56px; }
 @media (max-width: 600px) { .testimonial { padding: 28px 22px 22px 26px; } .testimonial blockquote { padding-right: 36px; } .testimonial blockquote p { font-size: 1.08rem; } .testimonial::before { right: 16px; font-size: 4.5rem; } }
+.form-status { margin: 16px 0 0; color: #b42318; font-weight: 500; min-height: 1px; }
+.form-status:empty { display: none; }

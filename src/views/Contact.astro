@@ -44,6 +44,7 @@ const subject = lang === 'lt' ? 'Nauja užklausa iš Denero svetainės' : 'New e
           <input type="hidden" name="redirect" value={thanksUrl} />
           <p class="hp" aria-hidden="true"><label>Botcheck <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" /></label></p>
           <FormFields lang={lang} />
+          <p id="form-status" class="form-status" role="alert" aria-live="polite"></p>
         </form>
         ) : (
         <form name={formName} method="POST" action={routes.thanks[lang]} data-netlify="true" netlify-honeypot="company_website">
@@ -52,6 +53,7 @@ const subject = lang === 'lt' ? 'Nauja užklausa iš Denero svetainės' : 'New e
           <FormFields lang={lang} />
         </form>
         )}
+        {w3f && <script is:inline src="/js/contact.js" defer></script>}
       </div>
     </div>
   </section>
