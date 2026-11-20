@@ -1,0 +1,13 @@
+// Cloudflare Workers konfigūracija: statinė svetainė iš dist/ aplanko.
+// _headers (saugumo antraštės) ir _redirects (nukreipimai) taikomi automatiškai.
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "denero",
+  "compatibility_date": "2025-10-01",
+  "assets": {
+    "directory": "./dist",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  },
+  "observability": { "enabled": true }
+}
