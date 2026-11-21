@@ -11,5 +11,5 @@ const tr = t(lang);
     <div><label for="f-phone">{tr('form.phone')}</label><input id="f-phone" name="phone" type="tel" maxlength="40" autocomplete="tel" pattern="[0-9+()\s\-]{6,40}" /></div>
     <div class="full"><label for="f-msg">{tr('form.message')} *</label><textarea id="f-msg" name="message" required maxlength="4000"></textarea></div>
     <div class="full"><label class="checkbox"><input type="checkbox" name="consent" required /> <span>{tr('form.consent')} <a href={routes.privacy[lang]}>{tr('form.consent_link')}</a>.</span></label></div>
-    <div class="full"><button class="btn btn--primary" type="submit">{tr('form.submit')}</button></div>
+    <div class="full"><button class="btn btn--primary" type="submit" data-umami-event="Formos siuntimas">{tr('form.submit')}</button></div>
   </div>
