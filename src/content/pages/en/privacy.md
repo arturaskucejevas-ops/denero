@@ -14,7 +14,7 @@ The name, company, email address, phone number and message submitted through the
 
 ## Cookies
 
-This website does not use tracking or advertising cookies.
+This website does not use cookies. To understand site usage we use Umami analytics, which does not identify visitors or store IP addresses – only aggregated, anonymous data (pages visited, country, device type, referring site).
 
 ## Your rights
 

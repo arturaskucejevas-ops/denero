@@ -14,7 +14,7 @@ Kontaktų formoje pateiktą vardą, įmonės pavadinimą, el. pašto adresą, te
 
 ## Slapukai
 
-Svetainė nenaudoja sekimo ar reklaminių slapukų.
+Svetainė nenaudoja slapukų. Lankomumui įvertinti naudojame „Umami“ statistiką, kuri neidentifikuoja lankytojų ir nesaugo IP adresų – renkami tik bendri, anonimiški duomenys (aplankyti puslapiai, šalis, įrenginio tipas, iš kur atėjote).
 
 ## Jūsų teisės
 
