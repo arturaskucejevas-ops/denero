@@ -1,0 +1,47 @@
+DENERO – LinkedIn įmonės puslapio tekstai
+==========================================
+
+PAVADINIMAS (Name):        DENERO
+ADRESAS (Public URL):      linkedin.com/company/denero   (jei užimtas: denero-eu)
+SVETAINĖ (Website):        https://denero.eu
+INDUSTRIJA (Industry):     IT Services and IT Consulting
+DYDIS (Organization size): 2-10 employees  (arba 0-1, jei dirbate vienas)
+TIPAS (Organization type): Privately held
+VIETA (Location):          A. P. Kavoliuko g. 2A-71, LT-04351 Vilnius, Lithuania
+
+ŠŪKIS (Tagline, iki 120 simb.)
+LT: Microsoft Dynamics NAV / Business Central, Power BI ir integracijos. DENERO PBI – 25 ataskaitos už 50 € + PVM/m.
+EN: Microsoft Dynamics NAV / Business Central, Power BI and integrations. DENERO PBI – 25 reports for €50 + VAT/yr.
+
+APRAŠYMAS (About / Overview) – LT
+DENERO padeda įmonėms išnaudoti visas Microsoft Dynamics NAV ir Dynamics 365 Business Central ERP sistemų galimybes.
+
+Ką darome:
+• Dynamics NAV / Business Central konsultacijos, diegimas, AL / C/AL programavimas ir priežiūra
+• NAV perkėlimas į Business Central
+• Sistemų integracijos: REST API, OData, EDI, SEPA
+• Power BI ataskaitos, Power Apps programėlės ir procesų automatizavimas
+• Svetainių, verslo portalų ir CRM (Dynamics 365) kūrimas
+
+DENERO PBI – 25 paruoštos Power BI finansų ir valdymo ataskaitos (pelnas, balansas, pinigų srautai, biudžetas, skolos, pardavimai, atsargos, personalas) Business Central, NAV ir kitoms sistemoms per SQL. Visos ataskaitos – 50 € + PVM per metus.
+
+Nemokama demonstracija su jūsų duomenimis: info@denero.eu | https://denero.eu
+
+APRAŠYMAS (About / Overview) – EN (pridėkite per „Manage languages“)
+DENERO helps companies get the most out of Microsoft Dynamics NAV and Dynamics 365 Business Central ERP.
+
+What we do:
+• Dynamics NAV / Business Central consulting, implementation, AL / C/AL development and support
+• NAV to Business Central upgrades
+• System integrations: REST API, OData, EDI, SEPA
+• Power BI reports, Power Apps and process automation
+• Website, business portal and CRM (Dynamics 365) development
+
+DENERO PBI – 25 ready-made Power BI finance and management reports (P&L, balance sheet, cash flow, budget, receivables, sales, inventory, HR) for Business Central, NAV and other systems via SQL. All reports – €50 + VAT per year.
+
+Free demo with your own data: info@denero.eu | https://denero.eu
+
+SPECIALIZACIJOS (Specialties, po vieną)
+Microsoft Dynamics NAV, Dynamics 365 Business Central, Power BI, Power Apps, Power Automate, ERP konsultacijos, AL programavimas, Sistemų integracijos, EDI, SEPA, Dynamics 365 CRM, SQL Server
+
+MYGTUKAS (Custom button):  Visit website → https://denero.eu/sprendimai/denero-pbi/
