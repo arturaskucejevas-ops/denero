@@ -1,0 +1,165 @@
+DENERO – LinkedIn įrašai (1 mėnuo, 8 įrašai)
+=============================================
+Kada skelbti: antradieniais ir ketvirtadieniais, 8:00–10:00.
+Kur: DENERO įmonės puslapyje, tada pasidalinkite (Repost) savo asmeniniame profilyje su vienu sakiniu nuo savęs.
+Paveikslėlis: tas pats numeris aplanke (pvz. 01-pristatymas.png).
+Nuorodas į svetainę geriau dėti PIRMAME KOMENTARE (LinkedIn mažiau rodo įrašus su nuoroda tekste).
+
+-------------------------------------------------------------
+1 SAVAITĖ, ANTRADIENIS – 01-pristatymas.png
+-------------------------------------------------------------
+Sveiki! Mes – DENERO 👋
+
+Padedame įmonėms, kad verslo sistemos dirbtų joms, o ne atvirkščiai.
+
+Su kuo galime padėti:
+🔹 ERP sistemos – Microsoft Dynamics NAV ir Business Central
+🔹 Apskaitos ir finansų sprendimai
+🔹 Duomenų analitika ir valdymo ataskaitos
+🔹 Sistemų integracijos ir procesų automatizavimas
+🔹 Svetainės, verslo portalai ir CRM
+🔹 Individualūs sprendimai pagal jūsų poreikius
+
+Kiekviena įmonė skirtinga, todėl pradedame nuo pokalbio – išsiaiškiname, kas trukdo, ir siūlome, kaip tai išspręsti.
+
+Sekite mūsų puslapį – dalinsimės praktiniais patarimais ir naujais DENERO sprendimais.
+
+#verslosprendimai #ERP #BusinessCentral #skaitmenizacija #Lietuva
+
+[Pirmas komentaras] Daugiau apie mus: https://denero.eu
+
+-------------------------------------------------------------
+1 SAVAITĖ, KETVIRTADIENIS – 02-nav-bc.png
+-------------------------------------------------------------
+Planuojate perkelti Dynamics NAV į Business Central? 5 dalykai, kuriuos verta žinoti iš anksto 👇
+
+1️⃣ Pradėkite nuo inventorizacijos. Kokie pritaikymai, ataskaitos ir integracijos naudojami iš tikrųjų? Dalies jų gali nebereikėti.
+
+2️⃣ Sutvarkykite duomenis prieš perkėlimą. Seni, dubliuoti ar nenaudojami įrašai – geriausias laikas atsikratyti.
+
+3️⃣ Pritaikymai keliauja kitaip. Business Central keičiamas per plėtinius (AL), o ne keičiant standartinį kodą – tai paprastina būsimus atnaujinimus.
+
+4️⃣ Testuokite su realiais procesais. Ne tik „ar veikia“, bet ir „ar žmonės gali dirbti taip pat greitai“.
+
+5️⃣ Neužmirškite mokymų. Nauja sąsaja – nauji įpročiai.
+
+Svarstote apie perėjimą ar turite klausimų? Parašykite – mielai aptarsime.
+
+#BusinessCentral #DynamicsNAV #ERP #Microsoft #skaitmenizacija
+
+[Pirmas komentaras] Daugiau: https://denero.eu/paslaugos/dynamics-nav-business-central/
+
+-------------------------------------------------------------
+2 SAVAITĖ, ANTRADIENIS – 03-analitika.png
+-------------------------------------------------------------
+Kiek laiko jūsų įmonėje užtrunka paruošti mėnesio finansų ataskaitą? 📊
+
+Dažnai tai atrodo taip: eksportas į Excel → formulės → kopijavimas → tikrinimas → ir taip kas mėnesį.
+
+O galima kitaip: ataskaitos atsinaujina pačios, o vadovas pelną, pinigų srautus, skolas ar biudžeto vykdymą mato vienoje vietoje – kompiuteryje ar telefone.
+
+Kuriame Power BI ataskaitas iš Business Central, NAV ir kitų sistemų (per SQL ir kitus duomenų šaltinius). Turime ir paruoštą sprendimą – DENERO PBI.
+
+Norite pamatyti, kaip tai atrodytų su jūsų duomenimis? Parašykite – parodysime.
+
+#PowerBI #finansai #analitika #BusinessCentral #valdymas
+
+[Pirmas komentaras] https://denero.eu/sprendimai/denero-pbi/
+
+-------------------------------------------------------------
+2 SAVAITĖ, KETVIRTADIENIS – 04-integracijos.png
+-------------------------------------------------------------
+Jei tie patys duomenys suvedami į dvi ar tris sistemas – tai kainuoja daugiau, nei atrodo 💸
+
+⏱ laikas, kurį darbuotojai praleidžia kopijuodami
+❌ klaidos, kurias vėliau reikia ieškoti ir taisyti
+🐢 sprendimai priimami pagal pasenusius duomenis
+
+Sistemos gali kalbėtis tarpusavyje:
+🔹 ERP ↔ el. parduotuvė, CRM, sandėlis
+🔹 EDI su prekybos tinklais
+🔹 SEPA mokėjimai ir banko išrašai
+🔹 API, XML / JSON, SQL duomenų mainai
+
+Kokias sistemas jūsų įmonėje norėtumėte sujungti? Parašykite komentare 👇
+
+#integracijos #automatizavimas #ERP #EDI #skaitmenizacija
+
+[Pirmas komentaras] https://denero.eu/paslaugos/erp-integracijos/
+
+-------------------------------------------------------------
+3 SAVAITĖ, ANTRADIENIS – 05-svetaines.png
+-------------------------------------------------------------
+Klientų informacija vis dar Excel lentelėse ir el. laiškuose? 📇
+
+Gera svetainė ir CRM – tai ne tik „vizitinė kortelė“. Tai vieta, kur:
+✅ klientai patys pateikia užklausas ar užsakymus
+✅ visa istorija apie klientą – vienoje vietoje
+✅ nepamirštami priminimai ir pasiūlymai
+✅ duomenys keliauja į ERP be rankinio darbo
+
+Kuriame ir pritaikome svetaines, klientų ir partnerių portalus bei CRM sistemas (įskaitant Microsoft Dynamics 365) – ir sujungiame juos su jūsų verslo sistemomis.
+
+#CRM #svetainės #Dynamics365 #verslas #skaitmenizacija
+
+[Pirmas komentaras] https://denero.eu/paslaugos/web-crm-kurimas/
+
+-------------------------------------------------------------
+3 SAVAITĖ, KETVIRTADIENIS – 06-greitai.png
+-------------------------------------------------------------
+Ruošiame naujus DENERO sprendimus 🚀
+
+🔸 DENERO Apskaita
+🔸 DENERO DigitSF
+🔸 ir daugiau sprendimų verslui
+
+Daugiau informacijos – jau netrukus. Sekite mūsų puslapį, kad nepraleistumėte.
+
+Norite sužinoti pirmieji? Parašykite mums – atsiųsime informaciją, kai tik ji bus paruošta.
+
+#DENERO #verslosprendimai #apskaita #skaitmenizacija #naujiena
+
+[Pirmas komentaras] https://denero.eu/sprendimai/
+
+-------------------------------------------------------------
+4 SAVAITĖ, ANTRADIENIS – 07-individualu.png
+-------------------------------------------------------------
+Standartinė programa „beveik tinka“, bet...? 🤔
+
+Kiekviena įmonė turi savo procesus. Kai standartinio funkcionalumo nepakanka, kuriame sprendimą pagal jus:
+
+1️⃣ Konsultacija – išsiaiškiname, kas trukdo
+2️⃣ Planas – aiškus sprendimas, terminai ir kaina
+3️⃣ Įgyvendinimas – kuriame, integruojame, testuojame
+4️⃣ Priežiūra – sprendimas auga kartu su jūsų verslu
+
+Papildomi ERP moduliai, automatizuoti skaičiavimai, ataskaitos, programėlės ar integracijos – pradėkime nuo pokalbio.
+
+#individualussprendimai #ERP #automatizavimas #PowerApps #verslas
+
+[Pirmas komentaras] https://denero.eu/kontaktai/
+
+-------------------------------------------------------------
+4 SAVAITĖ, KETVIRTADIENIS – 08-klausimas.png
+-------------------------------------------------------------
+Klausimas jums 👇
+
+Kas jūsų įmonėje labiausiai „vagia“ laiką?
+
+📋 Rankinis duomenų suvedimas
+📊 Ataskaitų ruošimas Excel'yje
+🔁 Duomenų kopijavimas tarp sistemų
+📧 Užklausų ir dokumentų derinimas el. paštu
+❓ Kita – parašykite komentare
+
+Atsakymus aptarsime ir pasidalinsime, kaip tokius dalykus galima automatizuoti.
+
+#efektyvumas #automatizavimas #verslas #ERP #skaitmenizacija
+
+(Šiam įrašui galite naudoti LinkedIn „Poll“ (apklausa) funkciją su 4 variantais vietoje paveikslėlio.)
+
+=============================================
+PATARIMAI
+- Per pirmą valandą atsakykite į visus komentarus – LinkedIn tada parodo įrašą daugiau žmonių.
+- Kiekvieną įrašą pasidalinkite (Repost) savo asmeniniame profilyje ir paprašykite kolegų paspausti „Patinka“.
+- Įrašą galima skelbti ir angliškai: atskiru įrašu arba antroje teksto pusėje. Jei reikia – paruošiu EN versijas.
