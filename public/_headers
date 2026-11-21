@@ -22,3 +22,8 @@
   X-Robots-Tag: noindex
 /en/thank-you/*
   X-Robots-Tag: noindex
+
+# Logotipai el. laiškų parašams – leidžiama rodyti kitose svetainėse
+/brand/*
+  ! Cross-Origin-Resource-Policy
+  Cache-Control: public, max-age=86400
