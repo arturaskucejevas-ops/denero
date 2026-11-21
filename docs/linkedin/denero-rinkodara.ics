@@ -1,0 +1,197 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//DENERO//Rinkodaros planas//LT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:DENERO rinkodara
+X-WR-TIMEZONE:Europe/Vilnius
+BEGIN:VEVENT
+UID:84329cc3-6fcb-4d9f-add8-5d8b4e25b8af@denero.eu
+DTSTAMP:20261121T111658Z
+DTSTART:20261124T070000Z
+DTEND:20261124T073000Z
+SUMMARY:LinkedIn įrašas 01: Pristatymas – kas yra DENERO
+DESCRIPTION:1. Atidarykite DENERO LinkedIn puslapį → Create → Post.\
+ n2. Tekstas: docs/linkedin/irasai/irasai.txt (įrašas 01).\n3. Paveiksl
+ ėlis: 01-*.png.\n4. Nuorodą įdėkite PIRMAME komentare.\n5. Repost sav
+ o profilyje + atsakykite į komentarus per 1 val.\nhttps://www.linkedin.c
+ om/company/denero-eu
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:LinkedIn įrašas 01: Pristatymas – kas yra DENERO
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:d5d06e31-1018-4405-a3b8-3e1532e8fe20@denero.eu
+DTSTAMP:20261121T111658Z
+DTSTART:20261126T070000Z
+DTEND:20261126T073000Z
+SUMMARY:LinkedIn įrašas 02: NAV → Business Central: 5 dalykai
+DESCRIPTION:1. Atidarykite DENERO LinkedIn puslapį → Create → Post.\
+ n2. Tekstas: docs/linkedin/irasai/irasai.txt (įrašas 02).\n3. Paveiksl
+ ėlis: 02-*.png.\n4. Nuorodą įdėkite PIRMAME komentare.\n5. Repost sav
+ o profilyje + atsakykite į komentarus per 1 val.\nhttps://www.linkedin.c
+ om/company/denero-eu
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:LinkedIn įrašas 02: NAV → Business Central: 5 dalykai
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:0ac5fe98-c437-431e-833d-6c242b544417@denero.eu
+DTSTAMP:20261121T111658Z
+DTSTART:20261201T070000Z
+DTEND:20261201T073000Z
+SUMMARY:LinkedIn įrašas 03: Analitika – visi finansai vienoje vietoje
+DESCRIPTION:1. Atidarykite DENERO LinkedIn puslapį → Create → Post.\
+ n2. Tekstas: docs/linkedin/irasai/irasai.txt (įrašas 03).\n3. Paveiksl
+ ėlis: 03-*.png.\n4. Nuorodą įdėkite PIRMAME komentare.\n5. Repost sav
+ o profilyje + atsakykite į komentarus per 1 val.\nhttps://www.linkedin.c
+ om/company/denero-eu
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:LinkedIn įrašas 03: Analitika – visi finansai vienoje vie
+ toje
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:91a5e3c2-0803-405a-9e1a-e08b63442f44@denero.eu
+DTSTAMP:20261121T111658Z
+DTSTART:20261203T070000Z
+DTEND:20261203T073000Z
+SUMMARY:LinkedIn įrašas 04: Integracijos – rankinis suvedimas kainuoj
+ a
+DESCRIPTION:1. Atidarykite DENERO LinkedIn puslapį → Create → Post.\
+ n2. Tekstas: docs/linkedin/irasai/irasai.txt (įrašas 04).\n3. Paveiksl
+ ėlis: 04-*.png.\n4. Nuorodą įdėkite PIRMAME komentare.\n5. Repost sav
+ o profilyje + atsakykite į komentarus per 1 val.\nhttps://www.linkedin.c
+ om/company/denero-eu
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:LinkedIn įrašas 04: Integracijos – rankinis suvedimas kai
+ nuoja
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:9f8eca0d-8068-44eb-97f5-a218b3dd098a@denero.eu
+DTSTAMP:20261121T111658Z
+DTSTART:20261208T070000Z
+DTEND:20261208T073000Z
+SUMMARY:LinkedIn įrašas 05: Svetainės\, portalai ir CRM
+DESCRIPTION:1. Atidarykite DENERO LinkedIn puslapį → Create → Post.\
+ n2. Tekstas: docs/linkedin/irasai/irasai.txt (įrašas 05).\n3. Paveiksl
+ ėlis: 05-*.png.\n4. Nuorodą įdėkite PIRMAME komentare.\n5. Repost sav
+ o profilyje + atsakykite į komentarus per 1 val.\nhttps://www.linkedin.c
+ om/company/denero-eu
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:LinkedIn įrašas 05: Svetainės\, portalai ir CRM
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:71b1df8f-db25-4c06-87c9-28a1a157c771@denero.eu
+DTSTAMP:20261121T111658Z
+DTSTART:20261210T070000Z
+DTEND:20261210T073000Z
+SUMMARY:LinkedIn įrašas 06: Greitai: nauji DENERO sprendimai
+DESCRIPTION:1. Atidarykite DENERO LinkedIn puslapį → Create → Post.\
+ n2. Tekstas: docs/linkedin/irasai/irasai.txt (įrašas 06).\n3. Paveiksl
+ ėlis: 06-*.png.\n4. Nuorodą įdėkite PIRMAME komentare.\n5. Repost sav
+ o profilyje + atsakykite į komentarus per 1 val.\nhttps://www.linkedin.c
+ om/company/denero-eu
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:LinkedIn įrašas 06: Greitai: nauji DENERO sprendimai
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f37a213d-f542-4cf1-9fda-24e10c45b202@denero.eu
+DTSTAMP:20261121T111658Z
+DTSTART:20261215T070000Z
+DTEND:20261215T073000Z
+SUMMARY:LinkedIn įrašas 07: Individualūs sprendimai
+DESCRIPTION:1. Atidarykite DENERO LinkedIn puslapį → Create → Post.\
+ n2. Tekstas: docs/linkedin/irasai/irasai.txt (įrašas 07).\n3. Paveiksl
+ ėlis: 07-*.png.\n4. Nuorodą įdėkite PIRMAME komentare.\n5. Repost sav
+ o profilyje + atsakykite į komentarus per 1 val.\nhttps://www.linkedin.c
+ om/company/denero-eu
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:LinkedIn įrašas 07: Individualūs sprendimai
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:93fc0be8-3d78-4466-a081-3d9e3d9dd92b@denero.eu
+DTSTAMP:20261121T111658Z
+DTSTART:20261217T070000Z
+DTEND:20261217T073000Z
+SUMMARY:LinkedIn įrašas 08: Klausimas: kas labiausiai vagia laiką? (ap
+ klausa)
+DESCRIPTION:1. Atidarykite DENERO LinkedIn puslapį → Create → Post.\
+ n2. Tekstas: docs/linkedin/irasai/irasai.txt (įrašas 08).\n3. Paveiksl
+ ėlis: 08-*.png.\n4. Nuorodą įdėkite PIRMAME komentare.\n5. Repost sav
+ o profilyje + atsakykite į komentarus per 1 val.\nhttps://www.linkedin.c
+ om/company/denero-eu
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:LinkedIn įrašas 08: Klausimas: kas labiausiai vagia laiką?
+  (apklausa)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:a0fc2feb-1f83-4bd6-9214-b55b6f8d5801@denero.eu
+DTSTAMP:20261121T111658Z
+DTSTART:20261123T073000Z
+DTEND:20261123T080000Z
+SUMMARY:LinkedIn: 10–20 žinučių potencialiems klientams
+DESCRIPTION:Parašykite 10–20 asmeninių žinučių finansų vadovams /
+  vyr. buhalteriams (NAV\, BC ir kitų sistemų naudotojams). Pasiūlykite
+  trumpą nemokamą demonstraciją.
+RRULE:FREQ=WEEKLY;COUNT=12;BYDAY=MO
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:LinkedIn: 10–20 žinučių potencialiems klientams
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2f0760d0-79ee-426d-bff0-605349fc1618@denero.eu
+DTSTAMP:20261121T111658Z
+DTSTART:20261201T080000Z
+DTEND:20261201T084500Z
+SUMMARY:DENERO: mėnesio rezultatų peržiūra
+DESCRIPTION:1. Google Search Console → Našumas (paieškos žodžiai\, 
+ paspaudimai).\n2. Cloudflare → Analytics ir AI Crawl Control.\n3. Kiek 
+ užklausų gauta info@denero.eu.\n4. Kas veikė / neveikė – kitam mėn
+ esiui.
+RRULE:FREQ=MONTHLY;COUNT=6;BYMONTHDAY=1
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:DENERO: mėnesio rezultatų peržiūra
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:04e9f312-be4b-4c79-8306-b5a60470dcf8@denero.eu
+DTSTAMP:20261121T111658Z
+DTSTART:20261203T080000Z
+DTEND:20261203T090000Z
+SUMMARY:DENERO: paskelbti straipsnį svetainėje
+DESCRIPTION:Paruoškite / paskelbkite naują straipsnį (temos – strate
+ gijoje). 2 straipsniai per mėnesį.
+RRULE:FREQ=MONTHLY;COUNT=6;BYMONTHDAY=3,17
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:DENERO: paskelbti straipsnį svetainėje
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+END:VCALENDAR
