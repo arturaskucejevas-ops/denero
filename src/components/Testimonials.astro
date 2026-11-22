@@ -19,8 +19,9 @@ const items = data.items.filter((i) => i.quote_lt);
               <p>{lang === 'en' && i.quote_en ? i.quote_en : i.quote_lt}</p>
             </blockquote>
             <figcaption>
-              <strong>{i.company}</strong>
-              <span>{lang === 'en' ? i.role_en : i.role_lt}</span>
+              {i.logo && <img class="testimonial-logo" src={i.logo} alt={i.company} width="120" height="40" loading="lazy" decoding="async" />}
+              <span class="testimonial-who"><strong>{i.company}</strong>
+              <span>{lang === 'en' ? i.role_en : i.role_lt}</span></span>
             </figcaption>
             {lang === 'en' && i.quote_en && <small class="testimonial-note">{tr('testimonials.translated')}</small>}
           </figure>

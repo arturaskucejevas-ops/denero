@@ -5,7 +5,16 @@
       "quote_en": "We are very satisfied with our cooperation. The services were delivered with high quality, and every one of our needs was taken into account. Thank you for the reliable work!",
       "role_lt": "Direktorius",
       "role_en": "Director",
-      "company": "Rtpeu, UAB"
+      "company": "Rtpeu, UAB",
+      "logo": ""
+    },
+    {
+      "quote_lt": "Dėkojame už kokybiškas paslaugas ir profesionalų požiūrį. Krovinių pervežimo veikloje svarbu tvarka ir tikslumas, o jūsų sprendimai padėjo mums dirbti sklandžiau. Rekomenduojame!",
+      "quote_en": "Thank you for the high-quality services and professional approach. In freight transport, order and accuracy matter, and your solutions helped us work more smoothly. We recommend you!",
+      "role_lt": "Direktorius",
+      "role_en": "Director",
+      "company": "UAB „Lacusta“",
+      "logo": "/atsiliepimai/lacusta.png"
     }
   ]
 }

@@ -18,7 +18,7 @@ const thanksUrl = new URL(routes.thanks[lang], Astro.site).href;
   {topic && <input type="hidden" name="sprendimas" value={topic} />}
   <p class="hp" aria-hidden="true"><label>Botcheck <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" /></label></p>
   <FormFields lang={lang} />
-  <p id="form-status" class="form-status" role="alert" aria-live="polite"></p>
+  <p class="form-status" role="alert" aria-live="polite"></p>
 </form>
 ) : (
 <form name={name} method="POST" action={routes.thanks[lang]} data-netlify="true" netlify-honeypot="company_website">
@@ -27,4 +27,3 @@ const thanksUrl = new URL(routes.thanks[lang], Astro.site).href;
   <FormFields lang={lang} />
 </form>
 )}
-{w3f && <script is:inline src="/js/contact.js" defer></script>}

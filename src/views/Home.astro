@@ -47,7 +47,9 @@ const solutions = await getOfferings('solutions', lang);
     </div>
   </section>
 
-  <section class="section section--soft">
+  <Testimonials lang={lang} soft />
+
+  <section class="section">
     <div class="container">
       <div class="section-head">
         <h2>{h.solutions_title}</h2>
@@ -63,7 +65,7 @@ const solutions = await getOfferings('solutions', lang);
   </section>
 
   {h.tech_items?.length > 0 && (
-    <section class="section">
+    <section class="section section--soft">
       <div class="container">
         <div class="section-head">
           <h2>{h.tech_title}</h2>
@@ -74,7 +76,7 @@ const solutions = await getOfferings('solutions', lang);
     </section>
   )}
 
-  <section class="section section--soft">
+  <section class="section">
     <div class="container">
       <div class="section-head"><h2>{h.why_title}</h2></div>
       <div class="why">
@@ -82,8 +84,6 @@ const solutions = await getOfferings('solutions', lang);
       </div>
     </div>
   </section>
-
-  <Testimonials lang={lang} />
 
   <CtaBand lang={lang} />
 </Base>

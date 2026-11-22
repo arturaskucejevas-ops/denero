@@ -15,3 +15,19 @@
     }
   });
 })();
+
+// Pokalbio burbulas
+(function () {
+  var btn = document.getElementById('chat-btn');
+  var panel = document.getElementById('chat-panel');
+  if (!btn || !panel) return;
+  function set(open) {
+    panel.hidden = !open;
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.classList.toggle('is-open', open);
+    if (open) { var f = panel.querySelector('textarea, input:not([type=hidden])'); if (f) f.focus(); }
+  }
+  btn.addEventListener('click', function () { set(panel.hidden); });
+  panel.querySelectorAll('[data-chat-close]').forEach(function (b) { b.addEventListener('click', function () { set(false); btn.focus(); }); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !panel.hidden) { set(false); btn.focus(); } });
+})();

@@ -256,3 +256,41 @@ ol.steps strong { color: var(--dark-900); }
 .inquiry .form-card a { color: var(--gold-700); }
 @media (max-width: 900px) { .inquiry-grid { grid-template-columns: 1fr; } }
 .shot a { display: block; cursor: zoom-in; } .shot a:hover img { border-color: var(--gold-500); }
+.testimonial figcaption { flex-direction: row; align-items: center; gap: 16px; }
+.testimonial-who { display: flex; flex-direction: column; gap: 2px; }
+.testimonial-logo { height: 40px; width: auto; max-width: 130px; object-fit: contain; flex: none; padding-right: 16px; border-right: 1px solid var(--line); }
+.testimonial { display: flex; flex-direction: column; }
+.testimonial blockquote { flex: 1; }
+
+/* Pokalbio burbulas */
+.chat { position: fixed; right: 20px; bottom: 20px; z-index: 90; display: flex; flex-direction: column; align-items: flex-end; gap: 14px; }
+.chat-btn { width: 62px; height: 62px; border-radius: 50%; border: 0; cursor: pointer; background: linear-gradient(145deg, var(--gold-300), var(--gold-600)); color: var(--dark-900); display: grid; place-items: center; box-shadow: 0 10px 28px rgba(14,15,17,.35), 0 0 0 4px rgba(212,166,74,.18); transition: transform .15s, box-shadow .15s; }
+.chat-btn:hover { transform: translateY(-2px) scale(1.04); box-shadow: 0 14px 32px rgba(14,15,17,.4), 0 0 0 6px rgba(212,166,74,.22); }
+.chat-btn .chat-ico-close { display: none; }
+.chat-btn.is-open .chat-ico-open { display: none; }
+.chat-btn.is-open .chat-ico-close { display: block; }
+.chat-panel { width: min(360px, calc(100vw - 32px)); background: #fff; border-radius: 16px; box-shadow: 0 20px 50px rgba(14,15,17,.35); overflow: hidden; border: 1px solid var(--line); }
+.chat-panel[hidden] { display: none; }
+.chat-head { display: flex; align-items: center; gap: 12px; padding: 16px 16px 16px 18px; background: linear-gradient(135deg, var(--dark-900), var(--dark-700)); color: #d6d7da; border-bottom: 3px solid var(--gold-500); }
+.chat-head img { height: 32px; width: auto; flex: none; }
+.chat-head div { display: flex; flex-direction: column; line-height: 1.3; flex: 1; }
+.chat-head strong { color: #fff; font-size: 1rem; }
+.chat-head span { font-size: .8rem; color: #bfc1c5; }
+.chat-x { background: none; border: 0; color: #d6d7da; font-size: 1.6rem; line-height: 1; cursor: pointer; padding: 0 4px; align-self: flex-start; }
+.chat-x:hover { color: var(--gold-300); }
+.chat-form { padding: 16px 18px 18px; display: grid; gap: 8px; }
+.chat-form label { font-size: .82rem; margin: 0; }
+.chat-form input, .chat-form textarea { padding: 9px 11px; font-size: .95rem; }
+.chat-form textarea { min-height: 84px; }
+.chat-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.chat-row > div { display: grid; gap: 4px; }
+.chat-consent { font-size: .8rem !important; }
+.chat-consent input { margin-top: 3px; }
+.chat-send { width: 100%; justify-content: center; }
+.chat-form .form-status { margin: 0; font-size: .85rem; }
+.chat-done { padding: 34px 20px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 6px; outline: none; }
+.chat-done[hidden] { display: none; }
+.chat-check { width: 52px; height: 52px; border-radius: 50%; background: var(--gold-50); color: var(--gold-700); border: 2px solid var(--gold-500); display: grid; place-items: center; font-size: 1.6rem; font-weight: 700; margin-bottom: 6px; }
+.chat-done span { color: var(--muted); font-size: .9rem; }
+@media (max-width: 480px) { .chat { right: 14px; bottom: 14px; } .chat-row { grid-template-columns: 1fr; } }
+@media print { .chat { display: none; } }
