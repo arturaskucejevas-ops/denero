@@ -3,7 +3,7 @@ title: DENERO PBI
 eyebrow: Power BI × Business Central / NAV
 headline: DENERO PBI – finansinė analitika jūsų BC ir NAV duomenims
 summary: "25 paruoštos valdymo ataskaitos Power BI: pelnas, balansas, pinigų srautai, biudžetas, skolos, pardavimai, atsargos ir personalas. Duomenys imami tiesiai iš Microsoft Dynamics 365 Business Central (Cloud ir on-premise) arba Dynamics NAV, be rankinio eksportavimo į Excel."
-card_summary: "25 paruoštos Power BI valdymo ataskaitos Business Central, NAV ir kitoms sistemoms. Visos ataskaitos – 50 € + PVM per metus."
+card_summary: "Paruoštos Power BI finansų ir valdymo ataskaitos: pelnas, balansas, pinigų srautai, biudžetas, skolos, pardavimai ir kt."
 icon: chart
 order: 3
 price: "50 € + PVM / metams"

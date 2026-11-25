@@ -1,24 +1,29 @@
 ---
 title: About us
-lead: Denero – specialists in Microsoft Dynamics NAV and Business Central, Power Platform and business system integrations.
-seo_title: "About Denero – Dynamics NAV & Business Central Experts"
-seo_description: "Denero – Microsoft Dynamics NAV and Business Central consulting, development, integrations, Power BI, apps, websites and CRM."
+lead: DENERO builds business solutions – from an accounting system to analytics, integrations and websites.
+seo_title: About DENERO – accounting system and business solutions
+seo_description: DENERO builds the DENERO Apskaita accounting system, DENERO PBI reports and other business solutions, and provides integration, analytics, website and CRM services.
 ---
-Denero helps companies make effective use of **Microsoft Dynamics NAV** and **Dynamics 365 Business Central** ERP and related technologies. We consult, implement, develop, integrate and support – so your business systems work for you, not the other way around.
+DENERO helps companies work more simply and efficiently. We build our own solutions and provide services so that accounting, data and processes are tidy, clear and automated.
 
-## What we do
+## DENERO solutions
 
-* [Microsoft Dynamics NAV / Business Central consulting, implementation and development](/en/services/dynamics-nav-business-central/)
+* [DENERO Apskaita](/en/) – online accounting system
+* [DENERO PBI](/en/solutions/denero-pbi/) – ready-made Power BI finance and management reports
+* [DENERO DigitSF](/en/solutions/denero-digitsf/) and [other solutions](/en/solutions/)
+
+## Services
+
 * [Custom solutions and system integrations (API, EDI, SEPA)](/en/services/erp-integracijos/)
-* [Power Apps and Power BI analytics](/en/services/power-apps-power-bi/)
+* [Apps and Power BI analytics](/en/services/power-apps-power-bi/)
 * [Website, business portal and CRM development](/en/services/web-crm-kurimas/)
 
 ## Our mission
 
-To help organizations make the most of Microsoft business technology: automate processes, connect systems and make decisions based on reliable data.
+To help businesses spend less time on routine and more on decisions that create value.
 
 ## Values
 
 - **Reliability** – we keep our commitments and deadlines.
-- **Transparency** – clear communication at every stage of the project.
-- **Expertise** – we keep learning and follow the latest Microsoft technologies.
+- **Simplicity** – we build solutions that are easy to use.
+- **Expertise** – we keep learning and follow the latest technologies.

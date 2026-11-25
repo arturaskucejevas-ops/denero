@@ -38,6 +38,8 @@ const solutions = defineCollection({
     price_note: z.string().optional(),
     price_amount: z.number().optional(),       // kaina skaičiumi (Google / AI duomenims)
     price_period: z.string().optional(),       // pvz. „P1Y“ (metai)
+    cta_url: z.string().optional(),            // papildomas mygtukas, pvz. prisijungimas
+    cta_label: z.string().optional(),
   }),
 });
 

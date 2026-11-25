@@ -1,5 +1,5 @@
 import settings from '../data/settings.json';
-import home from '../data/home.json';
+import ap from '../data/apskaita.json';
 import testimonials from '../data/testimonials.json';
 import { routes, detailPath, type Lang } from './ui';
 import { getOfferings, getPage, slugOf } from './content';
@@ -23,7 +23,7 @@ export async function buildLlmsTxt(site: URL) {
   out.push(`# ${settings.short_name}`, "");
   out.push(`> ${settings.seo.lt.default_description}`, '');
   out.push(`> ${settings.seo.en.default_description}`, '');
-  out.push(`${home.en.hero_text} Based in Lithuania, serving clients in Lithuanian and English.`, '');
+  out.push(`DENERO Apskaita: ${ap.en.text} Login: ${ap.login_url}. Plans and pricing: ${abs('/#planai', site)}.`, '', 'Based in Lithuania, serving clients in Lithuanian and English.', '');
   out.push('## Kontaktai / Contact', '', contacts('lt'), `- Web: ${site.href}`, '');
   for (const lang of ['lt', 'en'] as Lang[]) {
     out.push(lang === 'lt' ? '## Paslaugos (LT)' : '## Services (EN)', '');

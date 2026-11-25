@@ -8,16 +8,16 @@ icon: cloud
 order: 2
 draft: false
 seo_title: "Power Apps Development & Power BI Reports"
-seo_description: "Business and mobile apps with Power Apps, Power BI reports and analytics, Power Automate automation. Integrated with Business Central and SQL."
+seo_description: "Business and mobile apps with Power Apps, Power BI reports and data analytics, process automation with Power Automate."
 faq:
   - question: What is Microsoft Power BI?
     answer: Power BI is Microsoft's data analytics and visualization tool. It
-      combines data from ERP, SQL, Excel and other sources and presents it in
+      combines data from accounting systems, SQL, Excel and other sources and presents it in
       interactive reports and dashboards.
-  - question: Can Power BI be connected to Dynamics NAV or Business Central?
-    answer: Yes. Power BI reports can use the Business Central API, OData or the
-      NAV SQL database directly, so managers see up-to-date sales, finance or
-      inventory data in one place.
+  - question: Can Power BI be connected to our accounting system?
+    answer: In most cases, yes. Power BI can use an SQL database, API, OData or
+      files, so managers see up-to-date sales, finance or inventory data in one
+      place.
   - question: What is Power Apps and when is it a good fit?
     answer: Power Apps lets you quickly build business apps for desktop, tablet or
       phone – e.g. orders, stocktaking, approvals or work logging – and connect
@@ -27,13 +27,13 @@ We build **business and mobile apps**, **Power BI reports** and **data analytics
 
 ## Business & mobile apps
 
-With **Microsoft Power Apps**, .NET / C# and React we build apps that simplify everyday work: order and job logging, stocktaking, approval flows, field service tasks. Apps are connected to Business Central, Dataverse, SQL Server and other systems.
+With **Microsoft Power Apps**, .NET / C# and React we build apps that simplify everyday work: order and job logging, stocktaking, approval flows, field service tasks. Apps are connected to accounting systems, Dataverse, SQL Server and other sources.
 
 ## Power BI reporting & analytics
 
-Looking for something ready-made? [DENERO PBI](/en/solutions/denero-pbi/) – 25 ready-made Power BI finance and management reports for Business Central, NAV and other systems for €50 + VAT per year.
+Looking for something ready-made? [DENERO PBI](/en/solutions/denero-pbi/) – ready-made Power BI finance and management reports.
 
-We create **Power BI** reports and dashboards for sales, finance, inventory and production data, combining Dynamics NAV / Business Central, SQL, Excel and other sources into one clear view.
+We create **Power BI** reports and dashboards for sales, finance, inventory and production data, combining accounting systems, SQL, Excel and other sources into one clear view.
 
 ## Process automation
 

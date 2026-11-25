@@ -37,5 +37,26 @@ const listLd = {
       </div>
     </div>
   </section>
+  {kind === 'services' && (
+    <>
+      <section class="section section--soft">
+        <div class="container">
+          <div class="section-head"><h2>{h.why_title}</h2></div>
+          <div class="why">
+            {h.why_items.map((w) => <div class="why-item"><h3>{w.title}</h3><p>{w.text}</p></div>)}
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>{h.tech_title}</h2>
+            <p>{h.tech_text}</p>
+          </div>
+          <ul class="chips">{h.tech_items.map((x) => <li>{x}</li>)}</ul>
+        </div>
+      </section>
+    </>
+  )}
   <CtaBand lang={lang} />
 </Base>

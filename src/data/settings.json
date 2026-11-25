@@ -15,14 +15,14 @@
   "facebook": "",
   "seo": {
     "lt": {
-      "default_title": "Dynamics NAV ir Business Central konsultacijos",
-      "default_description": "Microsoft Dynamics NAV ir Business Central konsultacijos, diegimas, programavimas ir priežiūra. Power BI, Power Apps, integracijos (API, EDI, SEPA), CRM.",
-      "keywords": "Microsoft Dynamics NAV, Dynamics 365 Business Central, Business Central konsultacijos, Business Central diegimas, Business Central programavimas, NAV programavimas, NAV priežiūra, NAV perkėlimas į Business Central, ERP sistema, ERP konsultacijos, AL programavimas, C/AL, Power BI ataskaitos, Power Apps, Power Automate, sistemų integracijos, EDI integracija, SEPA, REST API, CRM sistemų kūrimas, Dynamics 365 CRM, Power Pages, svetainių kūrimas, Lietuva, Vilnius, DENERO PBI, Power BI ataskaitos Business Central, Power BI ataskaitos NAV, finansinės ataskaitos Power BI, valdymo ataskaitos, Power BI SQL"
+      "default_title": "DENERO Apskaita – apskaitos sistema verslui",
+      "default_description": "DENERO – apskaitos sistema DENERO Apskaita, Power BI ataskaitos DENERO PBI, sistemų integracijos, svetainės ir CRM. Verslo sprendimai Lietuvoje.",
+      "keywords": "DENERO Apskaita, apskaitos sistema, apskaitos programa, buhalterinė apskaita, apskaitos programa internete, sąskaitų išrašymas, verslo apskaita, DENERO PBI, Power BI ataskaitos, finansinės ataskaitos, sistemų integracijos, EDI, SEPA, svetainių kūrimas, CRM, Lietuva, Vilnius"
     },
     "en": {
-      "default_title": "Dynamics NAV & Business Central Consulting",
-      "default_description": "Microsoft Dynamics NAV and Business Central consulting, implementation, development and support. Power BI, Power Apps, integrations (API, EDI, SEPA), CRM.",
-      "keywords": "Microsoft Dynamics NAV, Dynamics 365 Business Central, Business Central consulting, Business Central implementation, Business Central development, NAV development, NAV support, NAV to Business Central upgrade, ERP consulting, AL development, Power BI reports, Power Apps, Power Automate, system integration, EDI integration, SEPA, CRM development, Dynamics 365 CRM, Power Pages, Lithuania, DENERO PBI, Power BI reports Business Central, Power BI reports NAV, financial reports Power BI, management reports, Power BI SQL"
+      "default_title": "DENERO Apskaita – accounting system for business",
+      "default_description": "DENERO – the DENERO Apskaita accounting system, DENERO PBI Power BI reports, system integrations, websites and CRM. Business solutions from Lithuania.",
+      "keywords": "DENERO Apskaita, accounting system, accounting software, online accounting, invoicing, business accounting, DENERO PBI, Power BI reports, financial reports, system integration, EDI, SEPA, website development, CRM, Lithuania"
     }
   },
   "og_image": "/og-image.png",

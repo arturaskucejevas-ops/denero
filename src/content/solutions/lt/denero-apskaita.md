@@ -1,10 +1,19 @@
 ---
 title: "DENERO Apskaita"
-summary: "DENERO sprendimas apskaitai. Informacija ruošiama – domina? Parašykite mums."
+summary: "Paprasta ir saugi apskaitos sistema internete: sąskaitos, pirkimai, pardavimai ir ataskaitos – vienoje vietoje."
 icon: doc
 order: 1
-coming_soon: true
-seo_title: "DENERO Apskaita – apskaitos sprendimas"
-seo_description: "DENERO Apskaita – DENERO apskaitos sprendimas. Informacija ruošiama, užklausą galite pateikti jau dabar."
+cta_url: "https://apskaita.denero.eu"
+cta_label: "Prisijungti"
+seo_title: "DENERO Apskaita – apskaitos sistema internete"
+seo_description: "DENERO Apskaita – apskaitos sistema internete: sąskaitos faktūros, pirkimai, pardavimai, banko operacijos ir ataskaitos. Peržiūrėkite planus ir kainas."
 ---
-Informacija apie šį sprendimą šiuo metu **ruošiama**. Norite sužinoti daugiau jau dabar? Užpildykite užklausos formą žemiau – atsiųsime visą informaciją ir atsakysime į klausimus.
+**DENERO Apskaita** – apskaitos sistema, veikianti naršyklėje: išrašykite sąskaitas, tvarkykite pirkimus ir pardavimus, importuokite banko išrašus ir matykite ataskaitas realiu laiku.
+
+* Sąskaitos faktūros ir apmokėjimų sekimas
+* Pirkimai, pardavimai, klientai ir tiekėjai
+* Banko operacijos
+* Ataskaitos realiu laiku
+* Komandos darbas su teisių valdymu
+
+[Peržiūrėkite planus ir kainas →](/#planai)

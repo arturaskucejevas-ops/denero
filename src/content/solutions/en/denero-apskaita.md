@@ -1,10 +1,19 @@
 ---
 title: "DENERO Apskaita"
-summary: "DENERO accounting solution. Information coming soon – interested? Write to us."
+summary: "A simple, secure online accounting system: invoices, purchases, sales and reports – all in one place."
 icon: doc
 order: 1
-coming_soon: true
-seo_title: "DENERO Apskaita – Accounting Solution"
-seo_description: "DENERO Apskaita – an accounting solution by DENERO. Information coming soon; you can send an enquiry now."
+cta_url: "https://apskaita.denero.eu"
+cta_label: "Log in"
+seo_title: "DENERO Apskaita – online accounting system"
+seo_description: "DENERO Apskaita – an online accounting system: invoices, purchases, sales, bank transactions and reports. See plans and pricing."
 ---
-Information about this solution is **being prepared**. Want to know more right now? Fill in the enquiry form below – we will send you full details and answer your questions.
+**DENERO Apskaita** is an accounting system that runs in your browser: issue invoices, manage purchases and sales, import bank statements and see real-time reports.
+
+* Invoices and payment tracking
+* Purchases, sales, customers and suppliers
+* Bank transactions
+* Real-time reports
+* Teamwork with permission management
+
+[See plans and pricing →](/en/#planai)

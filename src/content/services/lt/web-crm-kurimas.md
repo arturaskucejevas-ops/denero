@@ -8,18 +8,17 @@ icon: database
 order: 4
 draft: false
 seo_title: "Svetainių, portalų ir CRM sistemų kūrimas"
-seo_description: "Svetainių, klientų portalų ir CRM sistemų kūrimas: Dynamics 365 CRM, Power Pages, Dataverse, ASP.NET Core, React. Integracija su ERP."
+seo_description: "Svetainių, klientų portalų ir CRM sistemų kūrimas: Dynamics 365 CRM, Power Pages, Dataverse, ASP.NET Core, React. Integracija su kitomis sistemomis."
 faq:
   - question: Kas yra Microsoft Power Pages?
     answer: Power Pages – „Microsoft“ platforma saugioms verslo svetainėms ir
       portalams kurti. Ji tiesiogiai naudoja Dataverse duomenis, todėl klientai ar
       partneriai gali pateikti užklausas, matyti užsakymus ar dokumentus.
-  - question: Ar CRM sistemą galima sujungti su Business Central?
-    answer: Taip. Dynamics 365 CRM (Sales, Customer Service) ir Business Central
-      galima integruoti, kad klientų, užsakymų ir sąskaitų duomenys būtų
-      sinchronizuojami automatiškai.
+  - question: Ar CRM sistemą galima sujungti su apskaitos sistema?
+    answer: Taip. CRM ir apskaitos sistemas galima integruoti, kad klientų,
+      užsakymų ir sąskaitų duomenys būtų sinchronizuojami automatiškai.
 ---
-Kuriame ir pritaikome **internetines svetaines**, **verslo portalus** ir **CRM sistemas**, kurios susietos su jūsų ERP ir kitomis sistemomis.
+Kuriame ir pritaikome **internetines svetaines**, **verslo portalus** ir **CRM sistemas**, kurios susietos su jūsų apskaitos ir kitomis sistemomis.
 
 ## Internetinės svetainės ir verslo portalai
 
@@ -31,7 +30,7 @@ Diegiame ir pritaikome **Microsoft Dynamics 365 CRM** ir **Dataverse** sprendimu
 
 ## Integracijos
 
-Sujungiame svetaines, portalus ir CRM su Dynamics NAV / Business Central, el. paštu, mokėjimų ir kitomis išorinėmis sistemomis, kad duomenys būtų vienoje vietoje.
+Sujungiame svetaines, portalus ir CRM su apskaitos sistemomis, el. paštu, mokėjimų ir kitomis išorinėmis sistemomis, kad duomenys būtų vienoje vietoje.
 
 ## Naudojamos technologijos
 

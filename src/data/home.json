@@ -1,65 +1,38 @@
 {
   "lt": {
-    "hero_eyebrow": "Microsoft Dynamics NAV · Business Central · Power Platform",
-    "hero_title": "Microsoft Dynamics NAV ir Business Central sprendimai jūsų verslui",
-    "hero_text": "Konsultuojame, diegiame, programuojame ir prižiūrime Dynamics NAV bei Business Central ERP sistemas. Kuriame Power BI ataskaitas, Power Apps programėles, sistemų integracijas, svetaines ir CRM sprendimus.",
-    "hero_cta": "Susisiekti",
-    "hero_cta_secondary": "Mūsų paslaugos",
     "services_title": "Paslaugos",
-    "services_text": "Nuo Microsoft Dynamics NAV / Business Central konsultacijų iki integracijų, Power BI analitikos, programėlių ir CRM – viskas vienoje vietoje.",
+    "services_text": "Be DENERO sprendimų, padedame įmonėms su sistemų integracijomis, duomenų analitika, programėlėmis, svetainėmis ir CRM.",
     "solutions_title": "Sprendimai",
-    "solutions_text": "DENERO produktai verslui: paruoštos Power BI ataskaitos DENERO PBI, DENERO Apskaita, DENERO DigitSF ir individualūs sprendimai.",
-    "stats": [
-      {
-        "value": "NAV / BC",
-        "label": "Microsoft Dynamics ERP"
-      },
-      {
-        "value": "Power BI",
-        "label": "duomenų analitika"
-      },
-      {
-        "value": "API / EDI",
-        "label": "sistemų integracijos"
-      },
-      {
-        "value": "LT / EN",
-        "label": "aptarnavimas dviem kalbomis"
-      }
-    ],
-    "why_title": "Kodėl verta rinktis „Denero“",
+    "solutions_text": "DENERO produktai verslui: DENERO Apskaita, DENERO PBI, DENERO DigitSF ir individualūs sprendimai.",
+    "why_title": "Kodėl verta rinktis DENERO",
     "why_items": [
       {
-        "title": "Microsoft Dynamics kompetencija",
-        "text": "Gerai išmanome Dynamics NAV ir Business Central – nuo verslo procesų iki AL / C/AL kodo ir SQL duomenų bazės."
+        "title": "Savi sprendimai",
+        "text": "Kuriame ir vystome savo produktus – DENERO Apskaitą, DENERO PBI ir kitus."
       },
       {
         "title": "Viskas vienoje vietoje",
-        "text": "ERP, Power BI analitika, programėlės, integracijos, svetainės ir CRM – vienas partneris visam sprendimui."
+        "text": "Apskaita, analitika, integracijos, svetainės ir CRM – vienas partneris visam sprendimui."
       },
       {
         "title": "Ilgalaikė partnerystė",
-        "text": "Ne tik įdiegiame, bet ir prižiūrime, optimizuojame bei toliau tobuliname jūsų sistemas."
+        "text": "Ne tik įdiegiame, bet ir prižiūrime, tobuliname ir padedame augti."
       }
     ],
-    "cta_title": "Reikia Dynamics NAV ar Business Central specialisto?",
-    "cta_text": "Papasakokite apie savo sistemą ir poreikius – pasiūlysime tinkamiausią sprendimą.",
+    "cta_title": "Turite klausimą ar idėją?",
+    "cta_text": "Papasakokite apie savo poreikius – pasiūlysime tinkamiausią sprendimą.",
     "cta_button": "Gauti pasiūlymą",
-    "services_heading": "ERP, analitikos ir verslo sistemų paslaugos",
+    "services_heading": "Paslaugos verslui: integracijos, analitika, svetainės ir CRM",
     "tech_title": "Technologijos, su kuriomis dirbame",
     "tech_text": "Naudojame „Microsoft“ verslo valdymo, analitikos ir integracijų technologijas bei šiuolaikinius programavimo įrankius.",
     "tech_items": [
-      "Microsoft Dynamics NAV",
-      "Dynamics 365 Business Central",
-      "Dynamics 365 CRM",
       "Power BI",
       "Power Apps",
       "Power Automate",
       "Power Pages",
       "Dataverse",
+      "Dynamics 365 CRM",
       "SQL Server / T-SQL",
-      "AL / C/AL",
-      "RDLC ataskaitos",
       "REST API / OData / SOAP",
       "EDI / SEPA",
       "XML / JSON",
@@ -71,66 +44,39 @@
     ]
   },
   "en": {
-    "hero_eyebrow": "Microsoft Dynamics NAV · Business Central · Power Platform",
-    "hero_title": "Microsoft Dynamics NAV and Business Central solutions for your business",
-    "hero_text": "We consult on, implement, develop and support Dynamics NAV and Business Central ERP. We build Power BI reports, Power Apps, system integrations, websites and CRM solutions.",
-    "hero_cta": "Contact us",
-    "hero_cta_secondary": "Our services",
     "services_title": "Services",
-    "services_text": "From Microsoft Dynamics NAV / Business Central consulting to integrations, Power BI analytics, apps and CRM – all in one place.",
+    "services_text": "Alongside DENERO solutions, we help companies with system integrations, data analytics, apps, websites and CRM.",
     "solutions_title": "Solutions",
-    "solutions_text": "DENERO products for business: ready-made Power BI reports DENERO PBI, DENERO Apskaita, DENERO DigitSF and custom solutions.",
-    "stats": [
-      {
-        "value": "NAV / BC",
-        "label": "Microsoft Dynamics ERP"
-      },
-      {
-        "value": "Power BI",
-        "label": "data analytics"
-      },
-      {
-        "value": "API / EDI",
-        "label": "system integrations"
-      },
-      {
-        "value": "LT / EN",
-        "label": "service in two languages"
-      }
-    ],
-    "why_title": "Why choose Denero",
+    "solutions_text": "DENERO products for business: DENERO Apskaita, DENERO PBI, DENERO DigitSF and custom solutions.",
+    "why_title": "Why choose DENERO",
     "why_items": [
       {
-        "title": "Microsoft Dynamics expertise",
-        "text": "We know Dynamics NAV and Business Central inside out – from business processes to AL / C/AL code and the SQL database."
+        "title": "Our own solutions",
+        "text": "We build and develop our own products – DENERO Apskaita, DENERO PBI and more."
       },
       {
         "title": "Everything in one place",
-        "text": "ERP, Power BI analytics, apps, integrations, websites and CRM – one partner for the whole solution."
+        "text": "Accounting, analytics, integrations, websites and CRM – one partner for the whole solution."
       },
       {
         "title": "Long-term partnership",
-        "text": "We don't just implement – we support, optimize and keep improving your systems."
+        "text": "We don't just implement – we support, improve and help you grow."
       }
     ],
-    "cta_title": "Need a Dynamics NAV or Business Central specialist?",
-    "cta_text": "Tell us about your system and needs – we will propose the best-fitting solution.",
+    "cta_title": "Have a question or an idea?",
+    "cta_text": "Tell us about your needs and we will propose the best-fitting solution.",
     "cta_button": "Request a proposal",
-    "services_heading": "ERP, analytics and business systems services",
+    "services_heading": "Business services: integrations, analytics, websites and CRM",
     "tech_title": "Technologies we work with",
     "tech_text": "We use Microsoft business management, analytics and integration technologies together with modern development tools.",
     "tech_items": [
-      "Microsoft Dynamics NAV",
-      "Dynamics 365 Business Central",
-      "Dynamics 365 CRM",
       "Power BI",
       "Power Apps",
       "Power Automate",
       "Power Pages",
       "Dataverse",
+      "Dynamics 365 CRM",
       "SQL Server / T-SQL",
-      "AL / C/AL",
-      "RDLC reports",
       "REST API / OData / SOAP",
       "EDI / SEPA",
       "XML / JSON",

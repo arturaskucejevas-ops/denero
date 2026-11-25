@@ -7,18 +7,17 @@ icon: database
 order: 4
 draft: false
 seo_title: "Website, Portal & CRM Development"
-seo_description: "Websites, customer portals and CRM development: Dynamics 365 CRM, Power Pages, Dataverse, ASP.NET Core, React. Integrated with ERP."
+seo_description: "Websites, customer portals and CRM development: Dynamics 365 CRM, Power Pages, Dataverse, ASP.NET Core, React. Integrated with other systems."
 faq:
   - question: What is Microsoft Power Pages?
     answer: Power Pages is Microsoft's platform for secure business websites and
       portals. It works directly with Dataverse data, so customers or partners can
       submit requests and view orders or documents.
-  - question: Can a CRM be connected to Business Central?
-    answer: Yes. Dynamics 365 CRM (Sales, Customer Service) and Business Central
-      can be integrated so customer, order and invoice data is synchronized
-      automatically.
+  - question: Can a CRM be connected to an accounting system?
+    answer: Yes. CRM and accounting systems can be integrated so customer, order
+      and invoice data is synchronized automatically.
 ---
-We build and customize **websites**, **business portals** and **CRM systems** connected to your ERP and other systems.
+We build and customize **websites**, **business portals** and **CRM systems** connected to your accounting and other systems.
 
 ## Websites & business portals
 
@@ -30,7 +29,7 @@ We implement and customize **Microsoft Dynamics 365 CRM** and **Dataverse** solu
 
 ## Integrations
 
-We connect websites, portals and CRM with Dynamics NAV / Business Central, email, payment and other external systems so all data is in one place.
+We connect websites, portals and CRM with accounting systems, email, payment and other external systems so all data is in one place.
 
 ## Technologies
 

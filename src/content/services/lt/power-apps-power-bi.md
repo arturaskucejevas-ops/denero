@@ -8,16 +8,16 @@ icon: cloud
 order: 2
 draft: false
 seo_title: "Power Apps programėlės ir Power BI ataskaitos"
-seo_description: "Verslo ir mobiliųjų programėlių kūrimas su Power Apps, Power BI ataskaitos ir analitika, Power Automate. Integracija su Business Central ir SQL."
+seo_description: "Verslo ir mobiliųjų programėlių kūrimas su Power Apps, Power BI ataskaitos ir duomenų analitika, procesų automatizavimas su Power Automate."
 faq:
   - question: Kas yra Microsoft Power BI?
     answer: Power BI – „Microsoft“ duomenų analitikos ir vizualizavimo įrankis.
-      Jis sujungia duomenis iš ERP, SQL, Excel ir kitų šaltinių bei pateikia juos
+      Jis sujungia duomenis iš apskaitos sistemų, SQL, Excel ir kitų šaltinių bei pateikia juos
       interaktyviose ataskaitose ir valdymo skyduose (dashboard).
-  - question: Ar Power BI galima prijungti prie Dynamics NAV ar Business Central?
-    answer: Taip. Power BI ataskaitos gali tiesiogiai naudoti Business Central
-      API, OData arba NAV SQL duomenų bazę, todėl vadovai mato aktualius
-      pardavimų, finansų ar sandėlio duomenis vienoje vietoje.
+  - question: Ar Power BI galima prijungti prie mūsų apskaitos sistemos?
+    answer: Dažniausiai taip. Power BI gali naudoti SQL duomenų bazę, API, OData
+      ar failus, todėl vadovai mato aktualius pardavimų, finansų ar sandėlio
+      duomenis vienoje vietoje.
   - question: Kas yra Power Apps ir kada jis tinka?
     answer: Power Apps leidžia greitai sukurti verslo programėles kompiuteriui,
       planšetei ar telefonui – pvz., užsakymų, inventorizacijos, patvirtinimų ar
@@ -27,13 +27,13 @@ Kuriame **verslo ir mobiliąsias programėles**, **Power BI ataskaitas** ir **du
 
 ## Verslo ir mobiliosios programėlės
 
-Su **Microsoft Power Apps**, .NET / C# ir React kuriame programėles, kurios supaprastina kasdienius darbus: užsakymų ir darbų registravimą, inventorizaciją, patvirtinimo procesus, lauko darbuotojų užduotis. Programėles sujungiame su Business Central, Dataverse, SQL Server ar kitomis sistemomis.
+Su **Microsoft Power Apps**, .NET / C# ir React kuriame programėles, kurios supaprastina kasdienius darbus: užsakymų ir darbų registravimą, inventorizaciją, patvirtinimo procesus, lauko darbuotojų užduotis. Programėles sujungiame su apskaitos sistemomis, Dataverse, SQL Server ar kitais šaltiniais.
 
 ## Power BI ataskaitos ir duomenų analitika
 
-Ieškote paruoštų sprendimų? [DENERO PBI](/sprendimai/denero-pbi/) – 25 paruoštos Power BI finansų ir valdymo ataskaitos Business Central, NAV ir kitoms sistemoms už 50 € + PVM per metus.
+Ieškote paruošto sprendimo? [DENERO PBI](/sprendimai/denero-pbi/) – paruoštos Power BI finansų ir valdymo ataskaitos.
 
-Kuriame **Power BI** ataskaitas ir valdymo skydus (dashboard) pardavimų, finansų, sandėlio ir gamybos duomenims. Sujungiame Dynamics NAV / Business Central, SQL, Excel ir kitus duomenų šaltinius į vieną aiškų vaizdą.
+Kuriame **Power BI** ataskaitas ir valdymo skydus (dashboard) pardavimų, finansų, sandėlio ir gamybos duomenims. Sujungiame apskaitos sistemų, SQL, Excel ir kitus duomenų šaltinius į vieną aiškų vaizdą.
 
 ## Procesų automatizavimas
 

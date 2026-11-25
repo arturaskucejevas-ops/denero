@@ -1,0 +1,95 @@
+{
+  "login_url": "https://apskaita.denero.eu",
+  "lt": {
+    "eyebrow": "DENERO Apskaita",
+    "title": "Apskaita, kuri dirba už jus",
+    "text": "Paprasta ir saugi apskaitos sistema internete: sąskaitos, pirkimai, pardavimai ir ataskaitos – vienoje vietoje, bet kur ir bet kada.",
+    "login": "Prisijungti",
+    "see_plans": "Peržiūrėti planus",
+    "trust": ["Veikia naršyklėje – nieko diegti nereikia", "Duomenys saugomi saugiai", "Pagalba lietuvių kalba"],
+    "seo_title": "DENERO Apskaita – apskaitos sistema verslui internete",
+    "seo_description": "DENERO Apskaita – paprasta apskaitos sistema internete: sąskaitos faktūros, pirkimai, pardavimai, banko operacijos ir ataskaitos vienoje vietoje. Pasirinkite planą.",
+    "features_title": "Viskas, ko reikia kasdienei apskaitai",
+    "features_text": "Aiški sąsaja, automatizuoti procesai ir ataskaitos, kurias suprasite iš pirmo žvilgsnio.",
+    "features": [
+      { "icon": "doc", "title": "Sąskaitos faktūros", "text": "Išrašykite ir siųskite sąskaitas per kelias sekundes, sekite apmokėjimus." },
+      { "icon": "database", "title": "Pirkimai ir pardavimai", "text": "Visi dokumentai, klientai ir tiekėjai – vienoje tvarkingoje vietoje." },
+      { "icon": "network", "title": "Banko operacijos", "text": "Importuokite banko išrašus ir greitai suderinkite mokėjimus." },
+      { "icon": "chart", "title": "Ataskaitos realiu laiku", "text": "Pajamos, išlaidos, skolos ir pelnas – visada aktualūs skaičiai." },
+      { "icon": "users", "title": "Komandos darbas", "text": "Pakvieskite buhalterį ar kolegas ir nustatykite jų teises." },
+      { "icon": "shield", "title": "Saugu ir patikima", "text": "Šifruotas ryšys, atsarginės kopijos ir prieiga tik jūsų žmonėms." }
+    ],
+    "steps_title": "Pradėti paprasta",
+    "steps": [
+      { "title": "Pasirinkite planą", "text": "Pagal įmonės dydį ir poreikius – planą galėsite keisti bet kada." },
+      { "title": "Prisijunkite", "text": "Sistema veikia naršyklėje kompiuteryje, planšetėje ar telefone." },
+      { "title": "Dirbkite", "text": "Išrašykite sąskaitas, tvarkykite dokumentus ir matykite ataskaitas." }
+    ],
+    "plans_title": "Planai ir kainos",
+    "plans_text": "Pasirinkite jums tinkamą planą. Kainos nurodytos be PVM.",
+    "plans_note": "Preliminari informacija – planų sudėtis ir kainos gali keistis.",
+    "popular": "Populiariausias",
+    "per": "/ mėn. + PVM",
+    "plans": [
+      { "name": "Startas", "desc": "Individualiai veiklai ir mažoms įmonėms", "price": "19 €", "cta": "Pradėti",
+        "features": ["1 naudotojas", "Iki 50 dokumentų per mėnesį", "Sąskaitų išrašymas", "Pajamų ir išlaidų apskaita", "Pagrindinės ataskaitos", "Pagalba el. paštu"] },
+      { "name": "Verslas", "desc": "Augančioms įmonėms", "price": "39 €", "cta": "Pradėti", "popular": true,
+        "features": ["Iki 3 naudotojų", "Iki 300 dokumentų per mėnesį", "Viskas, kas yra Starte", "Pirkimai ir pardavimai", "Banko išrašų importas", "Prioritetinė pagalba"] },
+      { "name": "Profesionalus", "desc": "Didesnėms komandoms", "price": "79 €", "cta": "Pradėti",
+        "features": ["Iki 10 naudotojų", "Neribotas dokumentų kiekis", "Viskas, kas yra Versle", "Išplėstinės ataskaitos", "Integracijos (API)", "Asmeninis konsultantas"] },
+      { "name": "Individualus", "desc": "Sprendimas pagal jūsų poreikius", "price": "Pagal susitarimą", "cta": "Susisiekti", "individual": true,
+        "features": ["Neribotas naudotojų skaičius", "Individualūs moduliai", "Integracijos su jūsų sistemomis", "Duomenų perkėlimas", "Mokymai komandai", "Prioritetinė priežiūra"] }
+    ],
+    "more_title": "Kiti DENERO sprendimai",
+    "more_text": "Be apskaitos sistemos, kuriame ir kitus sprendimus verslui.",
+    "cta_title": "Turite klausimų apie DENERO Apskaitą?",
+    "cta_text": "Parašykite – padėsime išsirinkti tinkamą planą ar pritaikyti sistemą jūsų įmonei.",
+    "cta_button": "Susisiekti"
+  },
+  "en": {
+    "eyebrow": "DENERO Apskaita",
+    "title": "Accounting that works for you",
+    "text": "A simple, secure online accounting system: invoices, purchases, sales and reports – all in one place, anywhere, anytime.",
+    "login": "Log in",
+    "see_plans": "View plans",
+    "trust": ["Runs in the browser – nothing to install", "Your data is stored securely", "Support in Lithuanian and English"],
+    "seo_title": "DENERO Apskaita – online accounting system for business",
+    "seo_description": "DENERO Apskaita – a simple online accounting system: invoices, purchases, sales, bank transactions and reports in one place. Choose your plan.",
+    "features_title": "Everything you need for everyday accounting",
+    "features_text": "A clear interface, automated processes and reports you understand at a glance.",
+    "features": [
+      { "icon": "doc", "title": "Invoices", "text": "Create and send invoices in seconds and track payments." },
+      { "icon": "database", "title": "Purchases and sales", "text": "All documents, customers and suppliers in one tidy place." },
+      { "icon": "network", "title": "Bank transactions", "text": "Import bank statements and reconcile payments quickly." },
+      { "icon": "chart", "title": "Real-time reports", "text": "Revenue, expenses, receivables and profit – always up to date." },
+      { "icon": "users", "title": "Teamwork", "text": "Invite your accountant or colleagues and set their permissions." },
+      { "icon": "shield", "title": "Secure and reliable", "text": "Encrypted connection, backups and access only for your people." }
+    ],
+    "steps_title": "Getting started is easy",
+    "steps": [
+      { "title": "Choose a plan", "text": "Based on your company size and needs – you can change it anytime." },
+      { "title": "Log in", "text": "The system runs in the browser on a computer, tablet or phone." },
+      { "title": "Get to work", "text": "Issue invoices, manage documents and see your reports." }
+    ],
+    "plans_title": "Plans and pricing",
+    "plans_text": "Choose the plan that suits you. Prices exclude VAT.",
+    "plans_note": "Preliminary information – plan contents and prices may change.",
+    "popular": "Most popular",
+    "per": "/ month + VAT",
+    "plans": [
+      { "name": "Start", "desc": "For sole traders and small companies", "price": "€19", "cta": "Get started",
+        "features": ["1 user", "Up to 50 documents per month", "Invoicing", "Income and expense accounting", "Basic reports", "Email support"] },
+      { "name": "Business", "desc": "For growing companies", "price": "€39", "cta": "Get started", "popular": true,
+        "features": ["Up to 3 users", "Up to 300 documents per month", "Everything in Start", "Purchases and sales", "Bank statement import", "Priority support"] },
+      { "name": "Professional", "desc": "For larger teams", "price": "€79", "cta": "Get started",
+        "features": ["Up to 10 users", "Unlimited documents", "Everything in Business", "Advanced reports", "Integrations (API)", "Personal consultant"] },
+      { "name": "Custom", "desc": "A solution tailored to your needs", "price": "On request", "cta": "Contact us", "individual": true,
+        "features": ["Unlimited users", "Custom modules", "Integrations with your systems", "Data migration", "Team training", "Priority maintenance"] }
+    ],
+    "more_title": "Other DENERO solutions",
+    "more_text": "Besides the accounting system, we build other solutions for business.",
+    "cta_title": "Questions about DENERO Apskaita?",
+    "cta_text": "Write to us – we will help you choose the right plan or tailor the system to your company.",
+    "cta_button": "Contact us"
+  }
+}

@@ -78,7 +78,8 @@ const subject = `${lang === 'lt' ? 'Užklausa dėl' : 'Enquiry about'}: ${d.titl
       <p>{d.summary}</p>
       {(isSolution || d.price || d.coming_soon) && (
         <div class="hero-actions">
-          <a class="btn btn--primary" href="#uzklausa" data-umami-event="Domina mygtukas">{tr('solution.cta')}</a>
+          {d.cta_url && <a class="btn btn--primary" href={d.cta_url}>{d.cta_label}</a>}
+          <a class={`btn ${d.cta_url ? 'btn--ghost' : 'btn--primary'}`} href="#uzklausa" data-umami-event="Domina mygtukas">{tr('solution.cta')}</a>
           {d.price && <span class="price-pill"><strong>{d.price}</strong>{d.price_note && <small>{d.price_note}</small>}</span>}
           {d.coming_soon && <span class="badge badge--soon">{tr('solution.coming_soon')}</span>}
         </div>

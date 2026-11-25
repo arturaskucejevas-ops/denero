@@ -3,7 +3,7 @@ title: DENERO PBI
 eyebrow: Power BI × Business Central / NAV
 headline: DENERO PBI – financial analytics for your BC and NAV data
 summary: "25 ready-made Power BI management reports: profit, balance sheet, cash flow, budget, receivables, sales, inventory and HR. Data comes directly from Microsoft Dynamics 365 Business Central (Cloud and on-premises) or Dynamics NAV – no manual exports to Excel."
-card_summary: "25 ready-made Power BI management reports for Business Central, NAV and other systems. All reports – €50 + VAT per year."
+card_summary: "Ready-made Power BI finance and management reports: profit, balance sheet, cash flow, budget, receivables, sales and more."
 icon: chart
 order: 3
 price: "€50 + VAT / year"
