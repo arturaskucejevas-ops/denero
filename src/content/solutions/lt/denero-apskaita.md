@@ -1,19 +1,32 @@
 ---
 title: "DENERO Apskaita"
-summary: "Paprasta ir saugi apskaitos sistema internete: sąskaitos, pirkimai, pardavimai ir ataskaitos – vienoje vietoje."
+summary: "Apskaitos programa internete: pirkimai, pardavimai, atsargos, ilgalaikis turtas, kasa, mokesčių ataskaitos ir el. prekybos integracijos. Nuo 5 € / mėn."
 icon: doc
 order: 1
 cta_url: "https://apskaita.denero.eu"
 cta_label: "Prisijungti"
-seo_title: "DENERO Apskaita – apskaitos sistema internete"
-seo_description: "DENERO Apskaita – apskaitos sistema internete: sąskaitos faktūros, pirkimai, pardavimai, banko operacijos ir ataskaitos. Peržiūrėkite planus ir kainas."
+price: "nuo 5 € / mėn. + PVM"
+seo_title: "DENERO Apskaita – apskaitos programa internete"
+seo_description: "DENERO Apskaita – apskaitos programa internete: pirkimai, pardavimai, atsargos, ilgalaikis turtas, kasa, i.VAZ, mokesčių ataskaitos. Planai nuo 5 € / mėn."
 ---
-**DENERO Apskaita** – apskaitos sistema, veikianti naršyklėje: išrašykite sąskaitas, tvarkykite pirkimus ir pardavimus, importuokite banko išrašus ir matykite ataskaitas realiu laiku.
+**DENERO Apskaita** – apskaitos programa, veikianti naršyklėje adresu [apskaita.denero.eu](https://apskaita.denero.eu). Skirta mažoms, augančioms ir didesnėms įmonėms bei buhalterinės apskaitos įmonėms.
 
-* Sąskaitos faktūros ir apmokėjimų sekimas
-* Pirkimai, pardavimai, klientai ir tiekėjai
-* Banko operacijos
-* Ataskaitos realiu laiku
-* Komandos darbas su teisių valdymu
+## Moduliai
 
-[Peržiūrėkite planus ir kainas →](/#planai)
+* Pirkimai ir pardavimai
+* Atsargos
+* Ilgalaikis turtas
+* Kasa ir avanso apyskaitos
+* Mokėjimų paketai ir valiuta
+* Mokesčių ataskaitos ir i.VAZ
+* WooCommerce, Shopify, PrestaShop, Paysera, Montonio integracijos ir API
+* Papildomi moduliai: sutartys, personalas ir darbo užmokestis, gamyba
+
+## Planai (kainos be PVM)
+
+* **Startas** – 5 € / mėn. arba 55 € / metus, 3 vartotojai
+* **Verslas** – 10 € / mėn. arba 110 € / metus, 5 vartotojai
+* **Verslas+** – 18 € / mėn. arba 198 € / metus, 10 vartotojų
+* **Individualus** – buhalterinės apskaitos įmonėms ir didesnėms įmonėms, pagal susitarimą
+
+[Peržiūrėkite planus ir priedų kainas →](/#planai)

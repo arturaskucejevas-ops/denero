@@ -15,14 +15,14 @@
   "facebook": "",
   "seo": {
     "lt": {
-      "default_title": "DENERO Apskaita – apskaitos sistema verslui",
-      "default_description": "DENERO – apskaitos sistema DENERO Apskaita, Power BI ataskaitos DENERO PBI, sistemų integracijos, svetainės ir CRM. Verslo sprendimai Lietuvoje.",
-      "keywords": "DENERO Apskaita, apskaitos sistema, apskaitos programa, buhalterinė apskaita, apskaitos programa internete, sąskaitų išrašymas, verslo apskaita, DENERO PBI, Power BI ataskaitos, finansinės ataskaitos, sistemų integracijos, EDI, SEPA, svetainių kūrimas, CRM, Lietuva, Vilnius"
+      "default_title": "DENERO Apskaita – apskaitos programa verslui",
+      "default_description": "DENERO – apskaitos programa DENERO Apskaita (nuo 5 €/mėn.), Power BI ataskaitos DENERO PBI, sistemų integracijos, svetainės ir CRM. Verslo sprendimai Lietuvoje.",
+      "keywords": "DENERO Apskaita, apskaitos programa, apskaitos sistema, buhalterinė programa, buhalterinė apskaita internete, apskaitos programa smulkiam verslui, apskaitos programa buhalterinėms įmonėms, pirkimai ir pardavimai, atsargų apskaita, ilgalaikio turto apskaita, kasa, avanso apyskaita, i.VAZ, mokesčių ataskaitos, darbo užmokestis, personalo apskaita, gamybos apskaita, sutarčių valdymas, WooCommerce apskaita, Shopify apskaita, PrestaShop apskaita, Paysera, Montonio, DENERO PBI, Power BI ataskaitos, sistemų integracijos, Lietuva, Vilnius"
     },
     "en": {
-      "default_title": "DENERO Apskaita – accounting system for business",
-      "default_description": "DENERO – the DENERO Apskaita accounting system, DENERO PBI Power BI reports, system integrations, websites and CRM. Business solutions from Lithuania.",
-      "keywords": "DENERO Apskaita, accounting system, accounting software, online accounting, invoicing, business accounting, DENERO PBI, Power BI reports, financial reports, system integration, EDI, SEPA, website development, CRM, Lithuania"
+      "default_title": "DENERO Apskaita – accounting software for business",
+      "default_description": "DENERO – the DENERO Apskaita accounting software (from €5/month), DENERO PBI Power BI reports, system integrations, websites and CRM. Business solutions from Lithuania.",
+      "keywords": "DENERO Apskaita, accounting software, online accounting, accounting system Lithuania, small business accounting, accounting for accounting firms, inventory accounting, fixed assets, cash desk, i.VAZ, tax reports, payroll, HR, manufacturing, contracts, WooCommerce accounting, Shopify accounting, PrestaShop, Paysera, Montonio, DENERO PBI, Power BI reports, system integration, Lithuania"
     }
   },
   "og_image": "/og-image.png",

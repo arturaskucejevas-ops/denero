@@ -15,11 +15,34 @@ const tr = t(lang);
 const login = ap.login_url;
 const solutions = (await getOfferings('solutions', lang)).filter((s) => !s.id.endsWith('/denero-apskaita'));
 const site = Astro.site!;
+const paid = a.plans.filter((p: any) => p.price_m);
+const homeUrl = new URL(routes.home[lang], site).href;
 const appLd = {
   '@context': 'https://schema.org', '@type': 'SoftwareApplication',
-  name: 'DENERO Apskaita', applicationCategory: 'BusinessApplication', operatingSystem: 'Web',
-  description: a.seo_description, url: new URL(routes.home[lang], site).href,
+  name: 'DENERO Apskaita', alternateName: lang === 'lt' ? 'DENERO apskaitos programa' : 'DENERO accounting software',
+  applicationCategory: 'BusinessApplication', applicationSubCategory: lang === 'lt' ? 'Apskaitos programa' : 'Accounting software',
+  operatingSystem: 'Web', inLanguage: ['lt', 'en'], countriesSupported: 'LT',
+  description: a.seo_description, url: homeUrl, installUrl: login,
+  featureList: a.features.map((f: any) => f.title).join(', '),
+  screenshot: new URL('/og-image.png', site).href,
   publisher: { '@type': 'Organization', name: settings.company_name, url: site.href },
+  offers: {
+    '@type': 'AggregateOffer', priceCurrency: 'EUR', offerCount: paid.length,
+    lowPrice: Math.min(...paid.map((p: any) => p.price_m)), highPrice: Math.max(...paid.map((p: any) => p.price_m)),
+    offers: paid.map((p: any) => ({
+      '@type': 'Offer', name: `DENERO Apskaita ${p.name}`, price: p.price_m, priceCurrency: 'EUR',
+      url: `${homeUrl}#planai`, availability: 'https://schema.org/InStock',
+      description: `${p.desc}. ${p.users} ${lang === 'lt' ? 'vartotojai' : 'users'}. ${p.features.join(', ')}.`,
+      priceSpecification: [
+        { '@type': 'UnitPriceSpecification', price: p.price_m, priceCurrency: 'EUR', valueAddedTaxIncluded: false, billingDuration: 'P1M', unitCode: 'MON' },
+        { '@type': 'UnitPriceSpecification', price: p.price_y, priceCurrency: 'EUR', valueAddedTaxIncluded: false, billingDuration: 'P1Y', unitCode: 'ANN' },
+      ],
+    })),
+  },
+};
+const faqLd = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: a.faq.map((f: any) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
 };
 const eur = (n: number) => {
   const v = Math.round(n * 100) / 100;
@@ -30,7 +53,7 @@ const save = (p: any) => (p.price_m && p.price_y ? Math.round((1 - p.price_y / (
 const maxSave = Math.max(...a.plans.map((p: any) => save(p)));
 const months = lang === 'lt' ? ['Sau', 'Vas', 'Kov', 'Bal', 'Geg', 'Bir'] : ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'];
 ---
-<Base lang={lang} title={a.seo_title} description={a.seo_description} alternates={alt('home')} jsonLd={[appLd]}>
+<Base lang={lang} title={a.seo_title} description={a.seo_description} alternates={alt('home')} jsonLd={[appLd, faqLd]}>
   <section class="hero hero--app">
     <div class="container hero-split">
       <div>
@@ -197,6 +220,15 @@ const months = lang === 'lt' ? ['Sau', 'Vas', 'Kov', 'Bal', 'Geg', 'Bir'] : ['Ja
             href={detailPath('solutions', lang, slugOf(s.id))} more={tr('common.more')} />
         ))}
       </div>
+    </div>
+  </section>
+
+  <section class="section section--soft" aria-labelledby="faq-title">
+    <div class="container">
+      <section class="faq faq--wide">
+        <h2 id="faq-title">{a.faq_title}</h2>
+        {a.faq.map((f) => <details><summary>{f.q}</summary><p>{f.a}</p></details>)}
+      </section>
     </div>
   </section>
 

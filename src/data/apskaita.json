@@ -2,8 +2,8 @@
   "login_url": "https://apskaita.denero.eu",
   "lt": {
     "eyebrow": "DENERO Apskaita",
-    "title": "Apskaita, kuri dirba už jus",
-    "text": "Paprasta ir saugi apskaitos sistema internete: sąskaitos, pirkimai, pardavimai ir ataskaitos – vienoje vietoje, bet kur ir bet kada.",
+    "title": "Apskaitos programa, kuri dirba už jus",
+    "text": "DENERO Apskaita – apskaitos sistema internete įmonėms: pirkimai, pardavimai, atsargos, ilgalaikis turtas, kasa, mokesčių ataskaitos ir el. prekybos integracijos. Planai nuo 5 € per mėnesį.",
     "login": "Prisijungti",
     "see_plans": "Peržiūrėti planus",
     "trust": [
@@ -11,40 +11,55 @@
       "Duomenys saugomi saugiai",
       "Pagalba lietuvių kalba"
     ],
-    "seo_title": "DENERO Apskaita – apskaitos sistema verslui internete",
-    "seo_description": "DENERO Apskaita – paprasta apskaitos sistema internete: sąskaitos faktūros, pirkimai, pardavimai, banko operacijos ir ataskaitos vienoje vietoje. Pasirinkite planą.",
-    "features_title": "Viskas, ko reikia kasdienei apskaitai",
-    "features_text": "Aiški sąsaja, automatizuoti procesai ir ataskaitos, kurias suprasite iš pirmo žvilgsnio.",
+    "seo_title": "DENERO Apskaita – apskaitos programa nuo 5 €/mėn.",
+    "seo_description": "Apskaitos programa internete: pirkimai, pardavimai, atsargos, ilgalaikis turtas, kasa, i.VAZ, mokesčių ataskaitos, WooCommerce, Shopify. Nuo 5 € / mėn.",
+    "features_title": "Apskaitos moduliai vienoje sistemoje",
+    "features_text": "Viskas, ko reikia kasdienei įmonės apskaitai – nuo pirkimų ir pardavimų iki mokesčių ataskaitų ir el. prekybos integracijų.",
     "features": [
       {
         "icon": "doc",
-        "title": "Sąskaitos faktūros",
-        "text": "Išrašykite ir siųskite sąskaitas per kelias sekundes, sekite apmokėjimus."
+        "title": "Pirkimai ir pardavimai",
+        "text": "Pirkimo ir pardavimo dokumentai, klientai ir tiekėjai – vienoje tvarkingoje vietoje."
       },
       {
         "icon": "database",
-        "title": "Pirkimai ir pardavimai",
-        "text": "Visi dokumentai, klientai ir tiekėjai – vienoje tvarkingoje vietoje."
+        "title": "Atsargos",
+        "text": "Prekių likučių ir judėjimo apskaita."
+      },
+      {
+        "icon": "cog",
+        "title": "Ilgalaikis turtas",
+        "text": "Ilgalaikio turto apskaita vienoje sistemoje su kitais duomenimis."
+      },
+      {
+        "icon": "lock",
+        "title": "Kasa ir avanso apyskaitos",
+        "text": "Grynųjų pinigų operacijos ir darbuotojų avanso apyskaitos."
       },
       {
         "icon": "network",
-        "title": "Banko operacijos",
-        "text": "Importuokite banko išrašus ir greitai suderinkite mokėjimus."
+        "title": "Mokėjimų paketai ir valiuta",
+        "text": "Mokėjimų paketai bankui ir operacijos skirtingomis valiutomis."
       },
       {
         "icon": "chart",
-        "title": "Ataskaitos realiu laiku",
-        "text": "Pajamos, išlaidos, skolos ir pelnas – visada aktualūs skaičiai."
+        "title": "Mokesčių ataskaitos ir i.VAZ",
+        "text": "Mokesčių ataskaitos, o Verslo planuose – i.VAZ."
+      },
+      {
+        "icon": "code",
+        "title": "El. prekybos ir mokėjimų integracijos",
+        "text": "WooCommerce, Shopify, PrestaShop, Paysera, Montonio ir integracijų API."
       },
       {
         "icon": "users",
-        "title": "Komandos darbas",
-        "text": "Pakvieskite buhalterį ar kolegas ir nustatykite jų teises."
+        "title": "Personalas ir darbo užmokestis",
+        "text": "Papildomas modulis darbuotojų ir darbo užmokesčio apskaitai."
       },
       {
-        "icon": "shield",
-        "title": "Saugu ir patikima",
-        "text": "Šifruotas ryšys, atsarginės kopijos ir prieiga tik jūsų žmonėms."
+        "icon": "support",
+        "title": "Sutartys ir gamyba",
+        "text": "Papildomi moduliai sutartims ir gamybos apskaitai."
       }
     ],
     "steps_title": "Pradėti paprasta",
@@ -256,12 +271,43 @@
     "features_label": "Įeina:",
     "addons_toggle": "Papildomi priedai ir kainos",
     "per_m_short": "/ mėn.",
-    "per_y_short": "/ metus"
+    "per_y_short": "/ metus",
+    "faq_title": "Dažniausiai užduodami klausimai",
+    "faq": [
+      {
+        "q": "Kiek kainuoja DENERO Apskaita?",
+        "a": "Planai kainuoja nuo 5 € per mėnesį be PVM: Startas – 5 € (55 € metams), Verslas – 10 € (110 € metams), Verslas+ – 18 € (198 € metams). Buhalterinės apskaitos įmonėms ir didesnėms įmonėms – individualus pasiūlymas."
+      },
+      {
+        "q": "Kiek vartotojų įeina į planą?",
+        "a": "Startas – 3 vartotojai, Verslas – 5, Verslas+ – 10. Papildomas vartotojas kainuoja atitinkamai 2 €, 4 € ir 5 € per mėnesį be PVM."
+      },
+      {
+        "q": "Ar pigiau mokėti už metus?",
+        "a": "Taip. Mokant už metus sutaupoma apie 8 %, pavyzdžiui, Starto planas kainuoja 55 € per metus vietoje 60 €."
+      },
+      {
+        "q": "Kokius modulius turi DENERO Apskaita?",
+        "a": "Visuose planuose: pirkimai, pardavimai, atsargos, ilgalaikis turtas, mokėjimų paketai, mokesčių ataskaitos, valiuta, kasa, avanso apyskaitos ir WooCommerce integracija. Verslo plane papildomai – i.VAZ ir mokėjimų paslaugų integracija. Papildomi moduliai: sutartys, personalas ir darbo užmokestis, gamyba."
+      },
+      {
+        "q": "Su kokiomis el. parduotuvėmis ir mokėjimų sistemomis integruojasi?",
+        "a": "WooCommerce (visuose planuose), Shopify, PrestaShop, mokėjimų paslaugos Paysera ir Montonio, taip pat yra integracijų API kitoms sistemoms."
+      },
+      {
+        "q": "Ar DENERO Apskaita tinka buhalterinės apskaitos įmonėms?",
+        "a": "Taip. Buhalterinės apskaitos įmonėms ir didesnėms įmonėms siūlome individualų planą – susisiekite, aptarsime poreikius ir sąlygas."
+      },
+      {
+        "q": "Kaip prisijungti prie DENERO Apskaitos?",
+        "a": "Sistema veikia naršyklėje adresu apskaita.denero.eu – nieko diegti nereikia."
+      }
+    ]
   },
   "en": {
     "eyebrow": "DENERO Apskaita",
-    "title": "Accounting that works for you",
-    "text": "A simple, secure online accounting system: invoices, purchases, sales and reports – all in one place, anywhere, anytime.",
+    "title": "Accounting software that works for you",
+    "text": "DENERO Apskaita is an online accounting system for companies: purchases, sales, inventory, fixed assets, cash desk, tax reports and e-commerce integrations. Plans from €5 per month.",
     "login": "Log in",
     "see_plans": "View plans",
     "trust": [
@@ -269,40 +315,55 @@
       "Your data is stored securely",
       "Support in Lithuanian and English"
     ],
-    "seo_title": "DENERO Apskaita – online accounting system for business",
-    "seo_description": "DENERO Apskaita – a simple online accounting system: invoices, purchases, sales, bank transactions and reports in one place. Choose your plan.",
-    "features_title": "Everything you need for everyday accounting",
-    "features_text": "A clear interface, automated processes and reports you understand at a glance.",
+    "seo_title": "DENERO Apskaita – accounting software from €5/month",
+    "seo_description": "Online accounting software: purchases, sales, inventory, fixed assets, cash desk, i.VAZ, tax reports, WooCommerce, Shopify. From €5 / month.",
+    "features_title": "Accounting modules in one system",
+    "features_text": "Everything you need for everyday company accounting – from purchases and sales to tax reports and e-commerce integrations.",
     "features": [
       {
         "icon": "doc",
-        "title": "Invoices",
-        "text": "Create and send invoices in seconds and track payments."
+        "title": "Purchases and sales",
+        "text": "Purchase and sales documents, customers and suppliers in one tidy place."
       },
       {
         "icon": "database",
-        "title": "Purchases and sales",
-        "text": "All documents, customers and suppliers in one tidy place."
+        "title": "Inventory",
+        "text": "Stock balances and movements."
+      },
+      {
+        "icon": "cog",
+        "title": "Fixed assets",
+        "text": "Fixed asset accounting in the same system as the rest of your data."
+      },
+      {
+        "icon": "lock",
+        "title": "Cash desk and advance reports",
+        "text": "Cash transactions and employee advance reports."
       },
       {
         "icon": "network",
-        "title": "Bank transactions",
-        "text": "Import bank statements and reconcile payments quickly."
+        "title": "Payment batches and currencies",
+        "text": "Bank payment batches and multi-currency transactions."
       },
       {
         "icon": "chart",
-        "title": "Real-time reports",
-        "text": "Revenue, expenses, receivables and profit – always up to date."
+        "title": "Tax reports and i.VAZ",
+        "text": "Tax reports, and i.VAZ e-waybills in the Business plans."
+      },
+      {
+        "icon": "code",
+        "title": "E-commerce and payment integrations",
+        "text": "WooCommerce, Shopify, PrestaShop, Paysera, Montonio and an integration API."
       },
       {
         "icon": "users",
-        "title": "Teamwork",
-        "text": "Invite your accountant or colleagues and set their permissions."
+        "title": "HR and payroll",
+        "text": "An add-on module for employee and payroll accounting."
       },
       {
-        "icon": "shield",
-        "title": "Secure and reliable",
-        "text": "Encrypted connection, backups and access only for your people."
+        "icon": "support",
+        "title": "Contracts and manufacturing",
+        "text": "Add-on modules for contracts and manufacturing accounting."
       }
     ],
     "steps_title": "Getting started is easy",
@@ -514,6 +575,37 @@
     "features_label": "Includes:",
     "addons_toggle": "Add-ons and prices",
     "per_m_short": "/ mo",
-    "per_y_short": "/ yr"
+    "per_y_short": "/ yr",
+    "faq_title": "Frequently asked questions",
+    "faq": [
+      {
+        "q": "How much does DENERO Apskaita cost?",
+        "a": "Plans start at €5 per month excluding VAT: Start – €5 (€55 per year), Business – €10 (€110 per year), Business+ – €18 (€198 per year). Accounting firms and larger companies get a custom offer."
+      },
+      {
+        "q": "How many users are included?",
+        "a": "Start – 3 users, Business – 5, Business+ – 10. An additional user costs €2, €4 and €5 per month excluding VAT respectively."
+      },
+      {
+        "q": "Is yearly billing cheaper?",
+        "a": "Yes. Paying yearly saves about 8%, for example the Start plan costs €55 per year instead of €60."
+      },
+      {
+        "q": "Which modules does DENERO Apskaita include?",
+        "a": "All plans: purchases, sales, inventory, fixed assets, payment batches, tax reports, currencies, cash desk, advance reports and WooCommerce integration. The Business plan adds i.VAZ and payment services integration. Add-on modules: contracts, HR and payroll, manufacturing."
+      },
+      {
+        "q": "Which e-shops and payment systems does it integrate with?",
+        "a": "WooCommerce (all plans), Shopify, PrestaShop, the Paysera and Montonio payment services, plus an integration API for other systems."
+      },
+      {
+        "q": "Is DENERO Apskaita suitable for accounting firms?",
+        "a": "Yes. We offer a custom plan for accounting firms and larger companies – contact us to discuss your needs and terms."
+      },
+      {
+        "q": "How do I log in?",
+        "a": "The system runs in your browser at apskaita.denero.eu – nothing to install."
+      }
+    ]
   }
 }

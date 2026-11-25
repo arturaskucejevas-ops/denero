@@ -18,12 +18,48 @@ function contacts(lang: Lang) {
   ].join('\n');
 }
 
+
+function apskaitaBlock(lang: Lang, site: URL) {
+  const a = (ap as any)[lang];
+  const lt = lang === 'lt';
+  const eur = (n: number) => (lt ? `${n} €` : `€${n}`);
+  const out: string[] = [];
+  out.push(`## DENERO Apskaita${lt ? ' – apskaitos programa' : ' – accounting software'}`, `URL: ${abs(lt ? '/' : '/en/', site)}`, `${lt ? 'Prisijungimas' : 'Login'}: ${ap.login_url}`, '');
+  out.push(a.text, '');
+  out.push(`### ${a.features_title}`, '');
+  for (const f of a.features) out.push(`- **${f.title}** – ${f.text}`);
+  out.push('', `### ${a.plans_title} (${lt ? 'kainos be PVM' : 'prices excl. VAT'})`, '');
+  for (const p of a.plans) {
+    if (p.price_m) {
+      out.push(`#### ${p.name} – ${eur(p.price_m)} ${a.per_m} / ${eur(p.price_y)} ${a.per_y}`);
+      out.push(`${p.desc}. ${(p.users === 1 ? a.users_incl_1 : a.users_incl).replace('{n}', String(p.users))}${p.extra_user_m ? `; ${a.extra_user_m.replace('{p}', eur(p.extra_user_m))}` : ''}.`);
+    } else {
+      out.push(`#### ${p.name} – ${p.price}`, `${p.desc}. ${p.intro ?? ''}`);
+    }
+    out.push(`${a.features_label} ${p.features.join(', ')}${p.plus ? `; ${p.plus}` : ''}.`);
+    if (p.addons) {
+      out.push(`${a.addons_toggle}: ` + p.addons.map((x: any) => x.tiers
+        ? `${x.name} (${x.tiers.map((t: any) => `${t.label} ${eur(t.m)}${a.per_m_short}`).join(', ')})`
+        : `${x.name} ${eur(x.m)}${a.per_m_short} / ${eur(x.y)}${a.per_y_short}`).join('; ') + '.');
+    }
+    out.push('');
+  }
+  out.push(`### ${a.faq_title}`, '');
+  for (const f of a.faq) out.push(`**${f.q}**`, '', f.a, '');
+  return out;
+}
+
 export async function buildLlmsTxt(site: URL) {
   const out: string[] = [];
   out.push(`# ${settings.short_name}`, "");
   out.push(`> ${settings.seo.lt.default_description}`, '');
   out.push(`> ${settings.seo.en.default_description}`, '');
   out.push(`DENERO Apskaita: ${ap.en.text} Login: ${ap.login_url}. Plans and pricing: ${abs('/#planai', site)}.`, '', 'Based in Lithuania, serving clients in Lithuanian and English.', '');
+  out.push('## DENERO Apskaita', '',
+    `- LT: ${ap.lt.text} ${abs('/', site)}`,
+    `- EN: ${ap.en.text} ${abs('/en/', site)}`,
+    `- Planai / Plans: ` + ap.lt.plans.map((p: any) => p.price_m ? `${p.name} ${p.price_m} €/mėn. (${p.price_y} €/metus), ${p.users} vart.` : `${p.name} – ${p.price}`).join('; ') + ' (be PVM / excl. VAT)',
+    `- Prisijungimas / Login: ${ap.login_url}`, '');
   out.push('## Kontaktai / Contact', '', contacts('lt'), `- Web: ${site.href}`, '');
   for (const lang of ['lt', 'en'] as Lang[]) {
     out.push(lang === 'lt' ? '## Paslaugos (LT)' : '## Services (EN)', '');
@@ -54,6 +90,7 @@ export async function buildLlmsFull(site: URL) {
     const lt = lang === 'lt';
     const about = await getPage(lang, 'about');
     out.push(`# ${lt ? 'Lietuvių kalba' : 'English'}`, '');
+    out.push(...apskaitaBlock(lang, site));
     out.push(`## ${about.data.title}`, `URL: ${abs(routes.about[lang], site)}`, '');
     if (about.data.lead) out.push(about.data.lead, '');
     out.push((about.body ?? '').trim(), '');
