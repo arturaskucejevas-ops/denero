@@ -64,7 +64,7 @@
     ],
     "plans_title": "Planai ir kainos",
     "plans_text": "Pasirinkite jums tinkamą planą. Kainos nurodytos be PVM.",
-    "plans_note": "Preliminari informacija – planų sudėtis ir kainos gali keistis.",
+    "plans_note": "Priedus galite užsisakyti prie plano bet kada. Kainos nurodytos be PVM.",
     "popular": "Populiariausias",
     "plans": [
       {
@@ -89,7 +89,25 @@
           "Avanso apyskaita",
           "WooCommerce integracija"
         ],
-        "plus": "Pagal poreikį – papildomos integracijos"
+        "plus": "Pagal poreikį – papildomos integracijos",
+        "addons": [
+          {
+            "name": "Shopify integracija",
+            "m": 2,
+            "y": 24
+          },
+          {
+            "name": "PrestaShop integracija",
+            "m": 2,
+            "y": 24
+          },
+          {
+            "name": "Mokėjimų paslaugų integracija",
+            "note": "Paysera, Montonio",
+            "m": 2,
+            "y": 24
+          }
+        ]
       },
       {
         "name": "Verslas",
@@ -106,12 +124,50 @@
           "i.VAZ",
           "Mokėjimų paslaugų integracija (Paysera, Montonio)"
         ],
-        "addons_label": "Papildomi priedai:",
-        "addons_list": [
-          "Sutartys",
-          "Personalas ir DU"
-        ],
-        "plus": "Pagal poreikį – papildomos integracijos ir API"
+        "plus": "Pagal poreikį – papildomos integracijos ir API",
+        "addons": [
+          {
+            "name": "Sutartys",
+            "m": 3,
+            "y": 36
+          },
+          {
+            "name": "Personalas ir DU",
+            "note": "Kaina pagal darbuotojų skaičių",
+            "tiers": [
+              {
+                "label": "iki 5 darbuotojų",
+                "m": 6,
+                "y": 72
+              },
+              {
+                "label": "iki 9 darbuotojų",
+                "m": 9,
+                "y": 108
+              },
+              {
+                "label": "iki 15 darbuotojų",
+                "m": 8,
+                "y": 96
+              }
+            ]
+          },
+          {
+            "name": "Integracijų API",
+            "m": 5,
+            "y": 60
+          },
+          {
+            "name": "Shopify integracija",
+            "m": 3,
+            "y": 36
+          },
+          {
+            "name": "PrestaShop integracija",
+            "m": 3,
+            "y": 36
+          }
+        ]
       },
       {
         "name": "Verslas+",
@@ -129,12 +185,40 @@
           "Shopify integracija",
           "PrestaShop integracija"
         ],
-        "addons_label": "Papildomi priedai:",
-        "addons_list": [
-          "Personalas ir DU",
-          "Gamyba"
-        ],
-        "plus": "Pagal poreikį – papildomos integracijos"
+        "plus": "Pagal poreikį – papildomos integracijos",
+        "addons": [
+          {
+            "name": "Personalas ir DU",
+            "note": "Kaina pagal darbuotojų skaičių",
+            "tiers": [
+              {
+                "label": "iki 8 darbuotojų",
+                "m": 9,
+                "y": 108
+              },
+              {
+                "label": "iki 12 darbuotojų",
+                "m": 14,
+                "y": 168
+              },
+              {
+                "label": "iki 16 darbuotojų",
+                "m": 13,
+                "y": 156
+              },
+              {
+                "label": "iki 20 darbuotojų",
+                "m": 12,
+                "y": 144
+              }
+            ]
+          },
+          {
+            "name": "Gamyba",
+            "m": 5,
+            "y": 60
+          }
+        ]
       },
       {
         "name": "Individualus",
@@ -170,64 +254,9 @@
     "extra_user_m": "Papildomas vartotojas – {p} / mėn.",
     "extra_user_y": "Papildomas vartotojas – {p} / metus",
     "features_label": "Įeina:",
-    "addons_title": "Papildomi priedai ir integracijos",
-    "addons_text": "Prie plano galite pridėti reikalingus modulius ir integracijas. Priedų kainos gali skirtis pagal planą.",
-    "addons_per_m": "/ mėn. + PVM",
-    "addons_per_y": "/ metus + PVM",
-    "addons": [
-      {
-        "name": "Personalas ir darbo užmokestis",
-        "note": "Kaina priklauso nuo plano ir darbuotojų skaičiaus",
-        "icon": "users",
-        "price_m": 6,
-        "price_y": 72,
-        "from": true
-      },
-      {
-        "name": "Gamyba",
-        "icon": "cog",
-        "price_m": 5,
-        "price_y": 60
-      },
-      {
-        "name": "Sutartys",
-        "note": "Verslas+ – įskaičiuota",
-        "icon": "doc",
-        "price_m": 3,
-        "price_y": 36
-      },
-      {
-        "name": "Integracijų API",
-        "note": "Verslas+ – įskaičiuota",
-        "icon": "code",
-        "price_m": 5,
-        "price_y": 60
-      },
-      {
-        "name": "Shopify integracija",
-        "note": "Verslas+ – įskaičiuota",
-        "icon": "network",
-        "price_m": 2,
-        "price_y": 24,
-        "from": true
-      },
-      {
-        "name": "PrestaShop integracija",
-        "note": "Verslas+ – įskaičiuota",
-        "icon": "network",
-        "price_m": 2,
-        "price_y": 24,
-        "from": true
-      },
-      {
-        "name": "Mokėjimų paslaugų integracija",
-        "note": "Paysera, Montonio · Verslas ir Verslas+ – įskaičiuota",
-        "icon": "lock",
-        "price_m": 2,
-        "price_y": 24
-      }
-    ],
-    "from": "nuo"
+    "addons_toggle": "Papildomi priedai ir kainos",
+    "per_m_short": "/ mėn.",
+    "per_y_short": "/ metus"
   },
   "en": {
     "eyebrow": "DENERO Apskaita",
@@ -293,7 +322,7 @@
     ],
     "plans_title": "Plans and pricing",
     "plans_text": "Choose the plan that suits you. Prices exclude VAT.",
-    "plans_note": "Preliminary information – plan contents and prices may change.",
+    "plans_note": "Add-ons can be ordered with your plan at any time. Prices exclude VAT.",
     "popular": "Most popular",
     "plans": [
       {
@@ -318,7 +347,25 @@
           "Advance reports",
           "WooCommerce integration"
         ],
-        "plus": "Additional integrations as needed"
+        "plus": "Additional integrations as needed",
+        "addons": [
+          {
+            "name": "Shopify integration",
+            "m": 2,
+            "y": 24
+          },
+          {
+            "name": "PrestaShop integration",
+            "m": 2,
+            "y": 24
+          },
+          {
+            "name": "Payment services integration",
+            "note": "Paysera, Montonio",
+            "m": 2,
+            "y": 24
+          }
+        ]
       },
       {
         "name": "Business",
@@ -335,12 +382,50 @@
           "i.VAZ (e-waybills)",
           "Payment services integration (Paysera, Montonio)"
         ],
-        "addons_label": "Optional add-ons:",
-        "addons_list": [
-          "Contracts",
-          "HR and payroll"
-        ],
-        "plus": "Additional integrations and API as needed"
+        "plus": "Additional integrations and API as needed",
+        "addons": [
+          {
+            "name": "Contracts",
+            "m": 3,
+            "y": 36
+          },
+          {
+            "name": "HR and payroll",
+            "note": "Price by number of employees",
+            "tiers": [
+              {
+                "label": "up to 5 employees",
+                "m": 6,
+                "y": 72
+              },
+              {
+                "label": "up to 9 employees",
+                "m": 9,
+                "y": 108
+              },
+              {
+                "label": "up to 15 employees",
+                "m": 8,
+                "y": 96
+              }
+            ]
+          },
+          {
+            "name": "Integration API",
+            "m": 5,
+            "y": 60
+          },
+          {
+            "name": "Shopify integration",
+            "m": 3,
+            "y": 36
+          },
+          {
+            "name": "PrestaShop integration",
+            "m": 3,
+            "y": 36
+          }
+        ]
       },
       {
         "name": "Business+",
@@ -358,12 +443,40 @@
           "Shopify integration",
           "PrestaShop integration"
         ],
-        "addons_label": "Optional add-ons:",
-        "addons_list": [
-          "HR and payroll",
-          "Manufacturing"
-        ],
-        "plus": "Additional integrations as needed"
+        "plus": "Additional integrations as needed",
+        "addons": [
+          {
+            "name": "HR and payroll",
+            "note": "Price by number of employees",
+            "tiers": [
+              {
+                "label": "up to 8 employees",
+                "m": 9,
+                "y": 108
+              },
+              {
+                "label": "up to 12 employees",
+                "m": 14,
+                "y": 168
+              },
+              {
+                "label": "up to 16 employees",
+                "m": 13,
+                "y": 156
+              },
+              {
+                "label": "up to 20 employees",
+                "m": 12,
+                "y": 144
+              }
+            ]
+          },
+          {
+            "name": "Manufacturing",
+            "m": 5,
+            "y": 60
+          }
+        ]
       },
       {
         "name": "Custom",
@@ -399,63 +512,8 @@
     "extra_user_m": "Additional user – {p} / month",
     "extra_user_y": "Additional user – {p} / year",
     "features_label": "Includes:",
-    "addons_title": "Add-ons and integrations",
-    "addons_text": "Add the modules and integrations you need to your plan. Add-on prices may vary by plan.",
-    "addons_per_m": "/ month + VAT",
-    "addons_per_y": "/ year + VAT",
-    "addons": [
-      {
-        "name": "HR and payroll",
-        "note": "Price depends on the plan and number of employees",
-        "icon": "users",
-        "price_m": 6,
-        "price_y": 72,
-        "from": true
-      },
-      {
-        "name": "Manufacturing",
-        "icon": "cog",
-        "price_m": 5,
-        "price_y": 60
-      },
-      {
-        "name": "Contracts",
-        "note": "Business+ – included",
-        "icon": "doc",
-        "price_m": 3,
-        "price_y": 36
-      },
-      {
-        "name": "Integration API",
-        "note": "Business+ – included",
-        "icon": "code",
-        "price_m": 5,
-        "price_y": 60
-      },
-      {
-        "name": "Shopify integration",
-        "note": "Business+ – included",
-        "icon": "network",
-        "price_m": 2,
-        "price_y": 24,
-        "from": true
-      },
-      {
-        "name": "PrestaShop integration",
-        "note": "Business+ – included",
-        "icon": "network",
-        "price_m": 2,
-        "price_y": 24,
-        "from": true
-      },
-      {
-        "name": "Payment services integration",
-        "note": "Paysera, Montonio · Business and Business+ – included",
-        "icon": "lock",
-        "price_m": 2,
-        "price_y": 24
-      }
-    ],
-    "from": "from"
+    "addons_toggle": "Add-ons and prices",
+    "per_m_short": "/ mo",
+    "per_y_short": "/ yr"
   }
 }

@@ -146,16 +146,31 @@ const months = lang === 'lt' ? ['Sau', 'Vas', 'Kov', 'Bal', 'Geg', 'Bir'] : ['Ja
             <p class="plan-label">{a.features_label}</p>
             <ul class="plan-features">
               {p.features.map((f) => <li>{f}</li>)}
-              {!p.addons_list && p.plus && <li class="plus">{p.plus}</li>}
+              {p.plus && <li class="plus">{p.plus}</li>}
             </ul>
-            {p.addons_list && (
-              <>
-                <p class="plan-label plan-label--sub">{p.addons_label}</p>
-                <ul class="plan-features plan-features--addons">
-                  {p.addons_list.map((f) => <li>{f}</li>)}
-                  {p.plus && <li class="plus">{p.plus}</li>}
+            {p.addons && (
+              <details class="plan-addons">
+                <summary>{a.addons_toggle} <span class="cnt">{p.addons.length}</span></summary>
+                <ul>
+                  {p.addons.map((x) => (
+                    <li>
+                      <div class="pa-row">
+                        <span class="pa-name">{x.name}{x.note && <small>{x.note}</small>}</span>
+                        {!x.tiers && (
+                          <span class="pa-price"><b class="pm">{eur(x.m)}</b><b class="py">{eur(x.y)}</b><small class="pm">{a.per_m_short}</small><small class="py">{a.per_y_short}</small></span>
+                        )}
+                      </div>
+                      {x.tiers && (
+                        <ul class="pa-tiers">
+                          {x.tiers.map((t) => (
+                            <li><span>{t.label}</span><span class="pa-price"><b class="pm">{eur(t.m)}</b><b class="py">{eur(t.y)}</b><small class="pm">{a.per_m_short}</small><small class="py">{a.per_y_short}</small></span></li>
+                          ))}
+                        </ul>
+                      )}
+                    </li>
+                  ))}
                 </ul>
-              </>
+              </details>
             )}
             <a class={`btn ${p.popular || p.individual ? 'btn--primary' : 'btn--outline'} plan-cta`}
                href={p.individual ? routes.contact[lang] : login}
@@ -164,25 +179,6 @@ const months = lang === 'lt' ? ['Sau', 'Vas', 'Kov', 'Bal', 'Geg', 'Bir'] : ['Ja
         ))}
       </div>
 
-      <div class="addons">
-        <div class="addons-head">
-          <h3>{a.addons_title}</h3>
-          <p>{a.addons_text}</p>
-        </div>
-        <ul class="addons-list">
-          {a.addons.map((x) => (
-            <li>
-              <span class="addon-ico"><Icon name={x.icon} size={20} /></span>
-              <span class="addon-name"><strong>{x.name}</strong>{x.note && <small>{x.note}</small>}</span>
-              <span class="addon-price">
-                {x.from && <small class="from">{a.from}</small>}
-                <b class="pm">{eur(x.price_m)}</b><small class="pm">{a.addons_per_m}</small>
-                <b class="py">{eur(x.price_y)}</b><small class="py">{a.addons_per_y}</small>
-              </span>
-            </li>
-          ))}
-        </ul>
-      </div>
       <p class="plans-note">{a.plans_note}</p>
     </div>
   </section>

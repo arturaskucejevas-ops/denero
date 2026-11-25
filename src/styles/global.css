@@ -432,3 +432,21 @@ ol.steps.steps--row strong { display: block; font-size: 1.1rem; margin-bottom: 6
 .addons { align-items: start; }
 .plan-cta { margin-top: auto; }
 .plan-intro { color: #d6d7da; font-size: .92rem; margin: 6px 0 18px; }
+
+/* Plano priedai (išskleidžiami) */
+.plan-addons { margin: 0 0 22px; border: 1px solid var(--line); border-radius: 12px; background: var(--bg-soft); }
+.plan-addons summary { cursor: pointer; list-style: none; padding: 11px 14px; font-weight: 600; font-size: .9rem; color: var(--dark-900); display: flex; align-items: center; gap: 8px; }
+.plan-addons summary::-webkit-details-marker { display: none; }
+.plan-addons summary .cnt { background: var(--gold-500); color: var(--dark-900); font-size: .72rem; border-radius: 999px; padding: 1px 8px; }
+.plan-addons summary::after { content: '▾'; margin-left: auto; color: var(--gold-700); transition: transform .2s; }
+.plan-addons[open] summary::after { transform: rotate(180deg); }
+.plan-addons > ul { list-style: none; margin: 0; padding: 0 14px 10px; }
+.plan-addons > ul > li { padding: 9px 0; border-top: 1px solid var(--line); font-size: .88rem; }
+.pa-row { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+.pa-name { display: flex; flex-direction: column; color: var(--ink); }
+.pa-name small { color: var(--muted); font-size: .76rem; }
+.pa-price { white-space: nowrap; color: var(--muted); font-size: .78rem; }
+.pa-price b { color: var(--dark-900); font-size: .92rem; margin-right: 2px; }
+.pa-tiers { list-style: none; padding: 6px 0 0; margin: 0; display: grid; gap: 4px; }
+.pa-tiers li { display: flex; justify-content: space-between; gap: 10px; font-size: .82rem; color: var(--muted); padding: 3px 8px; background: #fff; border-radius: 6px; }
+.plan--popular .plan-addons { background: var(--gold-50); }
