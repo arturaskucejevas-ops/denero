@@ -143,8 +143,17 @@ const months = lang === 'lt' ? ['Sau', 'Vas', 'Kov', 'Bal', 'Geg', 'Bir'] : ['Ja
             <p class="plan-label">{a.features_label}</p>
             <ul class="plan-features">
               {p.features.map((f) => <li>{f}</li>)}
-              {p.plus && <li class="plus">{p.plus}</li>}
+              {!p.addons_list && p.plus && <li class="plus">{p.plus}</li>}
             </ul>
+            {p.addons_list && (
+              <>
+                <p class="plan-label plan-label--sub">{p.addons_label}</p>
+                <ul class="plan-features plan-features--addons">
+                  {p.addons_list.map((f) => <li>{f}</li>)}
+                  {p.plus && <li class="plus">{p.plus}</li>}
+                </ul>
+              </>
+            )}
             <a class={`btn ${p.popular || p.individual ? 'btn--primary' : 'btn--outline'} plan-cta`}
                href={p.individual ? routes.contact[lang] : login}
                data-umami-event={`Planas: ${p.name}`}>{p.cta}</a>
@@ -163,6 +172,7 @@ const months = lang === 'lt' ? ['Sau', 'Vas', 'Kov', 'Bal', 'Geg', 'Bir'] : ['Ja
               <span class="addon-ico"><Icon name={x.icon} size={20} /></span>
               <span class="addon-name"><strong>{x.name}</strong>{x.note && <small>{x.note}</small>}</span>
               <span class="addon-price">
+                {x.from && <small class="from">{a.from}</small>}
                 <b class="pm">{eur(x.price_m)}</b><small class="pm">{a.addons_per_m}</small>
                 <b class="py">{eur(x.price_y)}</b><small class="py">{a.addons_per_y}</small>
               </span>

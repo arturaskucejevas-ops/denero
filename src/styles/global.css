@@ -424,3 +424,10 @@ ol.steps.steps--row strong { display: block; font-size: 1.1rem; margin-bottom: 6
 @media (max-width: 800px) { .addons { grid-template-columns: 1fr; padding: 20px; } .addons-list li { grid-template-columns: auto 1fr; } .addon-price { grid-column: 2; text-align: left; } }
 .plan-features { align-content: start; }
 .plan-alt b { white-space: nowrap; }
+.plan-label--sub { border-top: 0; padding-top: 4px; margin-top: -8px; }
+.plan-features--addons { flex: 0; margin-bottom: 24px; }
+.plan-features--addons li::before { content: '+'; background: var(--bg-soft); color: var(--gold-700); font-size: .8rem; }
+.plan-features:has(+ .plan-label--sub) { flex: 0; margin-bottom: 18px; }
+.addon-price small.from { margin: 0 4px 0 0; }
+.addons { align-items: start; }
+.plan-cta { margin-top: auto; }
