@@ -11,7 +11,7 @@ const hours = lang === 'lt' ? settings.working_hours_lt : settings.working_hours
 const formName = `contact-${lang}`;
 const subject = lang === 'lt' ? 'Nauja užklausa iš Denero svetainės' : 'New enquiry from Denero website (EN)';
 ---
-<Base lang={lang} title={tr('contact.title')} description={tr('contact.lead')} alternates={alt('contact')}>
+<Base lang={lang} title={lang === 'lt' ? 'Kontaktai – DENERO Apskaita ir verslo sprendimai' : 'Contact – DENERO accounting software and solutions'} description={tr('contact.lead')} alternates={alt('contact')}>
   <section class="hero page-hero">
     <div class="container">
       <nav class="breadcrumbs" aria-label="Breadcrumb"><a href={routes.home[lang]}>{tr('nav.home')}</a> / {tr('contact.title')}</nav>

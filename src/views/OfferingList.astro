@@ -19,7 +19,7 @@ const listLd = {
     url: new URL(detailPath(kind, lang, slugOf(s.id)), Astro.site).href })),
 };
 ---
-<Base lang={lang} title={heading} description={lead} alternates={alt(kind)} jsonLd={[listLd]}>
+<Base lang={lang} title={kind === 'solutions' ? (h.solutions_seo_title || heading) : heading} description={lead} alternates={alt(kind)} jsonLd={[listLd]}>
   <section class="hero page-hero">
     <div class="container">
       <nav class="breadcrumbs" aria-label="Breadcrumb"><a href={routes.home[lang]}>{tr('nav.home')}</a> / {title}</nav>
