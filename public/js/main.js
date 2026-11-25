@@ -31,3 +31,21 @@
   panel.querySelectorAll('[data-chat-close]').forEach(function (b) { b.addEventListener('click', function () { set(false); btn.focus(); }); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !panel.hidden) { set(false); btn.focus(); } });
 })();
+
+// Planų kainų perjungiklis: mėnesinis / metinis
+(function () {
+  var box = document.getElementById('planai');
+  if (!box) return;
+  var opts = box.querySelectorAll('.billing-opt');
+  opts.forEach(function (o) {
+    o.addEventListener('click', function () {
+      var yearly = o.getAttribute('data-billing') === 'y';
+      box.classList.toggle('is-yearly', yearly);
+      opts.forEach(function (x) {
+        var on = x === o;
+        x.classList.toggle('is-on', on);
+        x.setAttribute('aria-pressed', on ? 'true' : 'false');
+      });
+    });
+  });
+})();

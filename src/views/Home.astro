@@ -21,6 +21,13 @@ const appLd = {
   description: a.seo_description, url: new URL(routes.home[lang], site).href,
   publisher: { '@type': 'Organization', name: settings.company_name, url: site.href },
 };
+const eur = (n: number) => {
+  const v = Math.round(n * 100) / 100;
+  const txt = v.toLocaleString(lang === 'lt' ? 'lt-LT' : 'en-GB', { minimumFractionDigits: Number.isInteger(v) ? 0 : 2, maximumFractionDigits: 2 });
+  return lang === 'lt' ? `${txt} €` : `€${txt}`;
+};
+const save = (p: any) => (p.price_m && p.price_y ? Math.round((1 - p.price_y / (12 * p.price_m)) * 100) : 0);
+const maxSave = Math.max(...a.plans.map((p: any) => save(p)));
 const months = lang === 'lt' ? ['Sau', 'Vas', 'Kov', 'Bal', 'Geg', 'Bir'] : ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'];
 ---
 <Base lang={lang} title={a.seo_title} description={a.seo_description} alternates={alt('home')} jsonLd={[appLd]}>
@@ -99,24 +106,69 @@ const months = lang === 'lt' ? ['Sau', 'Vas', 'Kov', 'Bal', 'Geg', 'Bir'] : ['Ja
         <h2 id="plans-title">{a.plans_title}</h2>
         <p>{a.plans_text}</p>
       </div>
+      <div class="billing" role="group" aria-label={`${a.billing_month} / ${a.billing_year}`}>
+        <button type="button" class="billing-opt is-on" data-billing="m" aria-pressed="true">{a.billing_month}</button>
+        <button type="button" class="billing-opt" data-billing="y" aria-pressed="false">{a.billing_year} <em>−{maxSave} %</em></button>
+      </div>
       <div class="plans">
         {a.plans.map((p) => (
-          <article class={`plan ${p.popular ? 'plan--popular' : ''} ${p.individual ? 'plan--custom' : ''}`}>
+          <article class={`plan ${p.popular ? 'plan--popular' : ''} ${p.individual ? 'plan--custom' : ''} ${p.placeholder ? 'plan--draft' : ''}`}>
             {p.popular && <span class="plan-badge">{a.popular}</span>}
             <h3>{p.name}</h3>
             <p class="plan-desc">{p.desc}</p>
-            <div class="plan-price">
-              <strong>{p.price}</strong>
-              {!p.individual && <span>{a.per}</span>}
-            </div>
+            {p.individual ? (
+              <div class="plan-price"><strong>{p.price}</strong></div>
+            ) : (
+              <>
+                <div class="plan-price">
+                  <strong class="pm">{eur(p.price_m)}</strong><span class="pm">{a.per_m}</span>
+                  <strong class="py">{eur(p.price_y)}</strong><span class="py">{a.per_y}</span>
+                </div>
+                <p class="plan-alt">
+                  <span class="pm">{a.alt_m.replace('{y}', eur(p.price_y))}{save(p) > 0 && <b> · {a.billing_save} {save(p)}&nbsp;%</b>}</span>
+                  <span class="py">{a.alt_y.replace('{m}', eur(p.price_y / 12))}</span>
+                </p>
+                {p.users && (
+                  <div class="plan-users">
+                    <Icon name="users" size={18} />
+                    <div>
+                      <strong>{(p.users === 1 ? a.users_incl_1 : a.users_incl).replace('{n}', String(p.users))}</strong>
+                      {p.extra_user_m && <span class="pm">{a.extra_user_m.replace('{p}', eur(p.extra_user_m))}</span>}
+                      {p.extra_user_y && <span class="py">{a.extra_user_y.replace('{p}', eur(p.extra_user_y))}</span>}
+                    </div>
+                  </div>
+                )}
+              </>
+            )}
+            <p class="plan-label">{a.features_label}</p>
             <ul class="plan-features">
               {p.features.map((f) => <li>{f}</li>)}
+              {p.plus && <li class="plus">{p.plus}</li>}
             </ul>
             <a class={`btn ${p.popular || p.individual ? 'btn--primary' : 'btn--outline'} plan-cta`}
                href={p.individual ? routes.contact[lang] : login}
                data-umami-event={`Planas: ${p.name}`}>{p.cta}</a>
           </article>
         ))}
+      </div>
+
+      <div class="addons">
+        <div class="addons-head">
+          <h3>{a.addons_title}</h3>
+          <p>{a.addons_text}</p>
+        </div>
+        <ul class="addons-list">
+          {a.addons.map((x) => (
+            <li>
+              <span class="addon-ico"><Icon name={x.icon} size={20} /></span>
+              <span class="addon-name"><strong>{x.name}</strong>{x.note && <small>{x.note}</small>}</span>
+              <span class="addon-price">
+                <b class="pm">{eur(x.price_m)}</b><small class="pm">{a.addons_per_m}</small>
+                <b class="py">{eur(x.price_y)}</b><small class="py">{a.addons_per_y}</small>
+              </span>
+            </li>
+          ))}
+        </ul>
       </div>
       <p class="plans-note">{a.plans_note}</p>
     </div>

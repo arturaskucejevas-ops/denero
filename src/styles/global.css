@@ -380,3 +380,47 @@ ol.steps.steps--row { max-width: none; gap: 20px; }
 ol.steps.steps--row li { background: #fff; padding: 64px 24px 24px; box-shadow: var(--shadow); }
 ol.steps.steps--row li::before { top: 22px; left: 24px; }
 ol.steps.steps--row strong { display: block; font-size: 1.1rem; margin-bottom: 6px; }
+
+/* Mėnesinis / metinis perjungiklis */
+.billing { display: flex; justify-content: center; margin: -8px auto 40px; gap: 4px; background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 5px; width: max-content; box-shadow: var(--shadow); }
+.billing-opt { border: 0; background: none; font: inherit; font-weight: 600; font-size: .95rem; color: var(--muted); padding: 9px 20px; border-radius: 999px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; }
+.billing-opt em { font-style: normal; font-size: .75rem; background: var(--gold-50); color: var(--gold-700); padding: 2px 8px; border-radius: 999px; }
+.billing-opt.is-on { background: var(--dark-900); color: #fff; }
+.billing-opt.is-on em { background: var(--gold-500); color: var(--dark-900); }
+#planai .py { display: none; }
+#planai.is-yearly .py { display: inline; }
+#planai.is-yearly .pm { display: none; }
+.plan-users .py, .plan-users .pm { }
+#planai.is-yearly .plan-users span.py { display: block; }
+.plan-users span.pm { display: block; }
+#planai.is-yearly .plan-users span.pm { display: none; }
+.plan-price { padding-bottom: 6px; margin-bottom: 6px; border-bottom: 0; }
+.plan-alt { color: var(--muted); font-size: .85rem; margin: 0 0 16px; min-height: 1.4em; }
+.plan-alt b { color: var(--gold-700); }
+.plan-users { display: flex; gap: 10px; align-items: flex-start; background: var(--bg-soft); border-radius: 10px; padding: 10px 12px; margin-bottom: 18px; font-size: .88rem; color: var(--muted); }
+.plan-users svg { flex: none; color: var(--gold-700); margin-top: 2px; }
+.plan-users strong { display: block; color: var(--dark-900); font-size: .92rem; }
+.plan-label { font-weight: 700; font-size: .85rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 0 0 10px; padding-top: 14px; border-top: 1px solid var(--line); }
+.plan-features { gap: 8px; }
+.plan-features li { font-size: .93rem; }
+.plan-features li.plus { color: var(--gold-700); font-weight: 600; }
+.plan-features li.plus::before { content: '+'; background: var(--gold-500); color: var(--dark-900); font-size: .85rem; }
+.plan--custom .plan-label { border-color: rgba(255,255,255,.12); color: #bfc1c5; }
+.plan--custom .plan-alt { display: none; }
+.plan--draft .plan-features li:last-child { color: var(--muted); font-style: italic; }
+
+/* Papildomos integracijos */
+.addons { margin-top: 48px; background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 28px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 28px; align-items: center; box-shadow: var(--shadow); }
+.addons-head h3 { margin-bottom: 6px; }
+.addons-head p { color: var(--muted); margin: 0; }
+.addons-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.addons-list li { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 14px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 12px; }
+.addon-ico { width: 40px; height: 40px; border-radius: 10px; background: var(--dark-900); color: var(--gold-500); display: grid; place-items: center; }
+.addon-name { display: flex; flex-direction: column; }
+.addon-name small { color: var(--muted); font-size: .82rem; }
+.addon-price { text-align: right; white-space: nowrap; }
+.addon-price b { font-size: 1.1rem; color: var(--dark-900); }
+.addon-price small { color: var(--muted); font-size: .8rem; margin-left: 4px; }
+@media (max-width: 800px) { .addons { grid-template-columns: 1fr; padding: 20px; } .addons-list li { grid-template-columns: auto 1fr; } .addon-price { grid-column: 2; text-align: left; } }
+.plan-features { align-content: start; }
+.plan-alt b { white-space: nowrap; }
