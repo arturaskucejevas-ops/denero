@@ -114,17 +114,27 @@
         "plus": "Pagal poreikį – papildomos integracijos ir API"
       },
       {
-        "name": "Profesionalus",
-        "desc": "Didesnėms komandoms",
-        "price_m": 79,
-        "price_y": 869,
+        "name": "Verslas+",
+        "desc": "Didesnėms įmonėms ir e. prekybai",
+        "price_m": 18,
+        "price_y": 198,
         "users": 10,
+        "extra_user_m": 5,
+        "extra_user_y": 55,
         "cta": "Pradėti",
-        "placeholder": true,
         "features": [
           "Viskas, kas yra Versle",
-          "Laikina informacija – patikslinsime"
-        ]
+          "Sutartys",
+          "Integracijų API",
+          "Shopify integracija",
+          "PrestaShop integracija"
+        ],
+        "addons_label": "Papildomi priedai:",
+        "addons_list": [
+          "Personalas ir DU",
+          "Gamyba"
+        ],
+        "plus": "Pagal poreikį – papildomos integracijos"
       },
       {
         "name": "Individualus",
@@ -165,27 +175,36 @@
     "addons_per_y": "/ metus + PVM",
     "addons": [
       {
-        "name": "Sutartys",
-        "icon": "doc",
-        "price_m": 3,
-        "price_y": 36
-      },
-      {
         "name": "Personalas ir darbo užmokestis",
-        "note": "Kaina priklauso nuo darbuotojų skaičiaus",
+        "note": "Kaina priklauso nuo plano ir darbuotojų skaičiaus",
         "icon": "users",
         "price_m": 6,
         "price_y": 72,
         "from": true
       },
       {
+        "name": "Gamyba",
+        "icon": "cog",
+        "price_m": 5,
+        "price_y": 60
+      },
+      {
+        "name": "Sutartys",
+        "note": "Verslas+ – įskaičiuota",
+        "icon": "doc",
+        "price_m": 3,
+        "price_y": 36
+      },
+      {
         "name": "Integracijų API",
+        "note": "Verslas+ – įskaičiuota",
         "icon": "code",
         "price_m": 5,
         "price_y": 60
       },
       {
         "name": "Shopify integracija",
+        "note": "Verslas+ – įskaičiuota",
         "icon": "network",
         "price_m": 2,
         "price_y": 24,
@@ -193,6 +212,7 @@
       },
       {
         "name": "PrestaShop integracija",
+        "note": "Verslas+ – įskaičiuota",
         "icon": "network",
         "price_m": 2,
         "price_y": 24,
@@ -200,7 +220,7 @@
       },
       {
         "name": "Mokėjimų paslaugų integracija",
-        "note": "Paysera, Montonio · Versle – įskaičiuota",
+        "note": "Paysera, Montonio · Verslas ir Verslas+ – įskaičiuota",
         "icon": "lock",
         "price_m": 2,
         "price_y": 24
@@ -322,17 +342,27 @@
         "plus": "Additional integrations and API as needed"
       },
       {
-        "name": "Professional",
-        "desc": "For larger teams",
-        "price_m": 79,
-        "price_y": 869,
+        "name": "Business+",
+        "desc": "For larger companies and e-commerce",
+        "price_m": 18,
+        "price_y": 198,
         "users": 10,
+        "extra_user_m": 5,
+        "extra_user_y": 55,
         "cta": "Get started",
-        "placeholder": true,
         "features": [
           "Everything in Business",
-          "Temporary information – to be confirmed"
-        ]
+          "Contracts",
+          "Integration API",
+          "Shopify integration",
+          "PrestaShop integration"
+        ],
+        "addons_label": "Optional add-ons:",
+        "addons_list": [
+          "HR and payroll",
+          "Manufacturing"
+        ],
+        "plus": "Additional integrations as needed"
       },
       {
         "name": "Custom",
@@ -373,27 +403,36 @@
     "addons_per_y": "/ year + VAT",
     "addons": [
       {
-        "name": "Contracts",
-        "icon": "doc",
-        "price_m": 3,
-        "price_y": 36
-      },
-      {
         "name": "HR and payroll",
-        "note": "Price depends on the number of employees",
+        "note": "Price depends on the plan and number of employees",
         "icon": "users",
         "price_m": 6,
         "price_y": 72,
         "from": true
       },
       {
+        "name": "Manufacturing",
+        "icon": "cog",
+        "price_m": 5,
+        "price_y": 60
+      },
+      {
+        "name": "Contracts",
+        "note": "Business+ – included",
+        "icon": "doc",
+        "price_m": 3,
+        "price_y": 36
+      },
+      {
         "name": "Integration API",
+        "note": "Business+ – included",
         "icon": "code",
         "price_m": 5,
         "price_y": 60
       },
       {
         "name": "Shopify integration",
+        "note": "Business+ – included",
         "icon": "network",
         "price_m": 2,
         "price_y": 24,
@@ -401,6 +440,7 @@
       },
       {
         "name": "PrestaShop integration",
+        "note": "Business+ – included",
         "icon": "network",
         "price_m": 2,
         "price_y": 24,
@@ -408,7 +448,7 @@
       },
       {
         "name": "Payment services integration",
-        "note": "Paysera, Montonio · included in Business",
+        "note": "Paysera, Montonio · Business and Business+ – included",
         "icon": "lock",
         "price_m": 2,
         "price_y": 24
