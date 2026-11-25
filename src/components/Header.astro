@@ -8,7 +8,7 @@ const { lang, alternates } = Astro.props;
 const tr = t(lang);
 const path = Astro.url.pathname;
 const items = [
-  { href: `${routes.home[lang]}#planai`, label: tr('nav.pricing') },
+  { href: routes.home[lang], label: tr('nav.apskaita') },
   { href: routes.solutions[lang], label: tr('nav.solutions') },
   { href: routes.services[lang], label: tr('nav.services') },
   { href: routes.about[lang], label: tr('nav.about') },
@@ -22,7 +22,7 @@ const other: Lang = lang === 'lt' ? 'en' : 'lt';
     <Logo href={routes.home[lang]} />
     <nav class="nav" id="site-nav" aria-label={tr('nav.menu')}>
       {items.map((i) => (
-        <a href={i.href} aria-current={!i.href.includes('#') && path.startsWith(i.href) ? 'page' : undefined}>{i.label}</a>
+        <a href={i.href} aria-current={(i.href === routes.home[lang] ? path === i.href : path.startsWith(i.href)) ? 'page' : undefined}>{i.label}</a>
       ))}
       <a class="nav-login" href={ap.login_url}>{tr('nav.login')}</a>
     </nav>
