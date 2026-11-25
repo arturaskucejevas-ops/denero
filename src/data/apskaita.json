@@ -138,17 +138,18 @@
       },
       {
         "name": "Individualus",
-        "desc": "Sprendimas pagal jūsų poreikius",
+        "desc": "Buhalterinės apskaitos įmonėms ir didesnėms įmonėms",
         "price": "Pagal susitarimą",
         "cta": "Susisiekti",
         "individual": true,
+        "intro": "Aptarsime jūsų poreikius ir pasiūlysime individualias sąlygas.",
         "features": [
-          "Neribotas vartotojų skaičius",
-          "Individualūs moduliai",
-          "Integracijos su jūsų sistemomis",
-          "Duomenų perkėlimas",
-          "Mokymai komandai",
-          "Prioritetinė priežiūra"
+          "Sprendimas buhalterinei įmonei ir jos klientams",
+          "Individualus vartotojų ir įmonių skaičius",
+          "Reikalingi moduliai ir integracijos",
+          "Duomenų perkėlimas iš kitų sistemų",
+          "Mokymai jūsų komandai",
+          "Asmeninis kontaktas ir prioritetinė pagalba"
         ]
       }
     ],
@@ -366,17 +367,18 @@
       },
       {
         "name": "Custom",
-        "desc": "A solution tailored to your needs",
+        "desc": "For accounting firms and larger companies",
         "price": "On request",
         "cta": "Contact us",
         "individual": true,
+        "intro": "We will discuss your needs and offer custom terms.",
         "features": [
-          "Unlimited users",
-          "Custom modules",
-          "Integrations with your systems",
-          "Data migration",
-          "Team training",
-          "Priority maintenance"
+          "A solution for an accounting firm and its clients",
+          "Custom number of users and companies",
+          "The modules and integrations you need",
+          "Data migration from other systems",
+          "Training for your team",
+          "Personal contact and priority support"
         ]
       }
     ],

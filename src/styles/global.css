@@ -431,3 +431,4 @@ ol.steps.steps--row strong { display: block; font-size: 1.1rem; margin-bottom: 6
 .addon-price small.from { margin: 0 4px 0 0; }
 .addons { align-items: start; }
 .plan-cta { margin-top: auto; }
+.plan-intro { color: #d6d7da; font-size: .92rem; margin: 6px 0 18px; }

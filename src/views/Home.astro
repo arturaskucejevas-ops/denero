@@ -117,7 +117,10 @@ const months = lang === 'lt' ? ['Sau', 'Vas', 'Kov', 'Bal', 'Geg', 'Bir'] : ['Ja
             <h3>{p.name}</h3>
             <p class="plan-desc">{p.desc}</p>
             {p.individual ? (
-              <div class="plan-price"><strong>{p.price}</strong></div>
+              <>
+                <div class="plan-price"><strong>{p.price}</strong></div>
+                {p.intro && <p class="plan-intro">{p.intro}</p>}
+              </>
             ) : (
               <>
                 <div class="plan-price">
