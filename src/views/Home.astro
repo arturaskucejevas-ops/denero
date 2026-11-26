@@ -33,7 +33,7 @@ const appLd = {
     offers: paid.map((p: any) => ({
       '@type': 'Offer', name: `DENERO Apskaita ${p.name}`, price: p.price_m, priceCurrency: 'EUR',
       url: `${homeUrl}#planai`, availability: 'https://schema.org/InStock',
-      description: `${p.desc}. ${p.users} ${lang === 'lt' ? 'vartotojai' : 'users'}. ${p.features.join(', ')}.`,
+      description: `${a.plans_trial}. ${p.desc}. ${p.users} ${lang === 'lt' ? 'vartotojai' : 'users'}. ${p.features.join(', ')}.`,
       priceSpecification: [
         { '@type': 'UnitPriceSpecification', price: p.price_m, priceCurrency: 'EUR', valueAddedTaxIncluded: false, billingDuration: 'P1M', unitCode: 'MON' },
         { '@type': 'UnitPriceSpecification', price: p.price_y, priceCurrency: 'EUR', valueAddedTaxIncluded: false, billingDuration: 'P1Y', unitCode: 'ANN' },
@@ -59,6 +59,7 @@ const months = lang === 'lt' ? ['Sau', 'Vas', 'Kov', 'Bal', 'Geg', 'Bir'] : ['Ja
     <div class="container hero-split">
       <div>
         <span class="eyebrow">{a.eyebrow}</span>
+        <a class="trial-pill" href="#isbandyti">🎁 {a.trial_badge}</a>
         <h1>{a.title}</h1>
         <p>{a.text}</p>
         <div class="hero-actions">
@@ -116,7 +117,30 @@ const months = lang === 'lt' ? ['Sau', 'Vas', 'Kov', 'Bal', 'Geg', 'Bir'] : ['Ja
     </div>
   </section>
 
-  <section class="section section--soft">
+  <section class="section section--soft trial" id="isbandyti" aria-labelledby="trial-title">
+    <div class="container trial-grid">
+      <div>
+        <span class="trial-badge">🎁 {a.trial_badge}</span>
+        <h2 id="trial-title">{a.trial_title}</h2>
+        <p class="trial-lead">{a.trial_text}</p>
+        <ol class="trial-steps">
+          {a.trial_steps.map((s) => <li><strong>{s.title}</strong><span>{s.text}</span></li>)}
+        </ol>
+        <div class="hero-actions">
+          <a class="btn btn--primary btn--lg" href={login} data-umami-event="Išbandyti demo">{a.trial_cta}</a>
+          <a class="btn btn--outline btn--lg" href={login} data-umami-event="Registruoti įmonę">{a.trial_demo}</a>
+        </div>
+      </div>
+      <figure class="trial-shot">
+        <picture>
+          <source media="(max-width: 700px)" srcset={`/apskaita/isbandyti-${lang}-m.png`} width="620" height="1180" />
+          <img src={`/apskaita/isbandyti-${lang}.png`} alt={a.trial_img_alt} width="1150" height="775" loading="lazy" decoding="async" />
+        </picture>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section">
     <div class="container">
       <div class="section-head"><h2>{a.steps_title}</h2></div>
       <ol class="steps steps--row">{a.steps.map((s) => <li><strong>{s.title}</strong> {s.text}</li>)}</ol>
@@ -134,6 +158,7 @@ const months = lang === 'lt' ? ['Sau', 'Vas', 'Kov', 'Bal', 'Geg', 'Bir'] : ['Ja
         <button type="button" class="billing-opt is-on" data-billing="m" aria-pressed="true">{a.billing_month}</button>
         <button type="button" class="billing-opt" data-billing="y" aria-pressed="false">{a.billing_year} <em>−{maxSave} %</em></button>
       </div>
+      <p class="plans-trial">🎁 {a.plans_trial}</p>
       <div class="plans">
         {a.plans.map((p) => (
           <article class={`plan ${p.popular ? 'plan--popular' : ''} ${p.individual ? 'plan--custom' : ''} ${p.placeholder ? 'plan--draft' : ''}`}>

@@ -3,7 +3,7 @@
   "lt": {
     "eyebrow": "DENERO Apskaita",
     "title": "Apskaitos programa, kuri dirba už jus",
-    "text": "DENERO Apskaita – apskaitos sistema internete įmonėms: pirkimai, pardavimai, atsargos, ilgalaikis turtas, kasa, mokesčių ataskaitos ir el. prekybos integracijos. Planai nuo 5 € per mėnesį.",
+    "text": "DENERO Apskaita – apskaitos sistema internete įmonėms: pirkimai, pardavimai, atsargos, ilgalaikis turtas, kasa, mokesčių ataskaitos ir el. prekybos integracijos. Planai nuo 5 € per mėnesį, išbandykite 1 mėnesį nemokamai.",
     "login": "Prisijungti",
     "see_plans": "Peržiūrėti planus",
     "trust": [
@@ -12,7 +12,7 @@
       "Pagalba lietuvių kalba"
     ],
     "seo_title": "DENERO Apskaita – apskaitos programa nuo 5 €/mėn.",
-    "seo_description": "Apskaitos programa internete: pirkimai, pardavimai, atsargos, ilgalaikis turtas, kasa, i.VAZ, mokesčių ataskaitos, WooCommerce, Shopify. Nuo 5 € / mėn.",
+    "seo_description": "Apskaitos programa internete: pirkimai, pardavimai, atsargos, ilgalaikis turtas, kasa, i.VAZ, mokesčių ataskaitos. Nuo 5 € / mėn., 1 mėn. išbandymas nemokamai.",
     "features_title": "Apskaitos moduliai vienoje sistemoje",
     "features_text": "Viskas, ko reikia kasdienei įmonės apskaitai – nuo pirkimų ir pardavimų iki mokesčių ataskaitų ir el. prekybos integracijų.",
     "features": [
@@ -255,7 +255,7 @@
     "more_title": "Kiti DENERO sprendimai",
     "more_text": "Be apskaitos sistemos, kuriame ir kitus sprendimus verslui.",
     "cta_title": "Turite klausimų apie DENERO Apskaitą?",
-    "cta_text": "Parašykite – padėsime išsirinkti tinkamą planą ar pritaikyti sistemą jūsų įmonei.",
+    "cta_text": "Išbandykite demo įmonę 1 mėnesį nemokamai arba parašykite – padėsime išsirinkti tinkamą planą.",
     "cta_button": "Susisiekti",
     "billing_month": "Mėnesinis",
     "billing_year": "Metinis",
@@ -277,6 +277,10 @@
       {
         "q": "Kiek kainuoja DENERO Apskaita?",
         "a": "Planai kainuoja nuo 5 € per mėnesį be PVM: Startas – 5 € (55 € metams), Verslas – 10 € (110 € metams), Verslas+ – 18 € (198 € metams). Buhalterinės apskaitos įmonėms ir didesnėms įmonėms – individualus pasiūlymas."
+      },
+      {
+        "q": "Ar galima DENERO Apskaitą išbandyti nemokamai?",
+        "a": "Taip. Prisijungimo lange paspauskite „Išbandyti demo įmonę“ – 1 mėnesį nemokamai galite naudotis sistema su pavyzdiniais duomenimis be registracijos. Kai būsite pasiruošę, paspauskite „Registruotis“, užregistruokite savo įmonę ir pasirinkite planą."
       },
       {
         "q": "Kiek vartotojų įeina į planą?",
@@ -302,12 +306,29 @@
         "q": "Kaip prisijungti prie DENERO Apskaitos?",
         "a": "Sistema veikia naršyklėje adresu apskaita.denero.eu – nieko diegti nereikia."
       }
-    ]
+    ],
+    "trial_badge": "1 mėnuo nemokamai",
+    "trial_title": "Išbandykite DENERO Apskaitą 1 mėnesį nemokamai",
+    "trial_text": "Prisijungimo lange paspauskite „Išbandyti demo įmonę“ – mėnesį nemokamai naudositės sistema su pavyzdiniais duomenimis, registruotis nereikia. Kai būsite pasiruošę, užregistruokite savo įmonę ir pasirinkite planą.",
+    "trial_steps": [
+      {
+        "title": "Išbandykite demo įmonę – 1 mėnuo nemokamai",
+        "text": "Paspauskite „Išbandyti demo įmonę“ – sistema su pavyzdiniais duomenimis, be registracijos."
+      },
+      {
+        "title": "Užregistruokite savo įmonę",
+        "text": "Kai būsite pasiruošę, paspauskite „Registruotis“, užregistruokite savo įmonę ir pasirinkite planą."
+      }
+    ],
+    "trial_cta": "Išbandyti nemokamai",
+    "trial_demo": "Registruoti įmonę",
+    "trial_img_alt": "DENERO Apskaitos prisijungimo langas: „Išbandyti demo įmonę“ (1 mėnuo nemokamai) ir „Registruotis“ (savo įmonės registracija)",
+    "plans_trial": "Prieš renkantis planą – išbandykite demo įmonę 1 mėnesį nemokamai"
   },
   "en": {
     "eyebrow": "DENERO Apskaita",
     "title": "Accounting software that works for you",
-    "text": "DENERO Apskaita is an online accounting system for companies: purchases, sales, inventory, fixed assets, cash desk, tax reports and e-commerce integrations. Plans from €5 per month.",
+    "text": "DENERO Apskaita is an online accounting system for companies: purchases, sales, inventory, fixed assets, cash desk, tax reports and e-commerce integrations. Plans from €5 per month, try it free for 1 month.",
     "login": "Log in",
     "see_plans": "View plans",
     "trust": [
@@ -316,7 +337,7 @@
       "Support in Lithuanian and English"
     ],
     "seo_title": "DENERO Apskaita – accounting software from €5/month",
-    "seo_description": "Online accounting software: purchases, sales, inventory, fixed assets, cash desk, i.VAZ, tax reports, WooCommerce, Shopify. From €5 / month.",
+    "seo_description": "Online accounting software: purchases, sales, inventory, fixed assets, cash desk, i.VAZ, tax reports. From €5 / month, 1-month free trial.",
     "features_title": "Accounting modules in one system",
     "features_text": "Everything you need for everyday company accounting – from purchases and sales to tax reports and e-commerce integrations.",
     "features": [
@@ -559,7 +580,7 @@
     "more_title": "Other DENERO solutions",
     "more_text": "Besides the accounting system, we build other solutions for business.",
     "cta_title": "Questions about DENERO Apskaita?",
-    "cta_text": "Write to us – we will help you choose the right plan or tailor the system to your company.",
+    "cta_text": "Try the demo company free for 1 month or write to us – we will help you choose the right plan.",
     "cta_button": "Contact us",
     "billing_month": "Monthly",
     "billing_year": "Yearly",
@@ -581,6 +602,10 @@
       {
         "q": "How much does DENERO Apskaita cost?",
         "a": "Plans start at €5 per month excluding VAT: Start – €5 (€55 per year), Business – €10 (€110 per year), Business+ – €18 (€198 per year). Accounting firms and larger companies get a custom offer."
+      },
+      {
+        "q": "Can I try DENERO Apskaita for free?",
+        "a": "Yes. On the login page click “Try demo company” – you can use the system with sample data free for 1 month without signing up. When you are ready, click “Sign up”, register your company and choose a plan."
       },
       {
         "q": "How many users are included?",
@@ -606,6 +631,23 @@
         "q": "How do I log in?",
         "a": "The system runs in your browser at apskaita.denero.eu – nothing to install."
       }
-    ]
+    ],
+    "trial_badge": "1 month free",
+    "trial_title": "Try DENERO Apskaita free for 1 month",
+    "trial_text": "On the login page click “Išbandyti demo įmonę” (Try demo company) – use the system with sample data free for one month, no sign-up needed. When you are ready, register your company and choose a plan.",
+    "trial_steps": [
+      {
+        "title": "Try the demo company – 1 month free",
+        "text": "Click “Išbandyti demo įmonę” (Try demo company) – the system with sample data, no sign-up."
+      },
+      {
+        "title": "Register your company",
+        "text": "When you are ready, click “Registruotis” (Sign up), register your company and choose a plan."
+      }
+    ],
+    "trial_cta": "Try for free",
+    "trial_demo": "Register company",
+    "trial_img_alt": "DENERO Apskaita login page: “Try demo company” (1 month free) and “Sign up” (register your company)",
+    "plans_trial": "Before choosing a plan – try the demo company free for 1 month"
   }
 }
