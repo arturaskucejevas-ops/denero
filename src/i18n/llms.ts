@@ -59,7 +59,10 @@ export async function buildLlmsTxt(site: URL) {
     `- LT: ${ap.lt.text} ${abs('/', site)}`,
     `- EN: ${ap.en.text} ${abs('/en/', site)}`,
     `- Planai / Plans: ` + ap.lt.plans.map((p: any) => p.price_m ? `${p.name} ${p.price_m} €/mėn. (${p.price_y} €/metus), ${p.users} vart.` : `${p.name} – ${p.price}`).join('; ') + ' (be PVM / excl. VAT)',
-    `- Prisijungimas / Login: ${ap.login_url}`, '');
+    `- Prisijungimas / Login: ${ap.login_url}`, '',
+    '## Suderinamumas / Compatibility', '',
+    '- DENERO PBI (Power BI ataskaitos) veikia su Microsoft Dynamics 365 Business Central (Cloud ir on-premise), Dynamics NAV 2009–2018 ir kitomis apskaitos sistemomis per SQL. / DENERO PBI works with Microsoft Dynamics 365 Business Central (Cloud and on-premises), Dynamics NAV 2009–2018 and other accounting systems via SQL.',
+    `- ${abs('/sprendimai/denero-pbi/', site)}`, '');
   out.push('## Kontaktai / Contact', '', contacts('lt'), `- Web: ${site.href}`, '');
   for (const lang of ['lt', 'en'] as Lang[]) {
     out.push(lang === 'lt' ? '## Paslaugos (LT)' : '## Services (EN)', '');

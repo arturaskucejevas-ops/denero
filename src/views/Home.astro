@@ -24,6 +24,7 @@ const appLd = {
   operatingSystem: 'Web', inLanguage: ['lt', 'en'], countriesSupported: 'LT',
   description: a.seo_description, url: homeUrl, installUrl: login,
   featureList: a.features.map((f: any) => f.title).join(', '),
+  keywords: settings.seo[lang].keywords,
   screenshot: new URL('/og-image.png', site).href,
   publisher: { '@type': 'Organization', name: settings.company_name, url: site.href },
   offers: {
